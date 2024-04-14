@@ -1,0 +1,58 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/chizom/Dev/office/ie_idb/pages/about.vue",
+    "chunkName": "pages/about",
+    "_name": "_cb46bde6"
+  },
+  {
+    "name": "dashboard",
+    "path": "/dashboard",
+    "component": "/Users/chizom/Dev/office/ie_idb/pages/dashboard.vue",
+    "chunkName": "pages/dashboard",
+    "_name": "_30ee9894"
+  },
+  {
+    "name": "forgot",
+    "path": "/forgot",
+    "component": "/Users/chizom/Dev/office/ie_idb/pages/forgot.vue",
+    "chunkName": "pages/forgot",
+    "_name": "_4c5e1fd3"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "/Users/chizom/Dev/office/ie_idb/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_f887c22e"
+  },
+  {
+    "name": "sent",
+    "path": "/sent",
+    "component": "/Users/chizom/Dev/office/ie_idb/pages/sent.vue",
+    "chunkName": "pages/sent",
+    "_name": "_31426070"
+  },
+  {
+    "name": "signup",
+    "path": "/signup",
+    "component": "/Users/chizom/Dev/office/ie_idb/pages/signup.vue",
+    "chunkName": "pages/signup",
+    "_name": "_4021ab48"
+  },
+  {
+    "name": "user-info",
+    "path": "/user-info",
+    "component": "/Users/chizom/Dev/office/ie_idb/pages/user-info.vue",
+    "chunkName": "pages/user-info",
+    "_name": "_72dc2170"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/chizom/Dev/office/ie_idb/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_8bd7085c"
+  }
+]

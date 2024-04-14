@@ -1,0 +1,23 @@
+{
+  "AdminNavBar": {
+    "description": "Auto imported from components/AdminNavBar.vue"
+  },
+  "Forgot": {
+    "description": "Auto imported from components/Forgot.vue"
+  },
+  "Login": {
+    "description": "Auto imported from components/Login.vue"
+  },
+  "Logo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "NavBar": {
+    "description": "Auto imported from components/NavBar.vue"
+  },
+  "PreLoader": {
+    "description": "Auto imported from components/PreLoader.vue"
+  },
+  "SignUp": {
+    "description": "Auto imported from components/SignUp.vue"
+  }
+}

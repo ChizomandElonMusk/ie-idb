@@ -1,0 +1,6 @@
+{
+  "appId": "com.ikejaelectric.idb",
+  "appName": "IE IDB",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

@@ -1,0 +1,35 @@
+{
+  "entry": "server.js",
+  "files": {
+    "components/forgot.js": "components/forgot.js",
+    "components/login.js": "components/login.js",
+    "components/logo.js": "components/logo.js",
+    "components/pre-loader.js": "components/pre-loader.js",
+    "components/sign-up.js": "components/sign-up.js",
+    "pages/about.js": "pages/about.js",
+    "pages/dashboard.js": "pages/dashboard.js",
+    "pages/forgot.js": "pages/forgot.js",
+    "pages/index.js": "pages/index.js",
+    "pages/login.js": "pages/login.js",
+    "pages/sent.js": "pages/sent.js",
+    "pages/signup.js": "pages/signup.js",
+    "pages/user-info.js": "pages/user-info.js",
+    "server.js": "server.js"
+  },
+  "maps": {
+    "components/forgot.js": "components/forgot.js.map",
+    "components/login.js": "components/login.js.map",
+    "components/logo.js": "components/logo.js.map",
+    "components/pre-loader.js": "components/pre-loader.js.map",
+    "components/sign-up.js": "components/sign-up.js.map",
+    "pages/about.js": "pages/about.js.map",
+    "pages/dashboard.js": "pages/dashboard.js.map",
+    "pages/forgot.js": "pages/forgot.js.map",
+    "pages/index.js": "pages/index.js.map",
+    "pages/login.js": "pages/login.js.map",
+    "pages/sent.js": "pages/sent.js.map",
+    "pages/signup.js": "pages/signup.js.map",
+    "pages/user-info.js": "pages/user-info.js.map",
+    "server.js": "server.js.map"
+  }
+}

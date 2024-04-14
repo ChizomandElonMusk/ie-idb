@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">196.43.252.89:9090</domain>
+        <domain includeSubdomains="true">192.168.6.183:9090</domain>
+        <domain includeSubdomains="true">https://196.43.252.89</domain>
+    </domain-config>
+</network-security-config>

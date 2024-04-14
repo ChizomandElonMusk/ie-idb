@@ -1,0 +1,7 @@
+{
+  "name": "ie_idb",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}
