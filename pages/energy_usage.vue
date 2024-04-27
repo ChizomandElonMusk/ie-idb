@@ -11,10 +11,12 @@
       <div class="flexcontainer" style="margin-top: 10px;">
         <div class="flexitem-username">
           <b style="font-size: 20px; color: #757575;" class="">
-            {{ greeting }}
+            Energy usage
           </b>
           <br>
-           
+          <b class="grey-text darken-4">
+            .......
+          </b> 
         </div>
 
         <div class="flexitem-notification">
@@ -23,10 +25,6 @@
       </div>
   
       <div class="row">
-        <b class="grey-text darken-4">
-          Chizom Echehieuka
-        </b>
-        <br>
         <div class="card-panel red" style="border-radius: 10px;">
 
           <div class="flexcontainerinfo">
@@ -37,7 +35,7 @@
 
             <div class="flex-time">
               <span class="white-text" style="font-size: 12px;">
-                {{ dashboard_date }}
+                May 16, 2023 10:05 am
               </span> <br>
               <span class="white-text" style="font-weight: 600; font-size: 20px;">
                 Cloudy
@@ -77,12 +75,10 @@
           <div class="card-panel orange flex-buttons" style="border-radius: 10px;">
 
             <div class="white-text center boarder-top">
-              <nuxt-link to="./energy_usage">
-                <img src="~assets/images/energy.svg" class="responsive-img" style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
-                <p class="button-text white-text">
-                  Energy Usage
-                </p>
-              </nuxt-link>
+              <img src="~assets/images/energy.svg" class="responsive-img" style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
+              <p class="button-text">
+                Energy Usage
+              </p>
             </div>
 
           </div>
@@ -92,13 +88,10 @@
           <div class="card-panel orange flex-buttons" style="border-radius: 10px;">
 
             <div class="white-text center boarder-top">
-              <nuxt-link to="./trans_history">
-                <img src="~assets/images/transaction.svg" class="responsive-img" style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
-                <p class="button-text white-text">
-                  Transaction History
-                </p>
-              </nuxt-link>
-              
+              <img src="~assets/images/transaction.svg" class="responsive-img" style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
+              <p class="button-text">
+                Transaction History
+              </p>
             </div>
 
           </div>
@@ -116,7 +109,7 @@
 
             <div class="white-text center boarder-top">
               <img src="~assets/images/purchase.svg" class="responsive-img" style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
-              <p class="button-text white-text">
+              <p class="button-text">
                 Purchase Electricity
               </p>
             </div>
@@ -181,15 +174,12 @@
   
   
   <script>
-  import { getUserInfo } from '~/js_modules/mods'
   export default {
       layout: 'admin_main',
 
       data() {
         return {
           fullname: '',
-          greeting: '',
-          dashboard_date: '',
   
           name: '',
           email: '',
@@ -208,52 +198,13 @@
           }
         },
 
-        async getUserDetails() {
-          await getUserInfo()
-        },
-
-        greetUser() {
-          // Get the current time
-          const now = new Date();
-          const hours = now.getHours();
-
-          // Greet the user based on the time
-          let greeting;
-          if (hours >= 5 && hours < 12) {
-              this.greeting = 'Good morning,';
-            } else if (hours >= 12 && hours < 18) {
-                this.greeting = 'Good afternoon,';
-            } else {
-                this.greeting = 'Good evening,';
-          }
-        },
-
-        formatDate(date) {
-            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-            const month = months[date.getMonth()];
-            const day = date.getDate();
-            const year = date.getFullYear();
-            let hours = date.getHours();
-            const minutes = ('0' + date.getMinutes()).slice(-2);
-            const ampm = hours >= 12 ? 'pm' : 'am';
-            hours = hours % 12;
-            hours = hours ? hours : 12; // Handle midnight (0 hours)
-            const formattedDate = `${month} ${day}, ${year} ${hours}:${minutes} ${ampm}`;
-            return formattedDate;
+        async getFullname() {
+          // this.fullname = localStorage.getItem('fullname')
         }
-
-      },
-      
-      mounted() {
-        console.log('calling getUserDetails');
-        this.getUserDetails()
-        this.greetUser()
-        const currentDate = new Date();
-        this.dashboard_date = this.formatDate(currentDate)
       },
 
       created() {
-        
+        // this.getFullname()
       }
   }
   </script>

@@ -14,16 +14,16 @@
     methods: {
       logOut() {
         if(process.client) {
-          localStorage.removeItem('token')
+          localStorage.removeItem('jdotwdott')
           window.location = './'
         }
       },
 
       checkToken() {
         if(process.client) {
-          let token = localStorage.getItem('token')
-          if (token === null) {
-            // this.$router.push('./')
+          let token = localStorage.getItem('jdotwdott')
+          if (token === null || token == '') {
+            this.$router.push('./')
           }
         }
       }

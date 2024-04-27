@@ -6,10 +6,15 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _cb46bde6 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
 const _30ee9894 = () => interopDefault(import('../pages/dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
+const _00fe474c = () => interopDefault(import('../pages/energy_usage.vue' /* webpackChunkName: "pages/energy_usage" */))
 const _4c5e1fd3 = () => interopDefault(import('../pages/forgot.vue' /* webpackChunkName: "pages/forgot" */))
 const _f887c22e = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
+const _1169e6e3 = () => interopDefault(import('../pages/purchase_electricity.vue' /* webpackChunkName: "pages/purchase_electricity" */))
+const _c6b82914 = () => interopDefault(import('../pages/remote.vue' /* webpackChunkName: "pages/remote" */))
+const _afc3bce2 = () => interopDefault(import('../pages/remote copy.vue' /* webpackChunkName: "pages/remote copy" */))
 const _31426070 = () => interopDefault(import('../pages/sent.vue' /* webpackChunkName: "pages/sent" */))
 const _4021ab48 = () => interopDefault(import('../pages/signup.vue' /* webpackChunkName: "pages/signup" */))
+const _30899906 = () => interopDefault(import('../pages/trans_history.vue' /* webpackChunkName: "pages/trans_history" */))
 const _72dc2170 = () => interopDefault(import('../pages/user-info.vue' /* webpackChunkName: "pages/user-info" */))
 const _8bd7085c = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -33,6 +38,10 @@ export const routerOptions = {
     component: _30ee9894,
     name: "dashboard"
   }, {
+    path: "/energy_usage",
+    component: _00fe474c,
+    name: "energy_usage"
+  }, {
     path: "/forgot",
     component: _4c5e1fd3,
     name: "forgot"
@@ -41,6 +50,18 @@ export const routerOptions = {
     component: _f887c22e,
     name: "login"
   }, {
+    path: "/purchase_electricity",
+    component: _1169e6e3,
+    name: "purchase_electricity"
+  }, {
+    path: "/remote",
+    component: _c6b82914,
+    name: "remote"
+  }, {
+    path: "/remote%20copy",
+    component: _afc3bce2,
+    name: "remote copy"
+  }, {
     path: "/sent",
     component: _31426070,
     name: "sent"
@@ -48,6 +69,10 @@ export const routerOptions = {
     path: "/signup",
     component: _4021ab48,
     name: "signup"
+  }, {
+    path: "/trans_history",
+    component: _30899906,
+    name: "trans_history"
   }, {
     path: "/user-info",
     component: _72dc2170,

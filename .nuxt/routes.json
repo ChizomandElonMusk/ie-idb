@@ -14,6 +14,13 @@
     "_name": "_30ee9894"
   },
   {
+    "name": "energy_usage",
+    "path": "/energy_usage",
+    "component": "/Users/chizom/Dev/office/ie_idb/pages/energy_usage.vue",
+    "chunkName": "pages/energy_usage",
+    "_name": "_00fe474c"
+  },
+  {
     "name": "forgot",
     "path": "/forgot",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/forgot.vue",
@@ -28,6 +35,27 @@
     "_name": "_f887c22e"
   },
   {
+    "name": "purchase_electricity",
+    "path": "/purchase_electricity",
+    "component": "/Users/chizom/Dev/office/ie_idb/pages/purchase_electricity.vue",
+    "chunkName": "pages/purchase_electricity",
+    "_name": "_1169e6e3"
+  },
+  {
+    "name": "remote",
+    "path": "/remote",
+    "component": "/Users/chizom/Dev/office/ie_idb/pages/remote.vue",
+    "chunkName": "pages/remote",
+    "_name": "_c6b82914"
+  },
+  {
+    "name": "remote copy",
+    "path": "/remote%20copy",
+    "component": "/Users/chizom/Dev/office/ie_idb/pages/remote copy.vue",
+    "chunkName": "pages/remote copy",
+    "_name": "_afc3bce2"
+  },
+  {
     "name": "sent",
     "path": "/sent",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/sent.vue",
@@ -40,6 +68,13 @@
     "component": "/Users/chizom/Dev/office/ie_idb/pages/signup.vue",
     "chunkName": "pages/signup",
     "_name": "_4021ab48"
+  },
+  {
+    "name": "trans_history",
+    "path": "/trans_history",
+    "component": "/Users/chizom/Dev/office/ie_idb/pages/trans_history.vue",
+    "chunkName": "pages/trans_history",
+    "_name": "_30899906"
   },
   {
     "name": "user-info",

@@ -9,11 +9,18 @@
 
  /* custom starts here */
 
+ input::placeholder {
+  color: #ffffff;
+}
+
  .flexcontainer {
   display: flex;
+  align-items: center;
  }
  .flexitem-username {
   flex-grow: 1;
+  display: flex; /* Ensure nested elements are also flex */
+  align-items: center; /* Align nested elements vertically */
  }
 
  .flexcontainerinfo {
@@ -45,6 +52,10 @@
 
  .boarder-top {
   margin-top: 15px;
+ }
+
+ .button-text {
+  font-weight: 600;
  }
  
 

@@ -7,9 +7,12 @@ You can directly use them in pages and other components without the need to impo
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
 - `<AdminNavBar>` | `<admin-nav-bar>` (components/AdminNavBar.vue)
+- `<CustomSelect>` | `<custom-select>` (components/CustomSelect.vue)
 - `<Forgot>` | `<forgot>` (components/Forgot.vue)
+- `<Keyboard>` | `<keyboard>` (components/Keyboard.vue)
 - `<Login>` | `<login>` (components/Login.vue)
 - `<Logo>` | `<logo>` (components/Logo.vue)
+- `<MeterInput>` | `<meter-input>` (components/MeterInput.vue)
 - `<NavBar>` | `<nav-bar>` (components/NavBar.vue)
 - `<PreLoader>` | `<pre-loader>` (components/PreLoader.vue)
 - `<SignUp>` | `<sign-up>` (components/SignUp.vue)

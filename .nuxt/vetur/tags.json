@@ -2,14 +2,23 @@
   "AdminNavBar": {
     "description": "Auto imported from components/AdminNavBar.vue"
   },
+  "CustomSelect": {
+    "description": "Auto imported from components/CustomSelect.vue"
+  },
   "Forgot": {
     "description": "Auto imported from components/Forgot.vue"
+  },
+  "Keyboard": {
+    "description": "Auto imported from components/Keyboard.vue"
   },
   "Login": {
     "description": "Auto imported from components/Login.vue"
   },
   "Logo": {
     "description": "Auto imported from components/Logo.vue"
+  },
+  "MeterInput": {
+    "description": "Auto imported from components/MeterInput.vue"
   },
   "NavBar": {
     "description": "Auto imported from components/NavBar.vue"

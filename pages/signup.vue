@@ -2,7 +2,7 @@
   <div>
     
     <div class="row full-width">
-      <div class="col s12 m6" style="margin-top: 40px">
+      <div class="col s12 m6" style="margin-top: 60px">
         <Logo/>
         
         <div class="container">

@@ -55,6 +55,7 @@
   <script>
     import backgroundUrl from '~/assets/images/angled_background.jpg'
     import PreLoader from '~/components/PreLoader.vue'
+    import { loginUser } from '~/js_modules/mods'
     export default {
       head() {
         return {// Other meta information
@@ -66,19 +67,43 @@
       data() {
         return {
           backgroundUrl,
-          username: 'cechehieuka',
-          password: '@@@1KingGod1234',
+          username: 'aafolayan',
+          password: 'Test@001',
           hidePreLoader: true,
         }
       },
 
       methods: {
 
-        signIn() {
+        async signIn() {
           M.toast({html: '<b class="yellow-text">Please wait...</b>'})
+          this.hidePreLoader = false
           // this.$router.push('./dashboard')
           this.username = this.username.trim()
           this.password = this.password.trim()
+          
+          if (this.username === '' || this.password === '') {
+            M.toast({html: '<b class="red-text">Username or Password is empty!</b>'})
+            this.hidePreLoader = true
+          } else {
+            let credentials = await loginUser(this.username, this.password)
+            console.log(credentials.jws);
+            if (credentials == undefined) {
+              M.toast({html: '<b class="red-text">Check Username or Password!</b>'})
+              this.hidePreLoader = true
+            } else {
+              localStorage.setItem('jdotwdott', credentials.jws)
+              this.$router.push('./dashboard')
+              this.hidePreLoader = true
+            }
+
+          }
+          
+
+          
+
+          
+
           // this.convertEmail(this.username, this.password)
 
           // console.log(`username -> ${this.username}     password -> ${this.password}`)
@@ -90,7 +115,7 @@
           //   this.convertEmail(this.username, this.password)
 
           // }
-          this.$router.push('./dashboard')
+          // this.$router.push('./dashboard')
 
         },
 

@@ -1,21 +1,21 @@
 
 
-export async function checkCustomerMeterNumber(meterNumber) {
-    var CustomerMeterNumber = ""
-    CustomerMeterNumber = {
-        param1: meterNumber,
+export async function loginUser(username, password) {
+    var passwords = ""
+    passwords = {
+        params: [username, password],
     }
-    CustomerMeterNumber = JSON.stringify(CustomerMeterNumber)
+    passwords = JSON.stringify(passwords)
 
     try {
-        const rawResponse = await fetch('https://api.ikejaelectric.com:8243/ie/harmony/v1/customer/accountlookup', {
+        const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/authenticate', {
             method: 'POST',
             headers: {
-                'Authorization': 'Bearer 1ba5295b-3525-3a8c-9b23-69a82e45fb2d',
+                'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
                 'Content-Type': 'application/json'
 
             },
-            body: CustomerMeterNumber,
+            body: passwords,
         })
 
         const response = await rawResponse.json()
@@ -23,47 +23,8 @@ export async function checkCustomerMeterNumber(meterNumber) {
 
         // console.log(response)
 
-        // console.log(response.accountNumber)
-        console.log(response)
-        
-        let users_meter_number = response.meterNumber
-        
-        if (users_meter_number == '') {
-            M.toast({html: `<b class="red-text">Please check meter number agian</b>`})
-        } else {
-            return response
-            // let users_account_number = response.accountNumber
-            // console.log(users_account_number)
-            // users_account_number = users_account_number.trim()
-            // await getCustomerInfoApi(users_account_number)
-        }
-    } catch (error) {
-        console.log(error)
-        console.log(this.service_type)
-        M.toast({html: `<b class="red-text">${error}</b>`})
-    }
-}
-
-
-export async function getCustomerInfoApi(accountNumber) {
-    M.toast({html: `<b class="yellow-text">Please wait</b>`})
-    var CustomerAccountNumber = ""
-    CustomerAccountNumber = {
-        accountNumber: accountNumber
-    }
-    CustomerAccountNumber = JSON.stringify(CustomerAccountNumber)
-    try {
-        const rawResponse = await fetch('https://api.ikejaelectric.com:8243/ie/harmony/v1/customer/info', {
-            method: 'POST',
-            headers: {
-                'Authorization': 'Bearer 1ba5295b-3525-3a8c-9b23-69a82e45fb2d',
-                'Content-Type': 'application/json'
-
-            },
-            body: CustomerAccountNumber,
-        })
-
-        const response = await rawResponse.json()
+        // console.log(response.passwords)
+        // console.log(response)
         return response
     } catch (error) {
         console.log(error)
@@ -72,40 +33,111 @@ export async function getCustomerInfoApi(accountNumber) {
 }
 
 
-export async function uploadImage(userId, accountNumber, docType, file) {
-    M.toast({html: `<b class="yellow-text">Uploading </b>`})
-    console.log(userId, accountNumber, docType, file)
-
-    var formData = new FormData()
-    formData.append("userId", userId);
-    formData.append("accountNo", accountNumber);
-    formData.append("docType", docType);
-    formData.append("file", file);
-    
-    
+export async function getUserInfo() {
+    let token = localStorage.getItem('jdotwdott')
+    var passwords = ""
+    passwords = {
+        param: "0102327327",
+    }
+    passwords = JSON.stringify(passwords)
 
     try {
-        const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/upload/document', {
+        const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/acctinfo', {
             method: 'POST',
             headers: {
-                'Authorization': 'Bearer ' + localStorage.token, 
+                'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+                'Content-Type': 'application/json',
+                'token': token
 
             },
-            body: formData,
+            body: passwords,
         })
 
         const response = await rawResponse.json()
-        if (response.statusMsg == 'Success') {
-            M.toast({html: `<b class="green-text">Success </b>`})
-        }
+        console.log(response)
+        return response
+
         // console.log(response)
 
+        // console.log(response.passwords)
+        // console.log(response)
         return response
-
-       
     } catch (error) {
         console.log(error)
         M.toast({html: `<b class="red-text">${error}</b>`})
-        return error
+    }
+}
+
+
+export async function getPaymentHistory() {
+    let token = localStorage.getItem('jdotwdott')
+    var passwords = ""
+    passwords = {
+        param: "0102327327",
+    }
+    passwords = JSON.stringify(passwords)
+
+    try {
+        const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/paymenthistory', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+                'Content-Type': 'application/json',
+                'token': token
+
+            },
+            body: passwords,
+        })
+
+        const response = await rawResponse.json()
+        console.log(response)
+        return response
+
+        // console.log(response)
+
+        // console.log(response.passwords)
+        // console.log(response)
+        // return response
+    } catch (error) {
+        console.log(error)
+        M.toast({html: `<b class="red-text">${error}</b>`})
+    }
+}
+
+
+
+export async function changePassword() {
+    let token = localStorage.getItem('jdotwdott')
+    console.log('this is the token ', token);
+    var passwords = ""
+    passwords = {
+        params: ["Test@001","Test@001"],
+    }
+    passwords = JSON.stringify(passwords)
+
+    try {
+        const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/changepassword', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+                'Content-Type': 'application/json',
+                'token': token
+
+            },
+            body: passwords,
+        })
+
+        const response = await rawResponse.json()
+        console.log(response)
+        return response
+
+        // console.log(response)
+
+        // console.log(response.passwords)
+        // console.log(response)
+        // return response
+    } catch (error) {
+        console.log(error)
+        M.toast({html: `<b class="red-text">${error}</b>`})
     }
 }
