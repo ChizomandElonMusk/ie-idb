@@ -27,7 +27,27 @@
         </div>
       </div>
 
-      <CustomSelect style="margin-top: 10px;" :options="['2 months', '3 months', '4 months', '5 months', '6 months']" :default="'Duration'" class="" v-model="transaction_duration" />
+      <!-- <CustomSelect style="margin-top: 10px;" :options="['2 months', '3 months', '4 months', '5 months', '6 months']" :default="'Duration'" class="" v-model="transaction_duration" /> -->
+
+      
+
+      <div class="flexcontainerSearch">
+        <div class=" input-field flexitem-datepicker">
+          <input type="date" placeholder="From" class="black btn btn-medium btn-flat white-text" v-model="date_from" style="border-radius: 10px 0 0px 10px; margin-top: 10px;">
+        </div>
+        <div style="width: 3px;"></div>
+        <div class=" input-field flexitem-datepicker">
+          <input type="date" placeholder="To" class="black btn btn-medium btn-flat white-text" v-model="date_to" style="border-radius: 0px 10px 10px 0px; margin-top: 10px;">
+        </div>
+        <div class=" input-field flexitem-datepicker">
+          <img src="~assets/images/search.svg" class="responsive-img" style="max-width: 45px;" @click="getDateFrom()">
+          <!-- <button @click="getDateFrom()" class="btn btn-medium btn-flat red white-text" style="border-radius: 10px 10px 10px 10px; margin-top: 10px;">
+            Search
+          </button> -->
+        </div>
+      </div>
+      
+      
   
       <div class="row">
         <div class="card-panel white" style="border-radius: 10px;">
@@ -57,26 +77,11 @@
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody v-for="(trans, index) in transactionList" :id="trans.orderNo">
                     <tr>
-                        <td>2304</td>
-                        <td>NGN 20,000</td>
-                        <td>Jan 1, 2024 10:05 am</td>
-                    </tr>
-                    <tr>
-                        <td>9342</td>
-                        <td>NGN 35,000</td>
-                        <td>Feb 14, 2024 11:35 am</td>
-                    </tr>
-                    <tr>
-                        <td>4234</td>
-                        <td>NGN 5,000</td>
-                        <td>March 8, 2024 1:35 am</td>
-                    </tr>
-                    <tr>
-                        <td>9324</td>
-                        <td>NGN 50,000</td>
-                        <td>April 10, 2024 12:13 pm</td>
+                        <td>{{ index + 1 }}</td>
+                        <td>₦{{ trans.amount }}</td>
+                        <td>{{ trans.transactionDate }}</td>
                     </tr>
                     
                 </tbody>
@@ -105,7 +110,7 @@
 <!-- <script src="@/assets/js/Chart.js"></script> -->
   <script>
   import CustomSelect from '~/components/CustomSelect.vue'
-  import { getPaymentHistory, changePassword } from '~/js_modules/mods'
+  import { getPaymentHistory, searchPaymentHistory } from '~/js_modules/mods'
   import moment from 'moment';
   import Chart from '@/assets/js/Chart.js'
 
@@ -131,20 +136,68 @@
       data() {
         return {
             transaction_duration: '',
+            transactionList: [],
+            date_from: '',
+            date_to: '',
   
         }
       },
 
       methods: {
+        async getDateFrom() {
+          this.date_from = this.date_from.trim()
+          this.date_to = this.date_to.trim()
+
+          if (this.date_from == '' || this.date_to == '') {
+            M.toast({html: '<b class="red-text">Please pick a valid date</b>'})
+          } else {
+            let date_from = this.date_from.replace(/-/g, '')
+            let date_to = this.date_to.replace(/-/g, '')
+
+            console.log(date_from);
+            console.log(date_to);
+            this.transactionList = await searchPaymentHistory("0102327327", date_from, date_to)
+            this.sortDate(this.transactionList)
+            this.loadGraph()
+          }
+        },
+
         loadGraph() {
             // const xValues = [50,60,70,80,90,100,110,120,130,140,150];
             // const yValues = [7,8,8,9,9,9,10,11,14,14,15];
             // const xValues = [1, 2, 3, 4];
+
+
+            // Extract transactionDate and amount into separate arrays
+            const transactionDates = this.transactionList.map(item => new Date(item.transactionDate).toDateString());
+            const amounts = this.transactionList.map(item => item.amount);
+
+            // Generate list of colors based on the length of transactionDates array
+            const numColors = transactionDates.length;
+            const barColors = generateColors(numColors);
+
+            // Function to generate list of colors
+            function generateColors(numColors) {
+              const colors = [];
+              for (let i = 0; i < numColors; i++) {
+                // Generate random color
+                const color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+                colors.push(color);
+              }
+              return colors;
+            }
+
+            // Log the extracted data and colors
+            console.log('Transaction Dates:', transactionDates);
+            console.log('Amounts:', amounts);
+            console.log('Bar Colors:', barColors);
             
 
-            const xValues = ["Jan", "Feb", "March", "April", "",];
-            const yValues = [20000, 35000, 5000, 50000, 0];
-            const barColors = ["red", "green","blue","orange"];
+            transactionDates.push("")
+            amounts.push("")
+            const xValues = transactionDates;
+            const yValues = amounts;
+            // const barColors = ["red", "green","blue","orange"];
 
             new Chart("myChart", {
             type: "bar",
@@ -166,6 +219,21 @@
             });
         },
 
+        sortDate(data) {
+          data.sort((a, b) => {
+            // Convert transactionDate strings to Date objects for comparison
+            const dateA = new Date(a.transactionDate);
+            const dateB = new Date(b.transactionDate);
+
+            
+
+            // Compare dates
+            
+            // return dateA - dateB;
+            return dateA - dateB;
+          });
+        },
+
         logOut() {
           if(process.client) {
             localStorage.removeItem('token')
@@ -174,16 +242,25 @@
         },
 
         async paymentHistory() {
-          await getPaymentHistory()
-          // await changePassword()
+          this.transactionList = await getPaymentHistory()
+          this.loadGraph()
+          this.sortDate(this.transactionList)
         }
       },
 
       mounted() {
-        this.loadGraph()
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.datepicker');
+          var instances = M.Datepicker.init(elems, {
+    format: 'yyyy-mm-dd' // Set the format option to 'yyyy-mm-dd'
+  });
+          console.log('loading.................................');
+        });
+        M.AutoInit();
+        
 
         console.log('calling paymentHistory');
-        // this.paymentHistory()
+        this.paymentHistory()
       },
 
       created() {
@@ -193,5 +270,3 @@
   </script>
   
   
-  <style scoped>
-  </style>

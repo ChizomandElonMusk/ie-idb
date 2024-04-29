@@ -50,6 +50,18 @@
   padding: 5px;
  }
 
+ .flexcontainerSearch {
+  display: flex;
+  align-items: center;
+ }
+ .flexitem-datepicker {
+  flex-grow: 1;
+  display: flex; /* Ensure nested elements are also flex */
+  align-items: center; /* Align nested elements vertically */
+ }
+
+
+
  .boarder-top {
   margin-top: 15px;
  }

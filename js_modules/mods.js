@@ -68,6 +68,40 @@ export async function getUserInfo() {
     }
 }
 
+export async function searchPaymentHistory(account_number, start_date, end_date) {
+    let token = localStorage.getItem('jdotwdott')
+    var passwords = ""
+    passwords = {
+        params: [account_number, start_date, end_date],
+    }
+    passwords = JSON.stringify(passwords)
+
+    try {
+        const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/paymenthistory2', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+                'Content-Type': 'application/json',
+                'token': token
+
+            },
+            body: passwords,
+        })
+
+        const response = await rawResponse.json()
+        console.log(response)
+        return response
+
+        // console.log(response)
+
+        // console.log(response.passwords)
+        // console.log(response)
+        // return response
+    } catch (error) {
+        console.log(error)
+        M.toast({html: `<b class="red-text">${error}</b>`})
+    }
+}
 
 export async function getPaymentHistory() {
     let token = localStorage.getItem('jdotwdott')
@@ -90,7 +124,7 @@ export async function getPaymentHistory() {
         })
 
         const response = await rawResponse.json()
-        console.log(response)
+        // console.log(response)
         return response
 
         // console.log(response)

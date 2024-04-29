@@ -17,14 +17,15 @@
            
         </div>
 
-        <div class="flexitem-notification">
-          <i class="material-icons">notifications</i>
+        <div class="flexitem-notification" @click="logOut()">
+          <!-- <i class="material-icons">notifications</i> -->
+          <img src="~assets/images/logout.svg" v-if="meter_reachable == true" class="responsive-img" style="max-width: 30px; filter: hue-rotate(180deg);" alt="">
         </div>
       </div>
   
       <div class="row">
         <b class="grey-text darken-4">
-          Chizom Echehieuka
+          {{ account_name }}
         </b>
         <br>
         <div class="card-panel red" style="border-radius: 10px;">
@@ -32,24 +33,39 @@
           <div class="flexcontainerinfo">
 
             <div class="white-text flex-icon-day">
-              <img src="~assets/images/rainy.svg" class="responsive-img" style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
+              <img src="~assets/images/bulb_on.svg" v-if="meter_reachable == true" class="responsive-img" style="max-width: 50px;" alt="">
+              <img src="~assets/images/bulb_off.svg" v-if="meter_reachable == false" class="responsive-img" style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
             </div>
 
             <div class="flex-time">
               <span class="white-text" style="font-size: 12px;">
                 {{ dashboard_date }}
-              </span> <br>
-              <span class="white-text" style="font-weight: 600; font-size: 20px;">
-                Cloudy
-              </span> <br>
+              </span> 
+              <br>
+
+              <span class="white-text" style="font-weight: 600; font-size: 10px;">
+                Account number:
+              </span> 
+              <br>
+
               <span class="white-text" style="font-weight: 300; font-size: 12px;">
-                Lagos, Nigeria
+                {{ account_number }}
               </span>
+              <br>
+
+              <span class="white-text" style="font-weight: 600; font-size: 10px;">
+                Meter number:
+              </span><br>
+              <span class="white-text" style="font-weight: 300; font-size: 12px;">
+                {{ meter_number }}
+              </span>
+
             </div>
 
             <div class="flex-temperature">
-              <span class="white-text" style="font-size: 50px;">
-                19&deg;C
+              <b style="background-color: yellow; padding: 5px; border-radius: 10px;">Tariff:</b> <br>
+              <span class="white-text" style="font-size: 20px;">
+                {{ tariff }}
               </span>
             </div>
 
@@ -58,7 +74,7 @@
           <div class="flexcontainerinfo" style="margin-top: 5px;">
 
             <div class="white-text flex-meter-number">
-              <b class="black-text" style="background-color: yellow; padding: 5px; border-radius: 10px;">Meter number:</b> 3450834059834
+              <!-- <b class="black-text" style="background-color: yellow; padding: 5px; border-radius: 10px;">Meter number:</b> {{ meter_number }} -->
             </div>
 
           </div>
@@ -187,9 +203,13 @@
 
       data() {
         return {
-          fullname: '',
+          account_name: '',
+          account_number: '',
+          meter_number: '',
+          tariff: '',
           greeting: '',
           dashboard_date: '',
+          meter_reachable: true,
   
           name: '',
           email: '',
@@ -203,13 +223,18 @@
       methods: {
         logOut() {
           if(process.client) {
-            localStorage.removeItem('token')
+            localStorage.clear()
             window.location = './'
           }
         },
 
         async getUserDetails() {
-          await getUserInfo()
+          let user_info = await getUserInfo()
+          this.account_name = user_info.accountName
+          this.account_number = user_info.accountNumber
+          this.meter_number = user_info.meterNumber
+          this.tariff = user_info.tariff
+          console.log('here is the ut ', this.account_name);
         },
 
         greetUser() {
