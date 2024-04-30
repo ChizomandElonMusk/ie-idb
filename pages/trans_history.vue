@@ -1,5 +1,5 @@
 <template>
-    <div style="padding-top: 40px;" class="container">
+    <div style="padding-top: 60px;" class="container">
       <!-- <div class="row">
         <div>
           <h6 class="red-text" style="font-weight: 100; margin-bottom: 20px;">
@@ -23,7 +23,7 @@
         </div>
 
         <div class="flexitem-notification">
-          <i class="material-icons">notifications</i>
+          <!-- <i class="material-icons">notifications</i> -->
         </div>
       </div>
 
@@ -33,11 +33,11 @@
 
       <div class="flexcontainerSearch">
         <div class=" input-field flexitem-datepicker">
-          <input type="date" placeholder="From" class="black btn btn-medium btn-flat white-text" v-model="date_from" style="border-radius: 10px 0 0px 10px; margin-top: 10px;">
+          <input type="date" placeholder="From" class="orange btn btn-medium btn-flat black-text" v-model="date_from" style="border-radius: 10px 0 0px 10px; margin-top: 10px;">
         </div>
         <div style="width: 3px;"></div>
         <div class=" input-field flexitem-datepicker">
-          <input type="date" placeholder="To" class="black btn btn-medium btn-flat white-text" v-model="date_to" style="border-radius: 0px 10px 10px 0px; margin-top: 10px;">
+          <input type="date" placeholder="To" class="orange btn btn-medium btn-flat black-text" v-model="date_to" style="border-radius: 0px 10px 10px 0px; margin-top: 10px;">
         </div>
         <div class=" input-field flexitem-datepicker">
           <img src="~assets/images/search.svg" class="responsive-img" style="max-width: 45px;" @click="getDateFrom()">
@@ -80,8 +80,8 @@
                 <tbody v-for="(trans, index) in transactionList" :id="trans.orderNo">
                     <tr>
                         <td>{{ index + 1 }}</td>
-                        <td>₦{{ trans.amount }}</td>
-                        <td>{{ trans.transactionDate }}</td>
+                        <td>₦{{ formatCurrency(trans.amount) }}</td>
+                        <td>{{ formatDateToString(trans.transactionDate) }}</td>
                     </tr>
                     
                 </tbody>
@@ -160,6 +160,16 @@
             this.sortDate(this.transactionList)
             this.loadGraph()
           }
+        },
+
+        formatDateToString(value) {
+          let stringDate = new Date(value).toDateString()
+          return stringDate
+        },
+
+        formatCurrency(value) {
+          return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
         },
 
         loadGraph() {
