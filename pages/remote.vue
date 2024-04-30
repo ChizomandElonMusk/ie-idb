@@ -1,5 +1,5 @@
 <template>
-    <div style="padding-top: 40px;" class="container">
+    <div style="padding-top: 60px;" class="container">
       <!-- <div class="row">
         <div>
           <h6 class="red-text" style="font-weight: 100; margin-bottom: 20px;">
@@ -63,9 +63,9 @@
       </div>
 
       <div class="row">
-        <nuxt-link to="./dashboard" class="btn btn-large col s12 orange black-text" style="border-radius: 10px; font-weight: 400;">
+        <button class="btn btn-large col s12 orange black-text" @click="loadToken()" style="border-radius: 10px; font-weight: 400;">
             <b>Load token</b>
-        </nuxt-link>
+        </button>
       </div>
 
       <br>
@@ -85,7 +85,7 @@
   
   <script>
   import Keyboard from '~/components/Keyboard.vue';
-
+  import { getUserInfo } from '~/js_modules/mods'
 
   export default {
       layout: 'admin_main',
@@ -97,7 +97,7 @@
         return {
             value: '',
             pastedContent: '',
-            meter_number: '23203042032042'
+            meter_number: ''
         }
       },
 
@@ -133,10 +133,28 @@
 
           // Test if the value matches the numeric pattern
           return numericRegex.test(value);
-        }
+        },
+
+        loadToken() {
+          this.value = this.value.trim()
+          if (this.value == '') {
+
+          } else {
+            this.value = 'Token successfully loaded'
+          }
+        },
+
+        async getUserDetails() {
+          let user_info = await getUserInfo()
+          this.meter_number = user_info.meterNumber
+        },
 
         
 
+      },
+
+      mounted() {
+        this.getUserDetails()
       },
 
       created() {

@@ -46,10 +46,16 @@
           </button> -->
         </div>
       </div>
+
+      <div class="row" :class="{'hide': hideLoader}">
+        <div class="col s12 center">
+          <img src="~assets/images/logo.png" class="responsive-img heartbeat" style="max-width: 60px;">
+        </div>
+      </div>
       
       
   
-      <div class="row">
+      <div class="row" :class="{'hide': hideElements}">
         <div class="card-panel white" style="border-radius: 10px;">
             <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
         </div>
@@ -65,7 +71,7 @@
 
       <!-- start of buttons -->
 
-      <div class="row">
+      <div class="row" :class="{'hide': hideElements}">
 
         <div class="col s12">
             <table class="striped">
@@ -139,6 +145,8 @@
             transactionList: [],
             date_from: '',
             date_to: '',
+            hideLoader: true,
+            hideElements: true,
   
         }
       },
@@ -147,10 +155,16 @@
         async getDateFrom() {
           this.date_from = this.date_from.trim()
           this.date_to = this.date_to.trim()
+          this.hideLoader = false
+          this.hideElements = true
 
           if (this.date_from == '' || this.date_to == '') {
             M.toast({html: '<b class="red-text">Please pick a valid date</b>'})
+            this.hideLoader = true
+            this.hideElements = false
           } else {
+            this.hideLoader = true
+            this.hideElements = false
             let date_from = this.date_from.replace(/-/g, '')
             let date_to = this.date_to.replace(/-/g, '')
 
@@ -252,9 +266,13 @@
         },
 
         async paymentHistory() {
+          this.hideLoader = false
+          this.hideElements = true
           this.transactionList = await getPaymentHistory()
           this.loadGraph()
           this.sortDate(this.transactionList)
+          this.hideLoader = true
+          this.hideElements = false
         }
       },
 

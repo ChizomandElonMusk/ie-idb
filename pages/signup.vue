@@ -56,7 +56,7 @@
                             </div>
                             <div class="row">
                                 <div class="input-field">
-                                    <button class="customButtonColor btn btn-large col s12 red">
+                                    <button class="customButtonColor btn btn-large col s12 red" style="border-radius: 10px 10px 10px 10px;">
                                         Create Account
                                     </button>
                                 </div>

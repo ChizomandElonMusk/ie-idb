@@ -26,7 +26,7 @@
                   </div>
                   <div class="row">
                       <div class="input-field col s12 center">
-                          <button class="red btn btn-large col s12" @click="signIn">
+                          <button class="red btn btn-large col s12" @click="signIn" style="border-radius: 10px 10px 10px 10px;">
                               Login
                           </button>
                       </div>
