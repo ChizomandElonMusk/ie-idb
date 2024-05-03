@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/remote%20copy", {data:[{}],fetch:{},mutations:void 0});

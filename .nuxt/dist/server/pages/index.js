@@ -1,4 +1,4 @@
-exports.ids = [13,5,7];
+exports.ids = [15,5,7];
 exports.modules = {
 
 /***/ 36:
@@ -12,70 +12,17 @@ module.exports = __webpack_require__.p + "img/logo.e97530d.png";
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Logo.vue?vue&type=template&id=ac56e43a&
-var render = function render() {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c('div', [_vm._ssrNode("<div class=\"row\" style=\"margin-top: 0px\"><div class=\"col s12 m3\"></div> <div class=\"col s12 m6 center\"><img" + _vm._ssrAttr("src", __webpack_require__(36)) + " alt class=\"responsive-img circle\" style=\"max-width:100px; max-height:100px\"></div> <div class=\"col s12 m3\"></div></div>")]);
-};
-var staticRenderFns = [];
-
-// CONCATENATED MODULE: ./components/Logo.vue?vue&type=template&id=ac56e43a&
-
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Logo.vue?vue&type=script&lang=js&
-/* harmony default export */ var Logovue_type_script_lang_js_ = ({
-  name: 'TinaLogo'
-});
-// CONCATENATED MODULE: ./components/Logo.vue?vue&type=script&lang=js&
- /* harmony default export */ var components_Logovue_type_script_lang_js_ = (Logovue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(2);
-
-// CONCATENATED MODULE: ./components/Logo.vue
-
-
-
-function injectStyles (context) {
-  
-  
-}
-
-/* normalize component */
-
-var component = Object(componentNormalizer["a" /* default */])(
-  components_Logovue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  injectStyles,
-  null,
-  "73e52696"
-  
-)
-
-/* harmony default export */ var Logo = __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ 39:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/angled_background.3974983.jpg";
-
-/***/ }),
-
-/***/ 41:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return loginUser; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getUserInfo; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return searchPaymentHistory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getPaymentHistory; });
-/* unused harmony export changePassword */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return loginUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getUserInfo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return searchPaymentHistory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getPaymentHistory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return registerIntent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return confirmOtp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return changePassword; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return passwordResetIntent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return confirmPasswordResetToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getOnlineStatus; });
+/* unused harmony export paymentReceipt */
 async function loginUser(username, password) {
   var passwords = "";
   passwords = {
@@ -205,14 +152,77 @@ async function getPaymentHistory() {
     });
   }
 }
-async function changePassword() {
-  let token = localStorage.getItem('jdotwdott');
-  console.log('this is the token ', token);
-  var passwords = "";
-  passwords = {
-    params: ["Test@001", "Test@001"]
+async function registerIntent(meterNumber) {
+  var user_meter_number = "";
+  user_meter_number = {
+    params: [meterNumber]
   };
-  passwords = JSON.stringify(passwords);
+  user_meter_number = JSON.stringify(user_meter_number);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/registerintent', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json'
+      },
+      body: user_meter_number
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function confirmOtp(otp) {
+  let token = localStorage.getItem('jdotwdott');
+  var userOtp = "";
+  userOtp = {
+    params: [otp]
+  };
+  userOtp = JSON.stringify(userOtp);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/register', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json',
+        'token': token
+      },
+      body: userOtp
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function changePassword(newPassword, confirmPassword) {
+  let token = localStorage.getItem('jdotwdott');
+  var userPasswords = "";
+  userPasswords = {
+    params: [newPassword, confirmPassword]
+  };
+  userPasswords = JSON.stringify(userPasswords);
   try {
     const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/changepassword', {
       method: 'POST',
@@ -221,7 +231,141 @@ async function changePassword() {
         'Content-Type': 'application/json',
         'token': token
       },
-      body: passwords
+      body: userPasswords
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function passwordResetIntent(username) {
+  var usernameReq = "";
+  usernameReq = {
+    params: [username]
+  };
+  usernameReq = JSON.stringify(usernameReq);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/resetintent', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json'
+      },
+      body: usernameReq
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function confirmPasswordResetToken(otp) {
+  let token = localStorage.getItem('jdotwdott');
+  var userOtp = "";
+  userOtp = {
+    params: [otp]
+  };
+  userOtp = JSON.stringify(userOtp);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/reset', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json',
+        'token': token
+      },
+      body: userOtp
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function getOnlineStatus() {
+  let token = localStorage.getItem('jdotwdott');
+  // var userMeterNumber = ""
+  // userMeterNumber = {
+  //     params: [otp],
+  // }
+  // userMeterNumber = JSON.stringify(userMeterNumber)
+
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/onlinestatus', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json',
+        'token': token
+      }
+      // body: userMeterNumber,
+    });
+
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+
+// payment receipt 
+async function paymentReceipt(orderNumber, channel) {
+  let token = localStorage.getItem('jdotwdott');
+  var userReceiptReq = "";
+  userReceiptReq = {
+    params: [orderNumber, channel]
+  };
+  userReceiptReq = JSON.stringify(userReceiptReq);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/paymentreceipt', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json',
+        'token': token
+      },
+      body: userReceiptReq
     });
     const response = await rawResponse.json();
     console.log(response);
@@ -242,7 +386,66 @@ async function changePassword() {
 
 /***/ }),
 
-/***/ 51:
+/***/ 38:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Logo.vue?vue&type=template&id=ac56e43a&
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('div', [_vm._ssrNode("<div class=\"row\" style=\"margin-top: 0px\"><div class=\"col s12 m3\"></div> <div class=\"col s12 m6 center\"><img" + _vm._ssrAttr("src", __webpack_require__(36)) + " alt class=\"responsive-img circle\" style=\"max-width:100px; max-height:100px\"></div> <div class=\"col s12 m3\"></div></div>")]);
+};
+var staticRenderFns = [];
+
+// CONCATENATED MODULE: ./components/Logo.vue?vue&type=template&id=ac56e43a&
+
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Logo.vue?vue&type=script&lang=js&
+/* harmony default export */ var Logovue_type_script_lang_js_ = ({
+  name: 'TinaLogo'
+});
+// CONCATENATED MODULE: ./components/Logo.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_Logovue_type_script_lang_js_ = (Logovue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(2);
+
+// CONCATENATED MODULE: ./components/Logo.vue
+
+
+
+function injectStyles (context) {
+  
+  
+}
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  components_Logovue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  injectStyles,
+  null,
+  "73e52696"
+  
+)
+
+/* harmony default export */ var Logo = __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ 39:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/angled_background.3974983.jpg";
+
+/***/ }),
+
+/***/ 42:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -292,46 +495,50 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 76:
+/***/ 80:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=729baad2&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=71abc3ab&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c('div', [_vm._ssrNode("<div class=\"row full-width\">", "</div>", [_vm._ssrNode("<div class=\"col s12 m6\" style=\"margin-top: 130px\">", "</div>", [_c('Logo'), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"container\">", "</div>", [_vm._ssrNode("<div class=\"row\">", "</div>", [_vm._ssrNode("<h5 class=\"center red-text\">\n              IDB\n            </h5> "), _c('PreLoader', {
-    staticClass: "center",
-    class: {
-      'hide': _vm.hidePreLoader
-    }
-  })], 2), _vm._ssrNode(" "), _vm._ssrNode("<form>", "</form>", [_vm._ssrNode("<div class=\"row\"><div class=\"input-field col s12\"><input type=\"text\" placeholder id=\"username\"" + _vm._ssrAttr("value", _vm.username) + " class=\"black-text focus\"> <label for=\"username\">Username</label></div></div> <div class=\"row\"><div class=\"input-field col s12\"><input type=\"password\" placeholder id=\"password\"" + _vm._ssrAttr("value", _vm.password) + " class=\"black-text\"> <label for=\"password\">Password</label></div></div> <div class=\"row\"><div class=\"input-field col s12 center\"><button class=\"red btn btn-large col s12\">\n                          Login\n                      </button></div></div> "), _vm._ssrNode("<div class=\"row\">", "</div>", [_vm._ssrNode("<div class=\"input-field col s12 center\">", "</div>", [_vm._ssrNode("\n                    Create a free account\n                      "), _c('nuxt-link', {
+  return _c('div', [_vm._ssrNode("<div class=\"row full-width\">", "</div>", [_vm._ssrNode("<div class=\"col s12 m6\" style=\"margin-top: 130px\">", "</div>", [_c('Logo'), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"container\">", "</div>", [_vm._ssrNode("<div class=\"row\"><h5 class=\"center red-text\">\n              IDB\n            </h5> <div" + _vm._ssrClass("row", {
+    'hide': _vm.hidePreLoader
+  }) + "><div class=\"col s12 center\"><img" + _vm._ssrAttr("src", __webpack_require__(36)) + " class=\"responsive-img heartbeat\" style=\"max-width: 60px;\"></div></div></div> "), _vm._ssrNode("<form>", "</form>", [_vm._ssrNode("<div class=\"row\"><div class=\"input-field col s12\"><input type=\"text\" placeholder id=\"username\"" + _vm._ssrAttr("value", _vm.username) + " class=\"black-text focus\"> <label for=\"username\">Username</label></div></div> <div class=\"row\"><div class=\"input-field col s12\"><input type=\"password\" placeholder id=\"password\"" + _vm._ssrAttr("value", _vm.password) + " class=\"black-text\"> <label for=\"password\">Password</label></div></div> <div class=\"row\"><div class=\"input-field col s12 center\"><button class=\"red btn btn-large col s12\" style=\"border-radius: 10px 10px 10px 10px;\">\n                          Login\n                      </button></div></div> "), _vm._ssrNode("<div class=\"row\">", "</div>", [_vm._ssrNode("<div class=\"input-field col s12 center\">", "</div>", [_vm._ssrNode("\n                    Create a free account\n                      "), _c('nuxt-link', {
     staticStyle: {
       "width": "300px"
     },
     attrs: {
       "to": "./signup"
     }
-  }, [_vm._v("\n                          Signup\n                      ")])], 2)])], 2)], 2)], 2), _vm._ssrNode(" <div class=\"col s12 m6 full-width hide-on-small-and-down\"" + _vm._ssrStyle(null, {
+  }, [_vm._v("\n                          Signup\n                      ")])], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\">", "</div>", [_vm._ssrNode("<div class=\"input-field col s12 center\">", "</div>", [_c('nuxt-link', {
+    staticStyle: {
+      "width": "300px"
+    },
+    attrs: {
+      "to": "./forgot"
+    }
+  }, [_vm._v("\n                          Forgot password\n                      ")])], 1)])], 2)], 2)], 2), _vm._ssrNode(" <div class=\"col s12 m6 full-width hide-on-small-and-down\"" + _vm._ssrStyle(null, {
     backgroundImage: `url(${_vm.backgroundUrl})`
   }, null) + "></div>")], 2)]);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=729baad2&
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=71abc3ab&
 
 // EXTERNAL MODULE: ./assets/images/angled_background.jpg
 var angled_background = __webpack_require__(39);
 var angled_background_default = /*#__PURE__*/__webpack_require__.n(angled_background);
 
 // EXTERNAL MODULE: ./components/PreLoader.vue + 4 modules
-var PreLoader = __webpack_require__(51);
+var PreLoader = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./js_modules/mods.js
-var mods = __webpack_require__(41);
+var mods = __webpack_require__(37);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=script&lang=js&
 
@@ -351,8 +558,8 @@ var mods = __webpack_require__(41);
   data() {
     return {
       backgroundUrl: angled_background_default.a,
-      username: 'aafolayan',
-      password: 'Test@001',
+      username: 'cechehieuka@ikejaelectric.com',
+      password: 'Chizom.@1',
       hidePreLoader: true
     };
   },
@@ -362,7 +569,6 @@ var mods = __webpack_require__(41);
         html: '<b class="yellow-text">Please wait...</b>'
       });
       this.hidePreLoader = false;
-      // this.$router.push('./dashboard')
       this.username = this.username.trim();
       this.password = this.password.trim();
       if (this.username === '' || this.password === '') {
@@ -371,17 +577,22 @@ var mods = __webpack_require__(41);
         });
         this.hidePreLoader = true;
       } else {
-        let credentials = await Object(mods["c" /* loginUser */])(this.username, this.password);
-        console.log(credentials.jws);
-        if (credentials == undefined) {
+        let credentials = await Object(mods["g" /* loginUser */])(this.username, this.password);
+        console.log(credentials);
+        if (credentials == undefined || credentials.message == 'Error encountered while processing request!') {
           M.toast({
             html: '<b class="red-text">Check Username or Password!</b>'
           });
           this.hidePreLoader = true;
         } else {
           localStorage.setItem('jdotwdott', credentials.jws);
-          this.$router.push('./dashboard');
-          this.hidePreLoader = true;
+          if (credentials.u.roles[0] == 'NEW') {
+            this.$router.push('./reset_password');
+            this.hidePreLoader = true;
+          } else if (credentials.u.roles[0] == 'REGULAR') {
+            this.$router.push('./dashboard');
+            this.hidePreLoader = true;
+          }
         }
       }
 
@@ -574,7 +785,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var pages = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {Logo: __webpack_require__(37).default,PreLoader: __webpack_require__(51).default})
+installComponents(component, {Logo: __webpack_require__(38).default})
 
 
 /***/ })

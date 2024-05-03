@@ -43,7 +43,7 @@ module.exports =
 /******/
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("./" + ({"1":"components/custom-select","2":"components/forgot","3":"components/keyboard","4":"components/login","5":"components/logo","6":"components/meter-input","7":"components/pre-loader","8":"components/sign-up","9":"pages/about","10":"pages/dashboard","11":"pages/energy_usage","12":"pages/forgot","13":"pages/index","14":"pages/login","15":"pages/purchase_electricity","16":"pages/remote","17":"pages/remote copy","18":"pages/sent","19":"pages/signup","20":"pages/trans_history","21":"pages/user-info"}[chunkId]||chunkId) + ".js");
+/******/ 			var chunk = require("./" + ({"1":"components/custom-select","2":"components/forgot","3":"components/keyboard","4":"components/login","5":"components/logo","6":"components/meter-input","7":"components/pre-loader","8":"components/sign-up","9":"pages/about","10":"pages/confirm_otp","11":"pages/confirm_otp_reset_password","12":"pages/dashboard","13":"pages/energy_usage","14":"pages/forgot","15":"pages/index","16":"pages/login","17":"pages/purchase_electricity","18":"pages/remote","19":"pages/reset_password","20":"pages/sent","21":"pages/signup","22":"pages/success_forgotten_password_reset","23":"pages/success_password_change","24":"pages/success_reg","25":"pages/trans_history","26":"pages/user-info"}[chunkId]||chunkId) + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -837,7 +837,7 @@ __webpack_require__(4).default("e622d370", content, true)
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(3);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "input::-moz-placeholder{color:#fff}input::placeholder{color:#fff}.flexcontainer,.flexitem-username{display:flex;align-items:center}.flexitem-username{flex-grow:1}.flexcontainerinfo{display:flex}.flex-icon-day{flex-grow:1;font-size:40px}.flex-meter-number,.flex-temperature,.flex-time{flex-grow:1}.flexcontainerbtn{display:flex;justify-content:space-between}.flex-buttons{flex-grow:1;padding:5px}.flexcontainerSearch,.flexitem-datepicker{display:flex;align-items:center}.flexitem-datepicker{flex-grow:1}.boarder-top{margin-top:15px}.button-text{font-weight:600}.input-field>label{color:grey;position:absolute;top:0;left:0;font-size:1rem;cursor:text;transition:transform .2s ease-out,color .2s ease-out;transform-origin:0 100%;text-align:left;text-align:initial;transform:translateY(12px)}.input-field input:focus+label{color:grey!important}.row .input-field input:focus{border-bottom:1px solid grey!important;box-shadow:0 1px 0 0 grey!important}.full-width{height:100vh!important;margin:0}.row{margin-bottom:0!important}.overlay-red{background-color:#f44336;z-index:2;cursor:pointer}.customButtonColor{background-color:#12121a}::-moz-placeholder{color:grey}::placeholder{color:grey}nav .brand-logo,nav ul a{color:#444}p{line-height:2rem}.sidenav-trigger{color:#26a69a}.parallax-container{min-height:380px;line-height:0;height:auto;color:hsla(0,0%,100%,.9)}.parallax-container .section{width:100%}@media only screen and (max-width:992px){.parallax-container .section{position:absolute;top:40%}#index-banner .section{top:10%}}@media only screen and (max-width:600px){#index-banner .section{top:0}}.icon-block{padding:0 15px}.icon-block .material-icons{font-size:inherit}footer.page-footer{margin:0}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "input::-moz-placeholder{color:#fff}input::placeholder{color:#fff}.flexcontainer,.flexitem-username{display:flex;align-items:center}.flexitem-username{flex-grow:1}.flexcontainerinfo{display:flex}.flex-icon-day{flex-grow:1;font-size:40px}.flex-meter-number,.flex-temperature,.flex-time{flex-grow:1}.flexcontainerbtn{display:flex;justify-content:space-between}.flex-buttons{flex-grow:1;padding:5px}.flexcontainerSearch,.flexitem-datepicker{display:flex;align-items:center}.flexitem-datepicker{flex-grow:1}.boarder-top{margin-top:15px}.button-text{font-weight:600}.input-field>label{color:grey;position:absolute;top:0;left:0;font-size:1rem;cursor:text;transition:transform .2s ease-out,color .2s ease-out;transform-origin:0 100%;text-align:left;text-align:initial;transform:translateY(12px)}.input-field input:focus+label{color:grey!important}.row .input-field input:focus{border-bottom:1px solid grey!important;box-shadow:0 1px 0 0 grey!important}.full-width{height:100vh!important;margin:0}.row{margin-bottom:0!important}.overlay-red{background-color:#f44336;z-index:2;cursor:pointer}.customButtonColor{background-color:#12121a}::-moz-placeholder{color:grey}::placeholder{color:grey}nav .brand-logo,nav ul a{color:#444}p{line-height:2rem}.sidenav-trigger{color:#26a69a}.parallax-container{min-height:380px;line-height:0;height:auto;color:hsla(0,0%,100%,.9)}.parallax-container .section{width:100%}@media only screen and (max-width:992px){.parallax-container .section{position:absolute;top:40%}#index-banner .section{top:10%}}@media only screen and (max-width:600px){#index-banner .section{top:0}}.icon-block{padding:0 15px}.icon-block .material-icons{font-size:inherit}footer.page-footer{margin:0}.heartbeat{animation:heartbeat 1.5s ease-in-out infinite both}@keyframes heartbeat{0%{transform:scale(1);transform-origin:center center;animation-timing-function:ease-out}10%{transform:scale(.91);animation-timing-function:ease-in}17%{transform:scale(.98);animation-timing-function:ease-out}33%{transform:scale(.87);animation-timing-function:ease-in}45%{transform:scale(1);animation-timing-function:ease-out}}", ""]);
 // Exports
 module.exports = ___CSS_LOADER_EXPORT___;
 
@@ -1623,19 +1623,24 @@ function shouldScrollToTop(route) {
 
 
 
-const _cb46bde6 = () => interopDefault(__webpack_require__.e(/* import() | pages/about */ 9).then(__webpack_require__.bind(null, 65)));
-const _30ee9894 = () => interopDefault(__webpack_require__.e(/* import() | pages/dashboard */ 10).then(__webpack_require__.bind(null, 66)));
-const _00fe474c = () => interopDefault(__webpack_require__.e(/* import() | pages/energy_usage */ 11).then(__webpack_require__.bind(null, 67)));
-const _4c5e1fd3 = () => interopDefault(__webpack_require__.e(/* import() | pages/forgot */ 12).then(__webpack_require__.bind(null, 68)));
-const _f887c22e = () => interopDefault(__webpack_require__.e(/* import() | pages/login */ 14).then(__webpack_require__.bind(null, 69)));
-const _1169e6e3 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchase_electricity */ 15).then(__webpack_require__.bind(null, 64)));
-const _c6b82914 = () => interopDefault(__webpack_require__.e(/* import() | pages/remote */ 16).then(__webpack_require__.bind(null, 70)));
-const _afc3bce2 = () => interopDefault(__webpack_require__.e(/* import() | pages/remote copy */ 17).then(__webpack_require__.bind(null, 71)));
-const _31426070 = () => interopDefault(__webpack_require__.e(/* import() | pages/sent */ 18).then(__webpack_require__.bind(null, 72)));
-const _4021ab48 = () => interopDefault(__webpack_require__.e(/* import() | pages/signup */ 19).then(__webpack_require__.bind(null, 73)));
-const _30899906 = () => interopDefault(__webpack_require__.e(/* import() | pages/trans_history */ 20).then(__webpack_require__.bind(null, 74)));
-const _72dc2170 = () => interopDefault(__webpack_require__.e(/* import() | pages/user-info */ 21).then(__webpack_require__.bind(null, 75)));
-const _8bd7085c = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 13).then(__webpack_require__.bind(null, 76)));
+const _cb46bde6 = () => interopDefault(__webpack_require__.e(/* import() | pages/about */ 9).then(__webpack_require__.bind(null, 64)));
+const _3d0565a8 = () => interopDefault(__webpack_require__.e(/* import() | pages/confirm_otp */ 10).then(__webpack_require__.bind(null, 65)));
+const _00cdfe2e = () => interopDefault(__webpack_require__.e(/* import() | pages/confirm_otp_reset_password */ 11).then(__webpack_require__.bind(null, 66)));
+const _30ee9894 = () => interopDefault(__webpack_require__.e(/* import() | pages/dashboard */ 12).then(__webpack_require__.bind(null, 67)));
+const _00fe474c = () => interopDefault(__webpack_require__.e(/* import() | pages/energy_usage */ 13).then(__webpack_require__.bind(null, 68)));
+const _4c5e1fd3 = () => interopDefault(__webpack_require__.e(/* import() | pages/forgot */ 14).then(__webpack_require__.bind(null, 69)));
+const _f887c22e = () => interopDefault(__webpack_require__.e(/* import() | pages/login */ 16).then(__webpack_require__.bind(null, 70)));
+const _1169e6e3 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchase_electricity */ 17).then(__webpack_require__.bind(null, 63)));
+const _c6b82914 = () => interopDefault(__webpack_require__.e(/* import() | pages/remote */ 18).then(__webpack_require__.bind(null, 71)));
+const _c69fef8a = () => interopDefault(__webpack_require__.e(/* import() | pages/reset_password */ 19).then(__webpack_require__.bind(null, 72)));
+const _31426070 = () => interopDefault(__webpack_require__.e(/* import() | pages/sent */ 20).then(__webpack_require__.bind(null, 73)));
+const _4021ab48 = () => interopDefault(__webpack_require__.e(/* import() | pages/signup */ 21).then(__webpack_require__.bind(null, 74)));
+const _f4740b48 = () => interopDefault(__webpack_require__.e(/* import() | pages/success_forgotten_password_reset */ 22).then(__webpack_require__.bind(null, 75)));
+const _ff1d30d0 = () => interopDefault(__webpack_require__.e(/* import() | pages/success_password_change */ 23).then(__webpack_require__.bind(null, 76)));
+const _129ce058 = () => interopDefault(__webpack_require__.e(/* import() | pages/success_reg */ 24).then(__webpack_require__.bind(null, 77)));
+const _30899906 = () => interopDefault(__webpack_require__.e(/* import() | pages/trans_history */ 25).then(__webpack_require__.bind(null, 78)));
+const _72dc2170 = () => interopDefault(__webpack_require__.e(/* import() | pages/user-info */ 26).then(__webpack_require__.bind(null, 79)));
+const _8bd7085c = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 15).then(__webpack_require__.bind(null, 80)));
 
 const emptyFn = () => {};
 external_vue_default.a.use(external_vue_router_default.a);
@@ -1649,6 +1654,14 @@ const routerOptions = {
     path: "/about",
     component: _cb46bde6,
     name: "about"
+  }, {
+    path: "/confirm_otp",
+    component: _3d0565a8,
+    name: "confirm_otp"
+  }, {
+    path: "/confirm_otp_reset_password",
+    component: _00cdfe2e,
+    name: "confirm_otp_reset_password"
   }, {
     path: "/dashboard",
     component: _30ee9894,
@@ -1674,9 +1687,9 @@ const routerOptions = {
     component: _c6b82914,
     name: "remote"
   }, {
-    path: "/remote%20copy",
-    component: _afc3bce2,
-    name: "remote copy"
+    path: "/reset_password",
+    component: _c69fef8a,
+    name: "reset_password"
   }, {
     path: "/sent",
     component: _31426070,
@@ -1685,6 +1698,18 @@ const routerOptions = {
     path: "/signup",
     component: _4021ab48,
     name: "signup"
+  }, {
+    path: "/success_forgotten_password_reset",
+    component: _f4740b48,
+    name: "success_forgotten_password_reset"
+  }, {
+    path: "/success_password_change",
+    component: _ff1d30d0,
+    name: "success_password_change"
+  }, {
+    path: "/success_reg",
+    component: _129ce058,
+    name: "success_reg"
   }, {
     path: "/trans_history",
     component: _30899906,
@@ -2498,15 +2523,15 @@ const layouts = {
 });
 // CONCATENATED MODULE: ./.nuxt/components/index.js
 const components_AdminNavBar = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 7)).then(c => wrapFunctional(c.default || c));
-const CustomSelect = () => __webpack_require__.e(/* import() | components/custom-select */ 1).then(__webpack_require__.bind(null, 55)).then(c => wrapFunctional(c.default || c));
-const Forgot = () => __webpack_require__.e(/* import() | components/forgot */ 2).then(__webpack_require__.bind(null, 53)).then(c => wrapFunctional(c.default || c));
-const Keyboard = () => __webpack_require__.e(/* import() | components/keyboard */ 3).then(__webpack_require__.bind(null, 40)).then(c => wrapFunctional(c.default || c));
-const Login = () => __webpack_require__.e(/* import() | components/login */ 4).then(__webpack_require__.bind(null, 54)).then(c => wrapFunctional(c.default || c));
-const Logo = () => __webpack_require__.e(/* import() | components/logo */ 5).then(__webpack_require__.bind(null, 37)).then(c => wrapFunctional(c.default || c));
-const MeterInput = () => __webpack_require__.e(/* import() | components/meter-input */ 6).then(__webpack_require__.bind(null, 77)).then(c => wrapFunctional(c.default || c));
+const CustomSelect = () => __webpack_require__.e(/* import() | components/custom-select */ 1).then(__webpack_require__.bind(null, 54)).then(c => wrapFunctional(c.default || c));
+const Forgot = () => __webpack_require__.e(/* import() | components/forgot */ 2).then(__webpack_require__.bind(null, 81)).then(c => wrapFunctional(c.default || c));
+const Keyboard = () => __webpack_require__.e(/* import() | components/keyboard */ 3).then(__webpack_require__.bind(null, 51)).then(c => wrapFunctional(c.default || c));
+const Login = () => __webpack_require__.e(/* import() | components/login */ 4).then(__webpack_require__.bind(null, 53)).then(c => wrapFunctional(c.default || c));
+const Logo = () => __webpack_require__.e(/* import() | components/logo */ 5).then(__webpack_require__.bind(null, 38)).then(c => wrapFunctional(c.default || c));
+const MeterInput = () => __webpack_require__.e(/* import() | components/meter-input */ 6).then(__webpack_require__.bind(null, 82)).then(c => wrapFunctional(c.default || c));
 const components_NavBar = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 8)).then(c => wrapFunctional(c.default || c));
-const PreLoader = () => __webpack_require__.e(/* import() | components/pre-loader */ 7).then(__webpack_require__.bind(null, 51)).then(c => wrapFunctional(c.default || c));
-const SignUp = () => __webpack_require__.e(/* import() | components/sign-up */ 8).then(__webpack_require__.bind(null, 78)).then(c => wrapFunctional(c.default || c));
+const PreLoader = () => __webpack_require__.e(/* import() | components/pre-loader */ 7).then(__webpack_require__.bind(null, 42)).then(c => wrapFunctional(c.default || c));
+const SignUp = () => __webpack_require__.e(/* import() | components/sign-up */ 8).then(__webpack_require__.bind(null, 83)).then(c => wrapFunctional(c.default || c));
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

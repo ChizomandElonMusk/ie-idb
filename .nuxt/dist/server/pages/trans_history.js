@@ -1,15 +1,28 @@
-exports.ids = [20,1];
+exports.ids = [25,1];
 exports.modules = {
 
-/***/ 41:
+/***/ 36:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/logo.e97530d.png";
+
+/***/ }),
+
+/***/ 37:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return loginUser; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getUserInfo; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return searchPaymentHistory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getPaymentHistory; });
-/* unused harmony export changePassword */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return loginUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getUserInfo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return searchPaymentHistory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getPaymentHistory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return registerIntent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return confirmOtp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return changePassword; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return passwordResetIntent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return confirmPasswordResetToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getOnlineStatus; });
+/* unused harmony export paymentReceipt */
 async function loginUser(username, password) {
   var passwords = "";
   passwords = {
@@ -139,14 +152,77 @@ async function getPaymentHistory() {
     });
   }
 }
-async function changePassword() {
-  let token = localStorage.getItem('jdotwdott');
-  console.log('this is the token ', token);
-  var passwords = "";
-  passwords = {
-    params: ["Test@001", "Test@001"]
+async function registerIntent(meterNumber) {
+  var user_meter_number = "";
+  user_meter_number = {
+    params: [meterNumber]
   };
-  passwords = JSON.stringify(passwords);
+  user_meter_number = JSON.stringify(user_meter_number);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/registerintent', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json'
+      },
+      body: user_meter_number
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function confirmOtp(otp) {
+  let token = localStorage.getItem('jdotwdott');
+  var userOtp = "";
+  userOtp = {
+    params: [otp]
+  };
+  userOtp = JSON.stringify(userOtp);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/register', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json',
+        'token': token
+      },
+      body: userOtp
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function changePassword(newPassword, confirmPassword) {
+  let token = localStorage.getItem('jdotwdott');
+  var userPasswords = "";
+  userPasswords = {
+    params: [newPassword, confirmPassword]
+  };
+  userPasswords = JSON.stringify(userPasswords);
   try {
     const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/changepassword', {
       method: 'POST',
@@ -155,7 +231,141 @@ async function changePassword() {
         'Content-Type': 'application/json',
         'token': token
       },
-      body: passwords
+      body: userPasswords
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function passwordResetIntent(username) {
+  var usernameReq = "";
+  usernameReq = {
+    params: [username]
+  };
+  usernameReq = JSON.stringify(usernameReq);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/resetintent', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json'
+      },
+      body: usernameReq
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function confirmPasswordResetToken(otp) {
+  let token = localStorage.getItem('jdotwdott');
+  var userOtp = "";
+  userOtp = {
+    params: [otp]
+  };
+  userOtp = JSON.stringify(userOtp);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/reset', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json',
+        'token': token
+      },
+      body: userOtp
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function getOnlineStatus() {
+  let token = localStorage.getItem('jdotwdott');
+  // var userMeterNumber = ""
+  // userMeterNumber = {
+  //     params: [otp],
+  // }
+  // userMeterNumber = JSON.stringify(userMeterNumber)
+
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/onlinestatus', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json',
+        'token': token
+      }
+      // body: userMeterNumber,
+    });
+
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+
+// payment receipt 
+async function paymentReceipt(orderNumber, channel) {
+  let token = localStorage.getItem('jdotwdott');
+  var userReceiptReq = "";
+  userReceiptReq = {
+    params: [orderNumber, channel]
+  };
+  userReceiptReq = JSON.stringify(userReceiptReq);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/paymentreceipt', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json',
+        'token': token
+      },
+      body: userReceiptReq
     });
     const response = await rawResponse.json();
     console.log(response);
@@ -176,7 +386,7 @@ async function changePassword() {
 
 /***/ }),
 
-/***/ 44:
+/***/ 41:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -199,7 +409,7 @@ module.exports.__inject__ = function (context) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CustomSelect_vue_vue_type_style_index_0_id_172a9751_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(44);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CustomSelect_vue_vue_type_style_index_0_id_172a9751_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(41);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CustomSelect_vue_vue_type_style_index_0_id_172a9751_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CustomSelect_vue_vue_type_style_index_0_id_172a9751_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CustomSelect_vue_vue_type_style_index_0_id_172a9751_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CustomSelect_vue_vue_type_style_index_0_id_172a9751_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
@@ -220,7 +430,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 55:
+/***/ 54:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -314,14 +524,14 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 62:
+/***/ 61:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/search.a28e282.svg";
 
 /***/ }),
 
-/***/ 63:
+/***/ 62:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -2390,21 +2600,21 @@ for(var k in plugins){if(plugins.hasOwnProperty(k)){core_controller.plugins.regi
 
 /***/ }),
 
-/***/ 74:
+/***/ 78:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/trans_history.vue?vue&type=template&id=48b711fa&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/trans_history.vue?vue&type=template&id=543ba658&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
     staticClass: "container",
     staticStyle: {
-      "padding-top": "40px"
+      "padding-top": "60px"
     }
   }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\">", "</div>", [_vm._ssrNode("<div class=\"flexitem-username\">", "</div>", [_c('nuxt-link', {
     staticClass: "btn btn-medium btn-flat red white-text",
@@ -2414,25 +2624,31 @@ var render = function render() {
     attrs: {
       "to": "./dashboard"
     }
-  }, [_vm._v("\n        Back\n      ")]), _vm._ssrNode(" <b class=\"grey white-text\" style=\"font-size: 20px; color: #757575; border-radius: 0 10px 10px 0; padding: 3px;\">\n        Transaction history\n      </b> <br> <b class=\"white-text darken-4\">\n        .......\n      </b>")], 2), _vm._ssrNode(" <div class=\"flexitem-notification\"><i class=\"material-icons\">notifications</i></div>")], 2), _vm._ssrNode(" <div class=\"flexcontainerSearch\"><div class=\"input-field flexitem-datepicker\"><input type=\"date\" placeholder=\"From\"" + _vm._ssrAttr("value", _vm.date_from) + " class=\"black btn btn-medium btn-flat white-text\" style=\"border-radius: 10px 0 0px 10px; margin-top: 10px;\"></div> <div style=\"width: 3px;\"></div> <div class=\"input-field flexitem-datepicker\"><input type=\"date\" placeholder=\"To\"" + _vm._ssrAttr("value", _vm.date_to) + " class=\"black btn btn-medium btn-flat white-text\" style=\"border-radius: 0px 10px 10px 0px; margin-top: 10px;\"></div> <div class=\"input-field flexitem-datepicker\"><img" + _vm._ssrAttr("src", __webpack_require__(62)) + " class=\"responsive-img\" style=\"max-width: 45px;\"></div></div> <div class=\"row\"><div class=\"card-panel white\" style=\"border-radius: 10px;\"><canvas id=\"myChart\" style=\"width:100%;max-width:600px\"></canvas></div></div> <div class=\"row\"></div> <div class=\"row\"><div class=\"col s12\"><table class=\"striped\"><thead><tr><th>id</th> <th>Amount</th> <th>Date</th></tr></thead> " + _vm._ssrList(_vm.transactionList, function (trans, index) {
-    return "<tbody" + _vm._ssrAttr("id", trans.orderNo) + "><tr><td>" + _vm._ssrEscape(_vm._s(index + 1)) + "</td> <td>" + _vm._ssrEscape("₦" + _vm._s(trans.amount)) + "</td> <td>" + _vm._ssrEscape(_vm._s(trans.transactionDate)) + "</td></tr></tbody>";
+  }, [_vm._v("\n        Back\n      ")]), _vm._ssrNode(" <b class=\"grey white-text\" style=\"font-size: 20px; color: #757575; border-radius: 0 10px 10px 0; padding: 3px;\">\n        Transaction history\n      </b> <br> <b class=\"white-text darken-4\">\n        .......\n      </b>")], 2), _vm._ssrNode(" <div class=\"flexitem-notification\"></div>")], 2), _vm._ssrNode(" <div class=\"flexcontainerSearch\"><div class=\"input-field flexitem-datepicker\"><input type=\"date\" placeholder=\"From\"" + _vm._ssrAttr("value", _vm.date_from) + "></div> <div style=\"width: 3px;\"></div> <div class=\"input-field flexitem-datepicker\"><input type=\"date\" placeholder=\"To\"" + _vm._ssrAttr("value", _vm.date_to) + "></div> <div class=\"input-field flexitem-datepicker\"><img" + _vm._ssrAttr("src", __webpack_require__(61)) + " class=\"responsive-img\" style=\"max-width: 45px;\"></div></div> <div" + _vm._ssrClass("row", {
+    'hide': _vm.hideLoader
+  }) + "><div class=\"col s12 center\"><img" + _vm._ssrAttr("src", __webpack_require__(36)) + " class=\"responsive-img heartbeat\" style=\"max-width: 60px;\"></div></div> <div" + _vm._ssrClass("row", {
+    'hide': _vm.hideElements
+  }) + "><div class=\"card-panel white\" style=\"border-radius: 10px;\"><canvas id=\"myChart\" style=\"width:100%;max-width:600px\"></canvas></div></div> <div class=\"row\"></div> <div" + _vm._ssrClass("row", {
+    'hide': _vm.hideElements
+  }) + "><div class=\"col s12\"><table class=\"striped\"><thead><tr><th>id</th> <th>Amount</th> <th>Date</th></tr></thead> " + _vm._ssrList(_vm.transactionList, function (trans, index) {
+    return "<tbody" + _vm._ssrAttr("id", trans.orderNo) + "><tr><td>" + _vm._ssrEscape(_vm._s(index + 1)) + "</td> <td>" + _vm._ssrEscape("₦" + _vm._s(_vm.formatCurrency(trans.amount))) + "</td> <td>" + _vm._ssrEscape(_vm._s(_vm.formatDateToString(trans.transactionDate))) + "</td></tr></tbody>";
   }) + "</table></div></div>")], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/trans_history.vue?vue&type=template&id=48b711fa&
+// CONCATENATED MODULE: ./pages/trans_history.vue?vue&type=template&id=543ba658&
 
 // EXTERNAL MODULE: ./components/CustomSelect.vue + 4 modules
-var CustomSelect = __webpack_require__(55);
+var CustomSelect = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./js_modules/mods.js
-var mods = __webpack_require__(41);
+var mods = __webpack_require__(37);
 
 // EXTERNAL MODULE: external "moment"
 var external_moment_ = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./assets/js/Chart.js
-var Chart = __webpack_require__(63);
+var Chart = __webpack_require__(62);
 var Chart_default = /*#__PURE__*/__webpack_require__.n(Chart);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/trans_history.vue?vue&type=script&lang=js&
@@ -2463,25 +2679,45 @@ var Chart_default = /*#__PURE__*/__webpack_require__.n(Chart);
       transaction_duration: '',
       transactionList: [],
       date_from: '',
-      date_to: ''
+      date_to: '',
+      hideLoader: true,
+      hideElements: true
     };
   },
   methods: {
     async getDateFrom() {
       this.date_from = this.date_from.trim();
       this.date_to = this.date_to.trim();
+      this.hideLoader = false;
+      this.hideElements = true;
       if (this.date_from == '' || this.date_to == '') {
         M.toast({
           html: '<b class="red-text">Please pick a valid date</b>'
         });
+        this.hideLoader = true;
+        this.hideElements = false;
       } else {
+        this.hideLoader = true;
+        this.hideElements = false;
         let date_from = this.date_from.replace(/-/g, '');
         let date_to = this.date_to.replace(/-/g, '');
-        console.log(date_from);
-        console.log(date_to);
-        this.transactionList = await Object(mods["d" /* searchPaymentHistory */])("0102327327", date_from, date_to);
-        this.sortDate(this.transactionList);
-        this.loadGraph();
+        if (this.transactionList.message == 'Token expired!') {
+          localStorage.clear();
+          this.$router.push('./');
+        } else {
+          this.transactionList = await Object(mods["j" /* searchPaymentHistory */])("0102327327", date_from, date_to);
+          this.sortDate(this.transactionList);
+          this.loadGraph();
+        }
+      }
+    },
+    formatDateToString(value) {
+      let stringDate = new Date(value).toDateString();
+      return stringDate;
+    },
+    formatCurrency(value) {
+      if (value == undefined) {} else {
+        return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       }
     },
     loadGraph() {
@@ -2554,9 +2790,22 @@ var Chart_default = /*#__PURE__*/__webpack_require__.n(Chart);
       if (false) {}
     },
     async paymentHistory() {
-      this.transactionList = await Object(mods["a" /* getPaymentHistory */])();
-      this.loadGraph();
-      this.sortDate(this.transactionList);
+      this.hideLoader = false;
+      this.hideElements = true;
+      this.transactionList = await Object(mods["e" /* getPaymentHistory */])();
+      // let pr = await paymentReceipt("20240422113154472007399276", "UT000007")
+      // let pr = await paymentReceipt("20240411202745039007724322", "UT000007")
+      // console.log('reeeeeeceipt ', pr);
+      console.log(this.transactionList);
+      if (this.transactionList.message == 'Token expired!') {
+        localStorage.clear();
+        this.$router.push('./');
+      } else {
+        this.loadGraph();
+        this.sortDate(this.transactionList);
+        this.hideLoader = true;
+        this.hideElements = false;
+      }
     }
   },
   mounted() {

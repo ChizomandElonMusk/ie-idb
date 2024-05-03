@@ -30,14 +30,16 @@
       <!-- <CustomSelect style="margin-top: 10px;" :options="['2 months', '3 months', '4 months', '5 months', '6 months']" :default="'Duration'" class="" v-model="transaction_duration" /> -->
 
       
-
       <div class="flexcontainerSearch">
+        
         <div class=" input-field flexitem-datepicker">
-          <input type="date" placeholder="From" class="orange btn btn-medium btn-flat black-text" v-model="date_from" style="border-radius: 10px 0 0px 10px; margin-top: 10px;">
+          <!-- <input type="date" placeholder="From" class="orange btn btn-medium btn-flat black-text" v-model="date_from" style="border-radius: 10px 0 0px 10px; margin-top: 10px;"> -->
+          <input type="date" placeholder="From" v-model="date_from">
         </div>
         <div style="width: 3px;"></div>
         <div class=" input-field flexitem-datepicker">
-          <input type="date" placeholder="To" class="orange btn btn-medium btn-flat black-text" v-model="date_to" style="border-radius: 0px 10px 10px 0px; margin-top: 10px;">
+          <!-- <input type="date" placeholder="To" class="orange btn btn-medium btn-flat black-text" v-model="date_to" style="border-radius: 0px 10px 10px 0px; margin-top: 10px;"> -->
+          <input type="date" placeholder="To" v-model="date_to">
         </div>
         <div class=" input-field flexitem-datepicker">
           <img src="~assets/images/search.svg" class="responsive-img" style="max-width: 45px;" @click="getDateFrom()">
@@ -116,7 +118,7 @@
 <!-- <script src="@/assets/js/Chart.js"></script> -->
   <script>
   import CustomSelect from '~/components/CustomSelect.vue'
-  import { getPaymentHistory, searchPaymentHistory } from '~/js_modules/mods'
+  import { getPaymentHistory, searchPaymentHistory, paymentReceipt } from '~/js_modules/mods'
   import moment from 'moment';
   import Chart from '@/assets/js/Chart.js'
 
@@ -168,11 +170,15 @@
             let date_from = this.date_from.replace(/-/g, '')
             let date_to = this.date_to.replace(/-/g, '')
 
-            console.log(date_from);
-            console.log(date_to);
-            this.transactionList = await searchPaymentHistory("0102327327", date_from, date_to)
-            this.sortDate(this.transactionList)
-            this.loadGraph()
+            if (this.transactionList.message == 'Token expired!') {
+              localStorage.clear()
+              this.$router.push('./')
+            } else {
+              this.transactionList = await searchPaymentHistory("0102327327", date_from, date_to)
+              this.sortDate(this.transactionList)
+              this.loadGraph()
+            }
+            
           }
         },
 
@@ -182,7 +188,12 @@
         },
 
         formatCurrency(value) {
-          return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          if (value == undefined) {
+
+          } else {
+            return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          }
+          
 
         },
 
@@ -269,19 +280,28 @@
           this.hideLoader = false
           this.hideElements = true
           this.transactionList = await getPaymentHistory()
-          this.loadGraph()
-          this.sortDate(this.transactionList)
-          this.hideLoader = true
-          this.hideElements = false
+          // let pr = await paymentReceipt("20240422113154472007399276", "UT000007")
+          // let pr = await paymentReceipt("20240411202745039007724322", "UT000007")
+          // console.log('reeeeeeceipt ', pr);
+          console.log(this.transactionList);
+          if (this.transactionList.message == 'Token expired!') {
+            localStorage.clear()
+            this.$router.push('./')
+          } else {
+            this.loadGraph()
+            this.sortDate(this.transactionList)
+            this.hideLoader = true
+            this.hideElements = false
+          }
         }
       },
 
       mounted() {
         document.addEventListener('DOMContentLoaded', function() {
           var elems = document.querySelectorAll('.datepicker');
-          var instances = M.Datepicker.init(elems, {
-    format: 'yyyy-mm-dd' // Set the format option to 'yyyy-mm-dd'
-  });
+            var instances = M.Datepicker.init(elems, {
+            format: 'yyyy-mm-dd' // Set the format option to 'yyyy-mm-dd'
+          });
           console.log('loading.................................');
         });
         M.AutoInit();

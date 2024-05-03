@@ -8,7 +8,7 @@ module.exports = __webpack_require__.p + "img/logo.e97530d.png";
 
 /***/ }),
 
-/***/ 37:
+/***/ 38:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60,7 +60,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 65:
+/***/ 64:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -132,7 +132,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var about = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {Logo: __webpack_require__(37).default})
+installComponents(component, {Logo: __webpack_require__(38).default})
 
 
 /***/ })

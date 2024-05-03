@@ -5,11 +5,18 @@
         <div class="col s12 m6" style="margin-top: 130px">
             <Logo/>
             <div class="container">
+              
               <div class="row">
                 <h5 class="center red-text">
                   IDB
                 </h5>
-                <PreLoader class="center" :class="{'hide': hidePreLoader}"/>
+                <!-- <PreLoader class="center" :class="{'hide': hidePreLoader}"/> -->
+                <div class="row" :class="{'hide': hidePreLoader}">
+                  <div class="col s12 center">
+                    <img src="~assets/images/logo.png" class="responsive-img heartbeat" style="max-width: 60px;">
+                  </div>
+                </div>
+
               </div>
               <form @submit.prevent>
                   <div class="row">
@@ -36,6 +43,13 @@
                         Create a free account
                           <nuxt-link to="./signup" class="" style="width: 300px;" >
                               Signup
+                          </nuxt-link>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="input-field col s12 center">
+                          <nuxt-link to="./forgot" class="" style="width: 300px;" >
+                              Forgot password
                           </nuxt-link>
                       </div>
                   </div>
@@ -67,8 +81,8 @@
       data() {
         return {
           backgroundUrl,
-          username: 'aafolayan',
-          password: 'Test@001',
+          username: 'cechehieuka@ikejaelectric.com',
+          password: 'Chizom.@1',
           hidePreLoader: true,
         }
       },
@@ -78,7 +92,6 @@
         async signIn() {
           M.toast({html: '<b class="yellow-text">Please wait...</b>'})
           this.hidePreLoader = false
-          // this.$router.push('./dashboard')
           this.username = this.username.trim()
           this.password = this.password.trim()
           
@@ -87,14 +100,20 @@
             this.hidePreLoader = true
           } else {
             let credentials = await loginUser(this.username, this.password)
-            console.log(credentials.jws);
-            if (credentials == undefined) {
+            console.log(credentials);
+            if (credentials == undefined || credentials.message == 'Error encountered while processing request!') {
               M.toast({html: '<b class="red-text">Check Username or Password!</b>'})
               this.hidePreLoader = true
             } else {
               localStorage.setItem('jdotwdott', credentials.jws)
-              this.$router.push('./dashboard')
+              if (credentials.u.roles[0] == 'NEW') {
+                this.$router.push('./reset_password')
               this.hidePreLoader = true
+              } else if (credentials.u.roles[0] == 'REGULAR'){
+                this.$router.push('./dashboard')
+              this.hidePreLoader = true
+              }
+              
             }
 
           }

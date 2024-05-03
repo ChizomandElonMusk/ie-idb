@@ -1,4 +1,4 @@
-exports.ids = [14,4,5];
+exports.ids = [16,4,5];
 exports.modules = {
 
 /***/ 36:
@@ -8,7 +8,7 @@ module.exports = __webpack_require__.p + "img/logo.e97530d.png";
 
 /***/ }),
 
-/***/ 37:
+/***/ 38:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -67,7 +67,7 @@ module.exports = __webpack_require__.p + "img/angled_background.3974983.jpg";
 
 /***/ }),
 
-/***/ 54:
+/***/ 53:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -139,7 +139,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 69:
+/***/ 70:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -198,7 +198,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var login = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {Logo: __webpack_require__(37).default,Login: __webpack_require__(54).default})
+installComponents(component, {Logo: __webpack_require__(38).default,Login: __webpack_require__(53).default})
 
 
 /***/ })

@@ -34,7 +34,7 @@
         </div> -->
 
         <div class="flexitem-notification">
-          <i class="material-icons">notifications</i>
+          <!-- <i class="material-icons">notifications</i> -->
         </div>
       </div>
   

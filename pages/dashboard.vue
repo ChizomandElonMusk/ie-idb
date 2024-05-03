@@ -33,8 +33,10 @@
           <div class="flexcontainerinfo">
 
             <div class="white-text flex-icon-day">
-              <img src="~assets/images/bulb_on.svg" v-if="meter_reachable == true" class="responsive-img" style="max-width: 50px;" alt="">
-              <img src="~assets/images/bulb_off.svg" v-if="meter_reachable == false" class="responsive-img" style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
+              <!-- <b style="font-size: 10px; margin-top: 0px;" class="row">meter status</b> -->
+              <img src="~assets/images/bulb_on.svg" v-if="online_status == 'online'" class="responsive-img" style="max-width: 50px;" alt="">
+              <img src="~assets/images/bulb_off.svg" v-if="online_status == 'offline'" class="responsive-img" style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
+              
             </div>
 
             <div class="flex-time">
@@ -63,9 +65,9 @@
             </div>
 
             <div class="flex-temperature">
-              <b style="background-color: yellow; padding: 5px; border-radius: 10px;">Tariff:</b> <br>
+              <b style="background-color: yellow; padding: 5px; border-radius: 10px;">Band:</b> <br>
               <span class="white-text" style="font-size: 20px;">
-                {{ tariff }}
+                {{ getFirstLetter(tariff) }}
               </span>
             </div>
 
@@ -197,7 +199,7 @@
   
   
   <script>
-  import { getUserInfo } from '~/js_modules/mods'
+  import { getUserInfo, getOnlineStatus } from '~/js_modules/mods'
   export default {
       layout: 'admin_main',
 
@@ -207,6 +209,7 @@
           account_number: '',
           meter_number: '',
           tariff: '',
+          online_status: 'offline',
           greeting: '',
           dashboard_date: '',
           meter_reachable: true,
@@ -228,13 +231,31 @@
           }
         },
 
+        getFirstLetter(text) {
+            // Check if the input text is not empty
+            if (text && text.length > 0) {
+                // Get the first character of the text and convert it to uppercase
+                return 'Band-' + text.charAt(0).toUpperCase();
+            } else {
+                // Return an empty string if the input text is empty
+                return '';
+            }
+        },
+
         async getUserDetails() {
           let user_info = await getUserInfo()
-          this.account_name = user_info.accountName
-          this.account_number = user_info.accountNumber
-          this.meter_number = user_info.meterNumber
-          this.tariff = user_info.tariff
-          console.log('here is the ut ', this.account_name);
+          let user_online_status = await getOnlineStatus()
+          if (user_info.message == 'Token expired!') {
+            localStorage.clear()
+            this.$router.push('./')
+          } else {
+            this.account_name = user_info.accountName
+            this.account_number = user_info.accountNumber
+            this.meter_number = user_info.meterNumber
+            this.tariff = user_info.tariff
+            this.online_status = user_online_status.message
+            console.log('here is the ut ', this.account_name);
+          }
         },
 
         greetUser() {

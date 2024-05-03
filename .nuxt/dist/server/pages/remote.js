@@ -1,13 +1,391 @@
-exports.ids = [16,3];
+exports.ids = [18,3];
 exports.modules = {
 
-/***/ 38:
+/***/ 37:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return loginUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getUserInfo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return searchPaymentHistory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getPaymentHistory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return registerIntent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return confirmOtp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return changePassword; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return passwordResetIntent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return confirmPasswordResetToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getOnlineStatus; });
+/* unused harmony export paymentReceipt */
+async function loginUser(username, password) {
+  var passwords = "";
+  passwords = {
+    params: [username, password]
+  };
+  passwords = JSON.stringify(passwords);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/authenticate', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json'
+      },
+      body: passwords
+    });
+    const response = await rawResponse.json();
+    // return response
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    return response;
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function getUserInfo() {
+  let token = localStorage.getItem('jdotwdott');
+  var passwords = "";
+  passwords = {
+    param: "0102327327"
+  };
+  passwords = JSON.stringify(passwords);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/acctinfo', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json',
+        'token': token
+      },
+      body: passwords
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    return response;
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function searchPaymentHistory(account_number, start_date, end_date) {
+  let token = localStorage.getItem('jdotwdott');
+  var passwords = "";
+  passwords = {
+    params: [account_number, start_date, end_date]
+  };
+  passwords = JSON.stringify(passwords);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/paymenthistory2', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json',
+        'token': token
+      },
+      body: passwords
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function getPaymentHistory() {
+  let token = localStorage.getItem('jdotwdott');
+  var passwords = "";
+  passwords = {
+    param: "0102327327"
+  };
+  passwords = JSON.stringify(passwords);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/paymenthistory', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json',
+        'token': token
+      },
+      body: passwords
+    });
+    const response = await rawResponse.json();
+    // console.log(response)
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function registerIntent(meterNumber) {
+  var user_meter_number = "";
+  user_meter_number = {
+    params: [meterNumber]
+  };
+  user_meter_number = JSON.stringify(user_meter_number);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/registerintent', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json'
+      },
+      body: user_meter_number
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function confirmOtp(otp) {
+  let token = localStorage.getItem('jdotwdott');
+  var userOtp = "";
+  userOtp = {
+    params: [otp]
+  };
+  userOtp = JSON.stringify(userOtp);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/register', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json',
+        'token': token
+      },
+      body: userOtp
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function changePassword(newPassword, confirmPassword) {
+  let token = localStorage.getItem('jdotwdott');
+  var userPasswords = "";
+  userPasswords = {
+    params: [newPassword, confirmPassword]
+  };
+  userPasswords = JSON.stringify(userPasswords);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/changepassword', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json',
+        'token': token
+      },
+      body: userPasswords
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function passwordResetIntent(username) {
+  var usernameReq = "";
+  usernameReq = {
+    params: [username]
+  };
+  usernameReq = JSON.stringify(usernameReq);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/resetintent', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json'
+      },
+      body: usernameReq
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function confirmPasswordResetToken(otp) {
+  let token = localStorage.getItem('jdotwdott');
+  var userOtp = "";
+  userOtp = {
+    params: [otp]
+  };
+  userOtp = JSON.stringify(userOtp);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/reset', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json',
+        'token': token
+      },
+      body: userOtp
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function getOnlineStatus() {
+  let token = localStorage.getItem('jdotwdott');
+  // var userMeterNumber = ""
+  // userMeterNumber = {
+  //     params: [otp],
+  // }
+  // userMeterNumber = JSON.stringify(userMeterNumber)
+
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/onlinestatus', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json',
+        'token': token
+      }
+      // body: userMeterNumber,
+    });
+
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+
+// payment receipt 
+async function paymentReceipt(orderNumber, channel) {
+  let token = localStorage.getItem('jdotwdott');
+  var userReceiptReq = "";
+  userReceiptReq = {
+    params: [orderNumber, channel]
+  };
+  userReceiptReq = JSON.stringify(userReceiptReq);
+  try {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/paymentreceipt', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+        'Content-Type': 'application/json',
+        'token': token
+      },
+      body: userReceiptReq
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    return response;
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+
+/***/ }),
+
+/***/ 40:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(43);
+var content = __webpack_require__(48);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -19,7 +397,33 @@ module.exports.__inject__ = function (context) {
 
 /***/ }),
 
-/***/ 40:
+/***/ 47:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Keyboard_vue_vue_type_style_index_0_id_1f7f4aba_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(40);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Keyboard_vue_vue_type_style_index_0_id_1f7f4aba_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Keyboard_vue_vue_type_style_index_0_id_1f7f4aba_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Keyboard_vue_vue_type_style_index_0_id_1f7f4aba_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Keyboard_vue_vue_type_style_index_0_id_1f7f4aba_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ 48:
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(3);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".vuertual-numeric-keyboard[data-v-1f7f4aba]{display:grid;grid-template-columns:auto auto auto;grid-gap:20px}.vuertual-numeric-keyboard .btn[data-v-1f7f4aba]{font-weight:700}.btn-keyboard[data-v-1f7f4aba]{background-color:#f44336;color:#fff}", ""]);
+// Exports
+module.exports = ___CSS_LOADER_EXPORT___;
+
+
+/***/ }),
+
+/***/ 51:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -111,7 +515,7 @@ var componentNormalizer = __webpack_require__(2);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(42)
+  var style0 = __webpack_require__(47)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -133,49 +537,23 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 42:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Keyboard_vue_vue_type_style_index_0_id_1f7f4aba_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(38);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Keyboard_vue_vue_type_style_index_0_id_1f7f4aba_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Keyboard_vue_vue_type_style_index_0_id_1f7f4aba_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Keyboard_vue_vue_type_style_index_0_id_1f7f4aba_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Keyboard_vue_vue_type_style_index_0_id_1f7f4aba_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-
-
-/***/ }),
-
-/***/ 43:
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(3);
-var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-___CSS_LOADER_EXPORT___.push([module.i, ".vuertual-numeric-keyboard[data-v-1f7f4aba]{display:grid;grid-template-columns:auto auto auto;grid-gap:20px}.vuertual-numeric-keyboard .btn[data-v-1f7f4aba]{font-weight:700}.btn-keyboard[data-v-1f7f4aba]{background-color:#f44336;color:#fff}", ""]);
-// Exports
-module.exports = ___CSS_LOADER_EXPORT___;
-
-
-/***/ }),
-
-/***/ 70:
+/***/ 71:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/remote.vue?vue&type=template&id=6ef40aa9&scoped=true&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/remote.vue?vue&type=template&id=86f0b04a&scoped=true&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
     staticClass: "container",
     staticStyle: {
-      "padding-top": "40px"
+      "padding-top": "60px"
     }
-  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\" data-v-6ef40aa9>", "</div>", [_vm._ssrNode("<div class=\"flexitem-username\" data-v-6ef40aa9>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\" data-v-86f0b04a>", "</div>", [_vm._ssrNode("<div class=\"flexitem-username\" data-v-86f0b04a>", "</div>", [_c('nuxt-link', {
     staticClass: "btn btn-medium btn-flat red white-text",
     staticStyle: {
       "border-radius": "10px 0 0px 10px"
@@ -183,7 +561,7 @@ var render = function render() {
     attrs: {
       "to": "./dashboard"
     }
-  }, [_vm._v("\n        Back\n      ")]), _vm._ssrNode(" <b class=\"grey white-text\" style=\"font-size: 20px; color: #757575; border-radius: 0 10px 10px 0; padding: 3px;\" data-v-6ef40aa9>\n        Remote token\n      </b> <br data-v-6ef40aa9> <b class=\"white-text darken-4\" data-v-6ef40aa9>\n        .......\n      </b>")], 2), _vm._ssrNode(" <div class=\"flexitem-notification\" data-v-6ef40aa9><i class=\"material-icons\" data-v-6ef40aa9>notifications</i></div>")], 2), _vm._ssrNode(" <div class=\"row\" style=\"margin-top: 20px;\" data-v-6ef40aa9><b class=\"grey-text darken-4\" data-v-6ef40aa9>" + _vm._ssrEscape("\n        Meter number: " + _vm._s(_vm.meter_number) + "\n      ") + "</b> <div class=\"card-panel red\" style=\"border-radius: 10px;\" data-v-6ef40aa9><input type=\"text\" name=\"token\" maxlength=\"20\" autocomplete=\"off\" placeholder=\"Enter token\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.value) + " class=\"white-text center\" style=\"border-bottom: 0; font-size: 20px;\" data-v-6ef40aa9></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-6ef40aa9>", "</div>", [_vm._ssrNode("<div class=\"input-field col s12\" style=\"padding-top: 20px\" data-v-6ef40aa9>", "</div>", [_c('Keyboard', {
+  }, [_vm._v("\n        Back\n      ")]), _vm._ssrNode(" <b class=\"grey white-text\" style=\"font-size: 20px; color: #757575; border-radius: 0 10px 10px 0; padding: 3px;\" data-v-86f0b04a>\n        Remote token\n      </b> <br data-v-86f0b04a> <b class=\"white-text darken-4\" data-v-86f0b04a>\n        .......\n      </b>")], 2), _vm._ssrNode(" <div class=\"flexitem-notification\" data-v-86f0b04a></div>")], 2), _vm._ssrNode(" <div class=\"row\" style=\"margin-top: 20px;\" data-v-86f0b04a><b class=\"grey-text darken-4\" data-v-86f0b04a>" + _vm._ssrEscape("\n        Meter number: " + _vm._s(_vm.meter_number) + "\n      ") + "</b> <div class=\"card-panel red\" style=\"border-radius: 10px;\" data-v-86f0b04a><input type=\"text\" name=\"token\" maxlength=\"20\" autocomplete=\"off\" placeholder=\"Enter token\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.value) + " class=\"white-text center\" style=\"border-bottom: 0; font-size: 20px;\" data-v-86f0b04a></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-86f0b04a>", "</div>", [_vm._ssrNode("<div class=\"input-field col s12\" style=\"padding-top: 20px\" data-v-86f0b04a>", "</div>", [_c('Keyboard', {
     attrs: {
       "selfValue": _vm.value
     },
@@ -193,25 +571,20 @@ var render = function render() {
       },
       "paste": _vm.handlePaste
     }
-  })], 1)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-6ef40aa9>", "</div>", [_c('nuxt-link', {
-    staticClass: "btn btn-large col s12 orange black-text",
-    staticStyle: {
-      "border-radius": "10px",
-      "font-weight": "400"
-    },
-    attrs: {
-      "to": "./dashboard"
-    }
-  }, [_c('b', [_vm._v("Load token")])])], 1), _vm._ssrNode(" <br data-v-6ef40aa9>")], 2);
+  })], 1)]), _vm._ssrNode(" <div class=\"row\" data-v-86f0b04a><button class=\"btn btn-large col s12 orange black-text\" style=\"border-radius: 10px; font-weight: 400;\" data-v-86f0b04a><b data-v-86f0b04a>Load token</b></button></div> <br data-v-86f0b04a>")], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/remote.vue?vue&type=template&id=6ef40aa9&scoped=true&
+// CONCATENATED MODULE: ./pages/remote.vue?vue&type=template&id=86f0b04a&scoped=true&
 
 // EXTERNAL MODULE: ./components/Keyboard.vue + 4 modules
-var Keyboard = __webpack_require__(40);
+var Keyboard = __webpack_require__(51);
+
+// EXTERNAL MODULE: ./js_modules/mods.js
+var mods = __webpack_require__(37);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/remote.vue?vue&type=script&lang=js&
+
 
 /* harmony default export */ var remotevue_type_script_lang_js_ = ({
   layout: 'admin_main',
@@ -222,7 +595,7 @@ var Keyboard = __webpack_require__(40);
     return {
       value: '',
       pastedContent: '',
-      meter_number: '23203042032042'
+      meter_number: ''
     };
   },
   methods: {
@@ -253,7 +626,20 @@ var Keyboard = __webpack_require__(40);
 
       // Test if the value matches the numeric pattern
       return numericRegex.test(value);
+    },
+    loadToken() {
+      this.value = this.value.trim();
+      if (this.value == '') {} else {
+        this.value = 'Token successfully loaded';
+      }
+    },
+    async getUserDetails() {
+      let user_info = await Object(mods["f" /* getUserInfo */])();
+      this.meter_number = user_info.meterNumber;
     }
+  },
+  mounted() {
+    this.getUserDetails();
   },
   created() {
     // this.getFullname()
@@ -281,7 +667,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "6ef40aa9",
+  "86f0b04a",
   "e5135722"
   
 )
@@ -289,7 +675,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var remote = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {Keyboard: __webpack_require__(40).default})
+installComponents(component, {Keyboard: __webpack_require__(51).default})
 
 
 /***/ })

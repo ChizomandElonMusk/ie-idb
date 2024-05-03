@@ -1,42 +1,42 @@
-exports.ids = [11];
+exports.ids = [13];
 exports.modules = {
 
-/***/ 45:
+/***/ 43:
 /***/ (function(module, exports) {
 
 module.exports = "data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIFRyYW5zZm9ybWVkIGJ5OiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4KPHN2ZyBmaWxsPSIjZmZmZmZmIiB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHJva2U9IiNmZmZmZmYiPgoNPGcgaWQ9IlNWR1JlcG9fYmdDYXJyaWVyIiBzdHJva2Utd2lkdGg9IjAiLz4KDTxnIGlkPSJTVkdSZXBvX3RyYWNlckNhcnJpZXIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgoNPGcgaWQ9IlNWR1JlcG9faWNvbkNhcnJpZXIiPgoNPHBhdGggZD0iTTEyLDEwaDdMOCwyMmwzLTlINUwxMywyWiIvPgoNPC9nPgoNPC9zdmc+"
 
 /***/ }),
 
-/***/ 46:
+/***/ 44:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/transaction.b4c49f2.svg";
 
 /***/ }),
 
-/***/ 47:
+/***/ 45:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/purchase.ac58b12.svg";
 
 /***/ }),
 
-/***/ 48:
+/***/ 46:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/remote.a3b8f87.svg";
 
 /***/ }),
 
-/***/ 59:
+/***/ 58:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/rainy.ee2659d.svg";
 
 /***/ }),
 
-/***/ 67:
+/***/ 68:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52,7 +52,7 @@ var render = function render() {
     staticStyle: {
       "padding-top": "40px"
     }
-  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\" data-v-7c5206b2><div class=\"flexitem-username\" data-v-7c5206b2><b style=\"font-size: 20px; color: #757575;\" data-v-7c5206b2>\n        Energy usage\n      </b> <br data-v-7c5206b2> <b class=\"grey-text darken-4\" data-v-7c5206b2>\n        .......\n      </b></div> <div class=\"flexitem-notification\" data-v-7c5206b2><i class=\"material-icons\" data-v-7c5206b2>notifications</i></div></div> <div class=\"row\" data-v-7c5206b2><div class=\"card-panel red\" style=\"border-radius: 10px;\" data-v-7c5206b2><div class=\"flexcontainerinfo\" data-v-7c5206b2><div class=\"white-text flex-icon-day\" data-v-7c5206b2><img" + _vm._ssrAttr("src", __webpack_require__(59)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-7c5206b2></div> <div class=\"flex-time\" data-v-7c5206b2><span class=\"white-text\" style=\"font-size: 12px;\" data-v-7c5206b2>\n            May 16, 2023 10:05 am\n          </span> <br data-v-7c5206b2> <span class=\"white-text\" style=\"font-weight: 600; font-size: 20px;\" data-v-7c5206b2>\n            Cloudy\n          </span> <br data-v-7c5206b2> <span class=\"white-text\" style=\"font-weight: 300; font-size: 12px;\" data-v-7c5206b2>\n            Lagos, Nigeria\n          </span></div> <div class=\"flex-temperature\" data-v-7c5206b2><span class=\"white-text\" style=\"font-size: 50px;\" data-v-7c5206b2>\n            19°C\n          </span></div></div> <div class=\"flexcontainerinfo\" style=\"margin-top: 5px;\" data-v-7c5206b2><div class=\"white-text flex-meter-number\" data-v-7c5206b2><b class=\"black-text\" style=\"background-color: yellow; padding: 5px; border-radius: 10px;\" data-v-7c5206b2>Meter number:</b> 3450834059834\n        </div></div></div></div> <div class=\"row\" data-v-7c5206b2><div class=\"flexcontainerbtn\" data-v-7c5206b2><div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-7c5206b2><div class=\"white-text center boarder-top\" data-v-7c5206b2><img" + _vm._ssrAttr("src", __webpack_require__(45)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-7c5206b2> <p class=\"button-text\" data-v-7c5206b2>\n            Energy Usage\n          </p></div></div> <div style=\"width: 10px;\" data-v-7c5206b2></div> <div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-7c5206b2><div class=\"white-text center boarder-top\" data-v-7c5206b2><img" + _vm._ssrAttr("src", __webpack_require__(46)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-7c5206b2> <p class=\"button-text\" data-v-7c5206b2>\n            Transaction History\n          </p></div></div></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-7c5206b2>", "</div>", [_vm._ssrNode("<div class=\"flexcontainerbtn\" data-v-7c5206b2>", "</div>", [_vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-7c5206b2><div class=\"white-text center boarder-top\" data-v-7c5206b2><img" + _vm._ssrAttr("src", __webpack_require__(47)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-7c5206b2> <p class=\"button-text\" data-v-7c5206b2>\n            Purchase Electricity\n          </p></div></div> <div style=\"width: 10px;\" data-v-7c5206b2></div> "), _vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-7c5206b2>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-7c5206b2>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\" data-v-7c5206b2><div class=\"flexitem-username\" data-v-7c5206b2><b style=\"font-size: 20px; color: #757575;\" data-v-7c5206b2>\n        Energy usage\n      </b> <br data-v-7c5206b2> <b class=\"grey-text darken-4\" data-v-7c5206b2>\n        .......\n      </b></div> <div class=\"flexitem-notification\" data-v-7c5206b2><i class=\"material-icons\" data-v-7c5206b2>notifications</i></div></div> <div class=\"row\" data-v-7c5206b2><div class=\"card-panel red\" style=\"border-radius: 10px;\" data-v-7c5206b2><div class=\"flexcontainerinfo\" data-v-7c5206b2><div class=\"white-text flex-icon-day\" data-v-7c5206b2><img" + _vm._ssrAttr("src", __webpack_require__(58)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-7c5206b2></div> <div class=\"flex-time\" data-v-7c5206b2><span class=\"white-text\" style=\"font-size: 12px;\" data-v-7c5206b2>\n            May 16, 2023 10:05 am\n          </span> <br data-v-7c5206b2> <span class=\"white-text\" style=\"font-weight: 600; font-size: 20px;\" data-v-7c5206b2>\n            Cloudy\n          </span> <br data-v-7c5206b2> <span class=\"white-text\" style=\"font-weight: 300; font-size: 12px;\" data-v-7c5206b2>\n            Lagos, Nigeria\n          </span></div> <div class=\"flex-temperature\" data-v-7c5206b2><span class=\"white-text\" style=\"font-size: 50px;\" data-v-7c5206b2>\n            19°C\n          </span></div></div> <div class=\"flexcontainerinfo\" style=\"margin-top: 5px;\" data-v-7c5206b2><div class=\"white-text flex-meter-number\" data-v-7c5206b2><b class=\"black-text\" style=\"background-color: yellow; padding: 5px; border-radius: 10px;\" data-v-7c5206b2>Meter number:</b> 3450834059834\n        </div></div></div></div> <div class=\"row\" data-v-7c5206b2><div class=\"flexcontainerbtn\" data-v-7c5206b2><div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-7c5206b2><div class=\"white-text center boarder-top\" data-v-7c5206b2><img" + _vm._ssrAttr("src", __webpack_require__(43)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-7c5206b2> <p class=\"button-text\" data-v-7c5206b2>\n            Energy Usage\n          </p></div></div> <div style=\"width: 10px;\" data-v-7c5206b2></div> <div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-7c5206b2><div class=\"white-text center boarder-top\" data-v-7c5206b2><img" + _vm._ssrAttr("src", __webpack_require__(44)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-7c5206b2> <p class=\"button-text\" data-v-7c5206b2>\n            Transaction History\n          </p></div></div></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-7c5206b2>", "</div>", [_vm._ssrNode("<div class=\"flexcontainerbtn\" data-v-7c5206b2>", "</div>", [_vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-7c5206b2><div class=\"white-text center boarder-top\" data-v-7c5206b2><img" + _vm._ssrAttr("src", __webpack_require__(45)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-7c5206b2> <p class=\"button-text\" data-v-7c5206b2>\n            Purchase Electricity\n          </p></div></div> <div style=\"width: 10px;\" data-v-7c5206b2></div> "), _vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-7c5206b2>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-7c5206b2>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "./remote"
     }
@@ -63,7 +63,7 @@ var render = function render() {
       "filter": "hue-rotate(180deg)"
     },
     attrs: {
-      "src": __webpack_require__(48),
+      "src": __webpack_require__(46),
       "alt": ""
     }
   }), _vm._v(" "), _c('p', {
