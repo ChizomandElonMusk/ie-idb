@@ -371,6 +371,7 @@ export async function paymentReceipt(orderNumber, channel) {
 
         const response = await rawResponse.json()
         console.log(response)
+        
         return response
 
         // console.log(response)
@@ -383,3 +384,81 @@ export async function paymentReceipt(orderNumber, channel) {
         M.toast({html: `<b class="red-text">${error}</b>`})
     }
 }
+
+
+// energy balance api call
+export async function energyBalance() {
+    let token = localStorage.getItem('jdotwdott')
+
+    try {
+        const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/energybalance', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+                'Content-Type': 'application/json',
+                'token': token
+
+            },
+        })
+
+        const response = await rawResponse.json()
+        console.log(response)
+        return response
+
+        // console.log(response)
+
+        // console.log(response.passwords)
+        // console.log(response)
+        // return response
+    } catch (error) {
+        console.log(error)
+        M.toast({html: `<b class="red-text">${error}</b>`})
+    }
+}
+
+
+
+// remote token loading
+export async function loadToken(userToken) {
+    let token = localStorage.getItem('jdotwdott')
+    var userTokenReq = ""
+    userTokenReq = {
+        params: [userToken],
+    }
+    userTokenReq = JSON.stringify(userTokenReq)
+
+    try {
+        const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/loadtoken', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+                'Content-Type': 'application/json',
+                'token': token
+
+            },
+            body: userTokenReq,
+        })
+
+        const response = await rawResponse.json()
+        console.log(response)
+        
+        return response
+
+        // console.log(response)
+
+        // console.log(response.passwords)
+        // console.log(response)
+        // return response
+    } catch (error) {
+        console.log(error)
+        M.toast({html: `<b class="red-text">${error}</b>`})
+    }
+}
+
+
+export function logOut() {
+    if(process.client) {
+      localStorage.clear()
+      return {'message': 0}
+    }
+  }

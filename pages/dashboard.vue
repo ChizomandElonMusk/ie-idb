@@ -32,14 +32,14 @@
 
           <div class="flexcontainerinfo">
 
-            <div class="white-text flex-icon-day">
+            <div class="white-text flex-icon-day" :class="{'hide': defaultData}">
               <!-- <b style="font-size: 10px; margin-top: 0px;" class="row">meter status</b> -->
               <img src="~assets/images/bulb_on.svg" v-if="online_status == 'online'" class="responsive-img" style="max-width: 50px;" alt="">
-              <img src="~assets/images/bulb_off.svg" v-if="online_status == 'offline'" class="responsive-img" style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
+              <img src="~assets/images/bulb_off.svg" v-if="online_status == 'offline'" class="responsive-img" style="max-width: 50px;" alt="">
               
             </div>
 
-            <div class="flex-time">
+            <div class="flex-time" :class="{'hide': defaultData}">
               <span class="white-text" style="font-size: 12px;">
                 {{ dashboard_date }}
               </span> 
@@ -64,12 +64,23 @@
 
             </div>
 
-            <div class="flex-temperature">
+            <div class="flex-temperature" :class="{'hide': defaultData}">
               <b style="background-color: yellow; padding: 5px; border-radius: 10px;">Band:</b> <br>
               <span class="white-text" style="font-size: 20px;">
                 {{ getFirstLetter(tariff) }}
               </span>
             </div>
+
+            
+
+            <div class="flex-time center" :class="{'hide': energyBalance}">
+              <p class="white-text" style="font-size: 22px;">
+                {{ energy_balance_data }}
+              </p> 
+              <img src="~assets/images/close.svg" v-if="online_status == 'online'" class="responsive-img" style="max-width: 30px;" alt="" v-on:click="closeEnergyBalance">
+            </div>
+
+
 
           </div>
 
@@ -94,13 +105,11 @@
           
           <div class="card-panel orange flex-buttons" style="border-radius: 10px;">
 
-            <div class="white-text center boarder-top">
-              <nuxt-link to="./energy_usage">
-                <img src="~assets/images/energy.svg" class="responsive-img" style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
-                <p class="button-text white-text">
-                  Energy Usage
-                </p>
-              </nuxt-link>
+            <div class="white-text center boarder-top" v-on:click="showEnergyUsage">
+              <img src="~assets/images/energy.svg" class="responsive-img" style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
+              <p class="button-text white-text">
+                Energy Usage
+              </p>
             </div>
 
           </div>
@@ -173,7 +182,7 @@
           <div class="center">
 
             <h4 class="white-text">
-              IE Ads
+              Ads
             </h4>
 
             <b class="white-text" style="font-size: 20px; font-weight: 700;">
@@ -199,7 +208,7 @@
   
   
   <script>
-  import { getUserInfo, getOnlineStatus } from '~/js_modules/mods'
+  import { getUserInfo, getOnlineStatus, energyBalance } from '~/js_modules/mods'
   export default {
       layout: 'admin_main',
 
@@ -219,6 +228,9 @@
           message: '',
   
           scheduleList: [],
+          defaultData: false,
+          energyBalance: true,
+          energy_balance_data: 'Please wait...',
   
         }
       },
@@ -229,6 +241,25 @@
             localStorage.clear()
             window.location = './'
           }
+        },
+
+        async showEnergyUsage() {
+          this.energy_balance_data = 'Please wait...'
+          this.defaultData = true
+          this.energyBalance = false
+          let ebdata = await energyBalance()
+          if (ebdata.data == undefined || ebdata.data == null) {
+            this.logOut()
+          } else {
+            this.energy_balance_data = ebdata.data
+            this.energy_balance_data = ' Balance: ' + this.energy_balance_data + ' KWH'
+          }
+          
+        },
+
+        closeEnergyBalance () {
+          this.defaultData = false
+          this.energyBalance = true
         },
 
         getFirstLetter(text) {

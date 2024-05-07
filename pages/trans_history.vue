@@ -82,14 +82,20 @@
                         <th>id</th>
                         <th>Amount</th>
                         <th>Date</th>
+                        <th>View</th>
                     </tr>
                 </thead>
 
                 <tbody v-for="(trans, index) in transactionList" :id="trans.orderNo">
                     <tr>
-                        <td>{{ index + 1 }}</td>
+                        <td>
+                          <a href="#!" v-on:click="getPaymentRec(trans.orderNo, trans.agencyCode)">
+                            {{ index + 1 }}
+                          </a>
+                        </td>
                         <td>₦{{ formatCurrency(trans.amount) }}</td>
                         <td>{{ formatDateToString(trans.transactionDate) }}</td>
+                        <td><img src="~assets/images/view.svg" v-on:click="getPaymentRec(trans.orderNo, trans.agencyCode)" class="responsive-img" style="max-width: 30px;" alt=""></td>
                     </tr>
                     
                 </tbody>
@@ -293,7 +299,14 @@
             this.hideLoader = true
             this.hideElements = false
           }
-        }
+        },
+
+        async getPaymentRec(orderNo, agencyCode) {
+          console.log(orderNo, agencyCode);
+          let receiptRes = await paymentReceipt(orderNo, agencyCode)
+        },
+        
+
       },
 
       mounted() {

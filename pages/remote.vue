@@ -85,7 +85,7 @@
   
   <script>
   import Keyboard from '~/components/Keyboard.vue';
-  import { getUserInfo } from '~/js_modules/mods'
+  import { getUserInfo, loadToken, logOut } from '~/js_modules/mods'
 
   export default {
       layout: 'admin_main',
@@ -135,12 +135,24 @@
           return numericRegex.test(value);
         },
 
-        loadToken() {
+        async loadToken() {
+          M.toast({html: '<b class="yellow-text">Please wait</b>'})
           this.value = this.value.trim()
           if (this.value == '') {
-
+            
           } else {
-            this.value = 'Token successfully loaded'
+            let res = await loadToken(this.value)
+            if(res.message == 'Token expired!') {
+              let logoutRes = logOut()
+              if (logoutRes.message = 0) {
+                window.location = './'
+              }
+            } else if(res.code == '250') {
+              this.value = 'Something went wrong. Try again!'
+            } else {
+              this.value = 'Token successfully loaded'
+            }
+            
           }
         },
 

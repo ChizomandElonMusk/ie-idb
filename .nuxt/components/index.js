@@ -1,13 +1,13 @@
-export const AdminNavBar = () => import('../../components/AdminNavBar.vue' /* webpackChunkName: "components/admin-nav-bar" */).then(c => wrapFunctional(c.default || c))
-export const CustomSelect = () => import('../../components/CustomSelect.vue' /* webpackChunkName: "components/custom-select" */).then(c => wrapFunctional(c.default || c))
-export const Forgot = () => import('../../components/Forgot.vue' /* webpackChunkName: "components/forgot" */).then(c => wrapFunctional(c.default || c))
-export const Keyboard = () => import('../../components/Keyboard.vue' /* webpackChunkName: "components/keyboard" */).then(c => wrapFunctional(c.default || c))
-export const Login = () => import('../../components/Login.vue' /* webpackChunkName: "components/login" */).then(c => wrapFunctional(c.default || c))
-export const Logo = () => import('../../components/Logo.vue' /* webpackChunkName: "components/logo" */).then(c => wrapFunctional(c.default || c))
-export const MeterInput = () => import('../../components/MeterInput.vue' /* webpackChunkName: "components/meter-input" */).then(c => wrapFunctional(c.default || c))
-export const NavBar = () => import('../../components/NavBar.vue' /* webpackChunkName: "components/nav-bar" */).then(c => wrapFunctional(c.default || c))
-export const PreLoader = () => import('../../components/PreLoader.vue' /* webpackChunkName: "components/pre-loader" */).then(c => wrapFunctional(c.default || c))
-export const SignUp = () => import('../../components/SignUp.vue' /* webpackChunkName: "components/sign-up" */).then(c => wrapFunctional(c.default || c))
+export { default as AdminNavBar } from '../../components/AdminNavBar.vue'
+export { default as CustomSelect } from '../../components/CustomSelect.vue'
+export { default as Forgot } from '../../components/Forgot.vue'
+export { default as Keyboard } from '../../components/Keyboard.vue'
+export { default as Login } from '../../components/Login.vue'
+export { default as Logo } from '../../components/Logo.vue'
+export { default as MeterInput } from '../../components/MeterInput.vue'
+export { default as NavBar } from '../../components/NavBar.vue'
+export { default as PreLoader } from '../../components/PreLoader.vue'
+export { default as SignUp } from '../../components/SignUp.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
