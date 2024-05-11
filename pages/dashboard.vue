@@ -77,7 +77,7 @@
               <p class="white-text" style="font-size: 22px;">
                 {{ energy_balance_data }}
               </p> 
-              <img src="~assets/images/close.svg" v-if="online_status == 'online'" class="responsive-img" style="max-width: 30px;" alt="" v-on:click="closeEnergyBalance">
+              <img src="~assets/images/close.svg" class="responsive-img" style="max-width: 30px;" alt="" v-on:click="closeEnergyBalance">
             </div>
 
 
@@ -108,7 +108,7 @@
             <div class="white-text center boarder-top" v-on:click="showEnergyUsage">
               <img src="~assets/images/energy.svg" class="responsive-img" style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
               <p class="button-text white-text">
-                Energy Usage
+                Energy Balance
               </p>
             </div>
 
@@ -141,12 +141,14 @@
           
           <div class="card-panel orange flex-buttons" style="border-radius: 10px;">
 
-            <div class="white-text center boarder-top">
-              <img src="~assets/images/purchase.svg" class="responsive-img" style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
-              <p class="button-text white-text">
-                Purchase Electricity
-              </p>
-            </div>
+            <a href="https://www.ie-payments.com/pay-bill" target="_blank">
+              <div class="white-text center boarder-top">
+                <img src="~assets/images/purchase.svg" class="responsive-img" style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
+                <p class="button-text white-text">
+                  Purchase Electricity
+                </p>
+              </div>
+            </a>
 
           </div>
 
@@ -248,8 +250,9 @@
           this.defaultData = true
           this.energyBalance = false
           let ebdata = await energyBalance()
+          console.log(ebdata);
           if (ebdata.data == undefined || ebdata.data == null) {
-            this.logOut()
+            this.energy_balance_data = 'Network error. Try again later'
           } else {
             this.energy_balance_data = ebdata.data
             this.energy_balance_data = ' Balance: ' + this.energy_balance_data + ' KWH'
@@ -275,18 +278,26 @@
 
         async getUserDetails() {
           let user_info = await getUserInfo()
-          let user_online_status = await getOnlineStatus()
+          
           if (user_info.message == 'Token expired!') {
             localStorage.clear()
             this.$router.push('./')
           } else {
+            
             this.account_name = user_info.accountName
             this.account_number = user_info.accountNumber
             this.meter_number = user_info.meterNumber
             this.tariff = user_info.tariff
-            this.online_status = user_online_status.message
+            let user_online_status = await getOnlineStatus()
+            this.online_status = user_online_status.message.toLowerCase()
             console.log('here is the ut ', this.account_name);
           }
+        },
+
+        async getOnlineStatusRoutineCall() {
+          let user_online_status = await getOnlineStatus()
+          this.online_status = user_online_status.message.toLowerCase()
+          
         },
 
         greetUser() {
@@ -330,7 +341,10 @@
       },
 
       created() {
-        
+        // setInterval(function () {
+        //   this.getOnlineStatusRoutineCall()
+        // }, 300000);
+        // }, 300000);
       }
   }
   </script>

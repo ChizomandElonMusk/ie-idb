@@ -57,12 +57,10 @@
       <!-- start of buttons -->
 
       <div class="row">
-        <div class="input-field col s12" style="padding-top: 20px">
-            <Keyboard @pressed="value = $event" :selfValue="value" @paste="handlePaste"></Keyboard>
-        </div>
+        <Keyboard @pressed="value = $event" :selfValue="value" @paste="handlePaste"></Keyboard>
       </div>
 
-      <div class="row">
+      <div class="row" style="margin-top: 20px;">
         <button class="btn btn-large col s12 orange black-text" @click="loadToken()" style="border-radius: 10px; font-weight: 400;">
             <b>Load token</b>
         </button>
