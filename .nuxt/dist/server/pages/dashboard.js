@@ -511,7 +511,7 @@ module.exports = "data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1cz
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/dashboard.vue?vue&type=template&id=0f5922ec&scoped=true
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/dashboard.vue?vue&type=template&id=38fd7db0&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -520,15 +520,15 @@ var render = function render() {
     staticStyle: {
       "padding-top": "40px"
     }
-  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\" data-v-0f5922ec><div class=\"flexitem-username\" data-v-0f5922ec><b style=\"font-size: 20px; color: #757575;\" data-v-0f5922ec>" + _vm._ssrEscape("\n        " + _vm._s(_vm.greeting) + "\n      ") + "</b> <br data-v-0f5922ec></div> <div class=\"flexitem-notification\" data-v-0f5922ec>" + (_vm.meter_reachable == true ? "<img" + _vm._ssrAttr("src", __webpack_require__(55)) + " alt class=\"responsive-img\" style=\"max-width: 30px; filter: hue-rotate(180deg);\" data-v-0f5922ec>" : "<!---->") + "</div></div> <div class=\"row\" data-v-0f5922ec><b class=\"grey-text darken-4\" data-v-0f5922ec>" + _vm._ssrEscape("\n      " + _vm._s(_vm.account_name) + "\n    ") + "</b> <br data-v-0f5922ec> <div class=\"card-panel red\" style=\"border-radius: 10px;\" data-v-0f5922ec><div class=\"flexcontainerinfo\" data-v-0f5922ec><div" + _vm._ssrClass("white-text flex-icon-day", {
+  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\" data-v-38fd7db0><div class=\"flexitem-username\" data-v-38fd7db0><b style=\"font-size: 20px; color: #757575;\" data-v-38fd7db0>" + _vm._ssrEscape("\n        " + _vm._s(_vm.greeting) + "\n      ") + "</b> <br data-v-38fd7db0></div> <div class=\"flexitem-notification\" data-v-38fd7db0>" + (_vm.meter_reachable == true ? "<img" + _vm._ssrAttr("src", __webpack_require__(55)) + " alt class=\"responsive-img\" style=\"max-width: 30px; filter: hue-rotate(180deg);\" data-v-38fd7db0>" : "<!---->") + "</div></div> <div class=\"row\" data-v-38fd7db0><b class=\"grey-text darken-4\" data-v-38fd7db0>" + _vm._ssrEscape("\n      " + _vm._s(_vm.account_name) + "\n    ") + "</b> <br data-v-38fd7db0> <div class=\"card-panel red\" style=\"border-radius: 10px;\" data-v-38fd7db0><div class=\"flexcontainerinfo\" data-v-38fd7db0><div" + _vm._ssrClass("white-text flex-icon-day", {
     'hide': _vm.defaultData
-  }) + " data-v-0f5922ec>" + (_vm.online_status == 'online' ? "<img" + _vm._ssrAttr("src", __webpack_require__(56)) + " alt class=\"responsive-img\" style=\"max-width: 50px;\" data-v-0f5922ec>" : "<!---->") + " " + (_vm.online_status == 'offline' ? "<img" + _vm._ssrAttr("src", __webpack_require__(57)) + " alt class=\"responsive-img\" style=\"max-width: 50px;\" data-v-0f5922ec>" : "<!---->") + "</div> <div" + _vm._ssrClass("flex-time", {
+  }) + " data-v-38fd7db0>" + (_vm.online_status == 'online' ? "<img" + _vm._ssrAttr("src", __webpack_require__(56)) + " alt class=\"responsive-img\" style=\"max-width: 50px;\" data-v-38fd7db0>" : "<!---->") + " " + (_vm.online_status == 'offline' ? "<img" + _vm._ssrAttr("src", __webpack_require__(57)) + " alt class=\"responsive-img\" style=\"max-width: 50px;\" data-v-38fd7db0>" : "<!---->") + "</div> <div" + _vm._ssrClass("flex-time", {
     'hide': _vm.defaultData
-  }) + " data-v-0f5922ec><span class=\"white-text\" style=\"font-size: 12px;\" data-v-0f5922ec>" + _vm._ssrEscape("\n            " + _vm._s(_vm.dashboard_date) + "\n          ") + "</span> <br data-v-0f5922ec> <span class=\"white-text\" style=\"font-weight: 600; font-size: 10px;\" data-v-0f5922ec>\n            Account number:\n          </span> <br data-v-0f5922ec> <span class=\"white-text\" style=\"font-weight: 300; font-size: 12px;\" data-v-0f5922ec>" + _vm._ssrEscape("\n            " + _vm._s(_vm.account_number) + "\n          ") + "</span> <br data-v-0f5922ec> <span class=\"white-text\" style=\"font-weight: 600; font-size: 10px;\" data-v-0f5922ec>\n            Meter number:\n          </span><br data-v-0f5922ec> <span class=\"white-text\" style=\"font-weight: 300; font-size: 12px;\" data-v-0f5922ec>" + _vm._ssrEscape("\n            " + _vm._s(_vm.meter_number) + "\n          ") + "</span></div> <div" + _vm._ssrClass("flex-temperature", {
+  }) + " data-v-38fd7db0><span class=\"white-text\" style=\"font-size: 12px;\" data-v-38fd7db0>" + _vm._ssrEscape("\n            " + _vm._s(_vm.dashboard_date) + "\n          ") + "</span> <br data-v-38fd7db0> <span class=\"white-text\" style=\"font-weight: 600; font-size: 10px;\" data-v-38fd7db0>\n            Account number:\n          </span> <br data-v-38fd7db0> <span class=\"white-text\" style=\"font-weight: 300; font-size: 12px;\" data-v-38fd7db0>" + _vm._ssrEscape("\n            " + _vm._s(_vm.account_number) + "\n          ") + "</span> <br data-v-38fd7db0> <span class=\"white-text\" style=\"font-weight: 600; font-size: 10px;\" data-v-38fd7db0>\n            Meter number:\n          </span><br data-v-38fd7db0> <span class=\"white-text\" style=\"font-weight: 300; font-size: 12px;\" data-v-38fd7db0>" + _vm._ssrEscape("\n            " + _vm._s(_vm.meter_number) + "\n          ") + "</span></div> <div" + _vm._ssrClass("flex-temperature", {
     'hide': _vm.defaultData
-  }) + " data-v-0f5922ec><b style=\"background-color: yellow; padding: 5px; border-radius: 10px;\" data-v-0f5922ec>Band:</b> <br data-v-0f5922ec> <span class=\"white-text\" style=\"font-size: 20px;\" data-v-0f5922ec>" + _vm._ssrEscape("\n            " + _vm._s(_vm.getFirstLetter(_vm.tariff)) + "\n          ") + "</span></div> <div" + _vm._ssrClass("flex-time center", {
+  }) + " data-v-38fd7db0><b style=\"background-color: yellow; padding: 5px; border-radius: 10px;\" data-v-38fd7db0>Band:</b> <br data-v-38fd7db0> <span class=\"white-text\" style=\"font-size: 20px;\" data-v-38fd7db0>" + _vm._ssrEscape("\n            " + _vm._s(_vm.getFirstLetter(_vm.tariff)) + "\n          ") + "</span></div> <div" + _vm._ssrClass("flex-time center", {
     'hide': _vm.energyBalance
-  }) + " data-v-0f5922ec><p class=\"white-text\" style=\"font-size: 22px;\" data-v-0f5922ec>" + _vm._ssrEscape("\n            " + _vm._s(_vm.energy_balance_data) + "\n          ") + "</p> <img" + _vm._ssrAttr("src", __webpack_require__(58)) + " alt class=\"responsive-img\" style=\"max-width: 30px;\" data-v-0f5922ec></div></div> <div class=\"flexcontainerinfo\" style=\"margin-top: 5px;\" data-v-0f5922ec><div class=\"white-text flex-meter-number\" data-v-0f5922ec></div></div></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-0f5922ec>", "</div>", [_vm._ssrNode("<div class=\"flexcontainerbtn\" data-v-0f5922ec>", "</div>", [_vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-0f5922ec><div class=\"white-text center boarder-top\" data-v-0f5922ec><img" + _vm._ssrAttr("src", __webpack_require__(43)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-0f5922ec> <p class=\"button-text white-text\" data-v-0f5922ec>\n            Energy Balance\n          </p></div></div> <div style=\"width: 10px;\" data-v-0f5922ec></div> "), _vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-0f5922ec>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-0f5922ec>", "</div>", [_c('nuxt-link', {
+  }) + " data-v-38fd7db0><p class=\"white-text\" style=\"font-size: 22px;\" data-v-38fd7db0>" + _vm._ssrEscape("\n            " + _vm._s(_vm.energy_balance_data) + "\n          ") + "</p> <img" + _vm._ssrAttr("src", __webpack_require__(58)) + " alt class=\"responsive-img\" style=\"max-width: 30px;\" data-v-38fd7db0></div></div> <div class=\"flexcontainerinfo\" style=\"margin-top: 5px;\" data-v-38fd7db0><div class=\"white-text flex-meter-number\" data-v-38fd7db0></div></div></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-38fd7db0>", "</div>", [_vm._ssrNode("<div class=\"flexcontainerbtn\" data-v-38fd7db0>", "</div>", [_vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-38fd7db0><div class=\"white-text center boarder-top\" data-v-38fd7db0><img" + _vm._ssrAttr("src", __webpack_require__(43)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-38fd7db0> <p class=\"button-text white-text\" data-v-38fd7db0>\n            Energy Balance\n          </p></div></div> <div style=\"width: 10px;\" data-v-38fd7db0></div> "), _vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-38fd7db0>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-38fd7db0>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "./trans_history"
     }
@@ -544,7 +544,7 @@ var render = function render() {
     }
   }), _vm._v(" "), _c('p', {
     staticClass: "button-text white-text"
-  }, [_vm._v("\n              Transaction History\n            ")])])], 1)])], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-0f5922ec>", "</div>", [_vm._ssrNode("<div class=\"flexcontainerbtn\" data-v-0f5922ec>", "</div>", [_vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-0f5922ec><a href=\"https://www.ie-payments.com/pay-bill\" target=\"_blank\" data-v-0f5922ec><div class=\"white-text center boarder-top\" data-v-0f5922ec><img" + _vm._ssrAttr("src", __webpack_require__(45)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-0f5922ec> <p class=\"button-text white-text\" data-v-0f5922ec>\n              Purchase Electricity\n            </p></div></a></div> <div style=\"width: 10px;\" data-v-0f5922ec></div> "), _vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-0f5922ec>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-0f5922ec>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("\n              Transaction History\n            ")])])], 1)])], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-38fd7db0>", "</div>", [_vm._ssrNode("<div class=\"flexcontainerbtn\" data-v-38fd7db0>", "</div>", [_vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-38fd7db0><a href=\"https://www.ie-payments.com/pay-bill\" target=\"_blank\" data-v-38fd7db0><div class=\"white-text center boarder-top\" data-v-38fd7db0><img" + _vm._ssrAttr("src", __webpack_require__(45)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-38fd7db0> <p class=\"button-text white-text\" data-v-38fd7db0>\n              Purchase Electricity\n            </p></div></a></div> <div style=\"width: 10px;\" data-v-38fd7db0></div> "), _vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-38fd7db0>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-38fd7db0>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "./remote"
     }
@@ -560,11 +560,11 @@ var render = function render() {
     }
   }), _vm._v(" "), _c('p', {
     staticClass: "button-text white-text"
-  }, [_vm._v("\n              Remote Loading\n            ")])])], 1)])], 2)]), _vm._ssrNode(" <div class=\"row\" data-v-0f5922ec><div class=\"card-panel red\" style=\"border-radius: 10px;\" data-v-0f5922ec><div class=\"center\" data-v-0f5922ec><h4 class=\"white-text\" data-v-0f5922ec>\n          Ads\n        </h4> <b class=\"white-text\" style=\"font-size: 20px; font-weight: 700;\" data-v-0f5922ec>\n          ...\n        </b></div></div></div>")], 2);
+  }, [_vm._v("\n              Remote Loading\n            ")])])], 1)])], 2)]), _vm._ssrNode(" <div class=\"row\" data-v-38fd7db0><div class=\"card-panel red\" style=\"border-radius: 10px;\" data-v-38fd7db0><div class=\"center\" data-v-38fd7db0><h4 class=\"white-text\" data-v-38fd7db0>\n          Ads\n        </h4> <b class=\"white-text\" style=\"font-size: 20px; font-weight: 700;\" data-v-38fd7db0>\n          ...\n        </b></div></div></div>")], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/dashboard.vue?vue&type=template&id=0f5922ec&scoped=true
+// CONCATENATED MODULE: ./pages/dashboard.vue?vue&type=template&id=38fd7db0&scoped=true
 
 // EXTERNAL MODULE: ./js_modules/mods.js
 var mods = __webpack_require__(37);
@@ -641,6 +641,7 @@ var mods = __webpack_require__(37);
     async getOnlineStatusRoutineCall() {
       let user_online_status = await Object(mods["e" /* getOnlineStatus */])();
       this.online_status = user_online_status.message.toLowerCase();
+      // console.log('light api was called');
     },
     greetUser() {
       // Get the current time
@@ -679,9 +680,9 @@ var mods = __webpack_require__(37);
     this.dashboard_date = this.formatDate(currentDate);
   },
   created() {
-    // setInterval(function () {
-    //   this.getOnlineStatusRoutineCall()
-    // }, 300000);
+    setInterval(async () => {
+      await this.getOnlineStatusRoutineCall();
+    }, 60000);
     // }, 300000);
   }
 });
@@ -707,7 +708,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "0f5922ec",
+  "38fd7db0",
   "32d73e0a"
   
 )

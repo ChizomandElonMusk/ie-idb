@@ -297,6 +297,7 @@
         async getOnlineStatusRoutineCall() {
           let user_online_status = await getOnlineStatus()
           this.online_status = user_online_status.message.toLowerCase()
+          // console.log('light api was called');
           
         },
 
@@ -341,9 +342,9 @@
       },
 
       created() {
-        // setInterval(function () {
-        //   this.getOnlineStatusRoutineCall()
-        // }, 300000);
+        setInterval(async () => {
+          await this.getOnlineStatusRoutineCall();
+        }, 60000);
         // }, 300000);
       }
   }
