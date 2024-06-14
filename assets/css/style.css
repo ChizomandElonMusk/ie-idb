@@ -9,6 +9,71 @@
 
  /* custom starts here */
 
+
+ .responsive-button {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  /* justify-content: space-between;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; */
+}
+
+.responsive-button:hover {
+  background-color: #0056b3;
+}
+
+.button-icon {
+  width: 30px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px;
+}
+
+.button-text {
+  flex: 1; /* Take up remaining space */
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid black;
+}
+ .video-bg-container {
+  position: relative;
+  overflow: hidden; /* Ensure the video does not overflow the container */
+  width: 100%;
+  height: 100vh; /* Adjust the height to cover the entire viewport */
+}
+
+#video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire container */
+}
+
+.button-container {
+  position: absolute;
+  bottom: 0;
+  /* width: 85%; */
+  z-index: 1; 
+  justify-content: space-between;
+}
+
+
+
+
+
  input::placeholder {
   color: #ffffff;
 }

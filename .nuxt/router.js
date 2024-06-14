@@ -19,6 +19,7 @@ const _4021ab48 = () => interopDefault(import('../pages/signup.vue' /* webpackCh
 const _f4740b48 = () => interopDefault(import('../pages/success_forgotten_password_reset.vue' /* webpackChunkName: "pages/success_forgotten_password_reset" */))
 const _ff1d30d0 = () => interopDefault(import('../pages/success_password_change.vue' /* webpackChunkName: "pages/success_password_change" */))
 const _129ce058 = () => interopDefault(import('../pages/success_reg.vue' /* webpackChunkName: "pages/success_reg" */))
+const _57c837c2 = () => interopDefault(import('../pages/test.vue' /* webpackChunkName: "pages/test" */))
 const _30899906 = () => interopDefault(import('../pages/trans_history.vue' /* webpackChunkName: "pages/trans_history" */))
 const _72dc2170 = () => interopDefault(import('../pages/user-info.vue' /* webpackChunkName: "pages/user-info" */))
 const _8bd7085c = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
@@ -94,6 +95,10 @@ export const routerOptions = {
     path: "/success_reg",
     component: _129ce058,
     name: "success_reg"
+  }, {
+    path: "/test",
+    component: _57c837c2,
+    name: "test"
   }, {
     path: "/trans_history",
     component: _30899906,

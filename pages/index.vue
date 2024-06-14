@@ -3,19 +3,21 @@
       
       <div class="row full-width">
         <div class="col s12 m6" style="margin-top: 130px">
-            <Logo/>
+            
             <div class="container">
-              
+
+              <div class="row" :class="{'hide': hidePreLoader}">
+                  <div class="col s12 center">
+                    <img src="~assets/images/logo.png" class="responsive-img" :class="{'heartbeat': startHeartBeat}" style="max-width: 60px;">
+                  </div>
+              </div>
+
               <div class="row">
                 <h5 class="center red-text">
-                  IDB
+                  IDB <b style="font-size: 10px; font-weight: 300;">Alpha version 0.0.1</b>
                 </h5>
                 <!-- <PreLoader class="center" :class="{'hide': hidePreLoader}"/> -->
-                <div class="row" :class="{'hide': hidePreLoader}">
-                  <div class="col s12 center">
-                    <img src="~assets/images/logo.png" class="responsive-img heartbeat" style="max-width: 60px;">
-                  </div>
-                </div>
+                
 
               </div>
               <form @submit.prevent>
@@ -81,9 +83,14 @@
       data() {
         return {
           backgroundUrl,
-          username: 'cechehieuka@ikejaelectric.com',
-          password: 'Chizom.@1',
-          hidePreLoader: true,
+          // username: 'cechehieuka@ikejaelectric.com',
+          // password: 'Chizom.@1',
+          username: '',
+          username2: '',
+          password: '',
+          password2: '',
+          hidePreLoader: false,
+          startHeartBeat: false,
         }
       },
 
@@ -92,31 +99,72 @@
         async signIn() {
           M.toast({html: '<b class="yellow-text">Please wait...</b>'})
           this.hidePreLoader = false
-          this.username = this.username.trim()
-          this.password = this.password.trim()
-          
-          if (this.username === '' || this.password === '') {
-            M.toast({html: '<b class="red-text">Username or Password is empty!</b>'})
-            this.hidePreLoader = true
-          } else {
-            let credentials = await loginUser(this.username, this.password)
-            console.log(credentials);
-            if (credentials == undefined || credentials.message == 'Error encountered while processing request!') {
-              M.toast({html: '<b class="red-text">Check Username or Password!</b>'})
-              this.hidePreLoader = true
-            } else {
-              localStorage.setItem('jdotwdott', credentials.jws)
-              if (credentials.u.roles[0] == 'NEW') {
-                this.$router.push('./reset_password')
-              this.hidePreLoader = true
-              } else if (credentials.u.roles[0] == 'REGULAR'){
-                this.$router.push('./dashboard')
-              this.hidePreLoader = true
-              }
-              
-            }
+          this.startHeartBeat = true
+          // this.username = this.username.trim()
+          // this.password = this.password.trim()
 
+          // start of for test only
+          if (this.username !== 'test@gmail.com' && this.password !== ' p@$$word') {
+            M.toast({html: '<b class="red-text">Wrong email and password!</b>'})
+          } else {
+            this.username2 = 'cechehieuka@ikejaelectric.com'
+            this.password2 = 'Chizom.@1'
+
+            if (this.username2 === '' || this.password2 === '') {
+            M.toast({html: '<b class="red-text">Username or Password is empty!</b>'})
+            // this.hidePreLoader = true
+            this.startHeartBeat = false
+          } else {
+              let credentials = await loginUser(this.username2, this.password2)
+              console.log(credentials);
+              if (credentials == undefined || credentials.message == 'Error encountered while processing request!') {
+                M.toast({html: '<b class="red-text">Check Username or Password!</b>'})
+                // this.hidePreLoader = true
+                this.startHeartBeat = false
+              } else {
+                localStorage.setItem('jdotwdott', credentials.jws)
+                if (credentials.u.roles[0] == 'NEW') {
+                  this.$router.push('./reset_password')
+                // this.hidePreLoader = true
+                this.startHeartBeat = false
+                } else if (credentials.u.roles[0] == 'REGULAR'){
+                  this.$router.push('./dashboard')
+                // this.hidePreLoader = true
+                this.startHeartBeat = false
+                }
+                
+              }
+
+            }
           }
+          // end of for test only
+          
+          // if (this.username === '' || this.password === '') {
+          //   M.toast({html: '<b class="red-text">Username or Password is empty!</b>'})
+          //   // this.hidePreLoader = true
+          //   this.startHeartBeat = false
+          // } else {
+          //   let credentials = await loginUser(this.username, this.password)
+          //   console.log(credentials);
+          //   if (credentials == undefined || credentials.message == 'Error encountered while processing request!') {
+          //     M.toast({html: '<b class="red-text">Check Username or Password!</b>'})
+          //     // this.hidePreLoader = true
+          //     this.startHeartBeat = false
+          //   } else {
+          //     localStorage.setItem('jdotwdott', credentials.jws)
+          //     if (credentials.u.roles[0] == 'NEW') {
+          //       this.$router.push('./reset_password')
+          //     // this.hidePreLoader = true
+          //     this.startHeartBeat = false
+          //     } else if (credentials.u.roles[0] == 'REGULAR'){
+          //       this.$router.push('./dashboard')
+          //     // this.hidePreLoader = true
+          //     this.startHeartBeat = false
+          //     }
+              
+          //   }
+
+          // }
           
 
           

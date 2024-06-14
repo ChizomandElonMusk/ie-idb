@@ -105,6 +105,13 @@
     "_name": "_129ce058"
   },
   {
+    "name": "test",
+    "path": "/test",
+    "component": "/Users/chizom/Dev/office/ie_idb/pages/test.vue",
+    "chunkName": "pages/test",
+    "_name": "_57c837c2"
+  },
+  {
     "name": "trans_history",
     "path": "/trans_history",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/trans_history.vue",
