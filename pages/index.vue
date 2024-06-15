@@ -104,7 +104,7 @@
           // this.password = this.password.trim()
 
           // start of for test only
-          if (this.username !== 'test@gmail.com' && this.password !== ' p@$$word') {
+          if (this.username !== 'test@gmail.com' && this.password !== 'p@$$word') {
             M.toast({html: '<b class="red-text">Wrong email and password!</b>'})
           } else {
             this.username2 = 'cechehieuka@ikejaelectric.com'
