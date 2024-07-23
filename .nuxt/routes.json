@@ -3,133 +3,114 @@
     "name": "about",
     "path": "/about",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/about.vue",
-    "chunkName": "pages/about",
-    "_name": "_cb46bde6"
+    "chunkName": "pages/about"
   },
   {
     "name": "confirm_otp",
     "path": "/confirm_otp",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/confirm_otp.vue",
-    "chunkName": "pages/confirm_otp",
-    "_name": "_3d0565a8"
+    "chunkName": "pages/confirm_otp"
   },
   {
     "name": "confirm_otp_reset_password",
     "path": "/confirm_otp_reset_password",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/confirm_otp_reset_password.vue",
-    "chunkName": "pages/confirm_otp_reset_password",
-    "_name": "_00cdfe2e"
+    "chunkName": "pages/confirm_otp_reset_password"
   },
   {
     "name": "dashboard",
     "path": "/dashboard",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/dashboard.vue",
-    "chunkName": "pages/dashboard",
-    "_name": "_30ee9894"
+    "chunkName": "pages/dashboard"
   },
   {
     "name": "energy_usage",
     "path": "/energy_usage",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/energy_usage.vue",
-    "chunkName": "pages/energy_usage",
-    "_name": "_00fe474c"
+    "chunkName": "pages/energy_usage"
   },
   {
     "name": "forgot",
     "path": "/forgot",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/forgot.vue",
-    "chunkName": "pages/forgot",
-    "_name": "_4c5e1fd3"
+    "chunkName": "pages/forgot"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/login.vue",
-    "chunkName": "pages/login",
-    "_name": "_f887c22e"
+    "chunkName": "pages/login"
   },
   {
     "name": "purchase_electricity",
     "path": "/purchase_electricity",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/purchase_electricity.vue",
-    "chunkName": "pages/purchase_electricity",
-    "_name": "_1169e6e3"
+    "chunkName": "pages/purchase_electricity"
   },
   {
     "name": "remote",
     "path": "/remote",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/remote.vue",
-    "chunkName": "pages/remote",
-    "_name": "_c6b82914"
+    "chunkName": "pages/remote"
   },
   {
     "name": "reset_password",
     "path": "/reset_password",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/reset_password.vue",
-    "chunkName": "pages/reset_password",
-    "_name": "_c69fef8a"
+    "chunkName": "pages/reset_password"
   },
   {
     "name": "sent",
     "path": "/sent",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/sent.vue",
-    "chunkName": "pages/sent",
-    "_name": "_31426070"
+    "chunkName": "pages/sent"
   },
   {
     "name": "signup",
     "path": "/signup",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/signup.vue",
-    "chunkName": "pages/signup",
-    "_name": "_4021ab48"
+    "chunkName": "pages/signup"
   },
   {
     "name": "success_forgotten_password_reset",
     "path": "/success_forgotten_password_reset",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/success_forgotten_password_reset.vue",
-    "chunkName": "pages/success_forgotten_password_reset",
-    "_name": "_f4740b48"
+    "chunkName": "pages/success_forgotten_password_reset"
   },
   {
     "name": "success_password_change",
     "path": "/success_password_change",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/success_password_change.vue",
-    "chunkName": "pages/success_password_change",
-    "_name": "_ff1d30d0"
+    "chunkName": "pages/success_password_change"
   },
   {
     "name": "success_reg",
     "path": "/success_reg",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/success_reg.vue",
-    "chunkName": "pages/success_reg",
-    "_name": "_129ce058"
+    "chunkName": "pages/success_reg"
   },
   {
     "name": "test",
     "path": "/test",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/test.vue",
-    "chunkName": "pages/test",
-    "_name": "_57c837c2"
+    "chunkName": "pages/test"
   },
   {
     "name": "trans_history",
     "path": "/trans_history",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/trans_history.vue",
-    "chunkName": "pages/trans_history",
-    "_name": "_30899906"
+    "chunkName": "pages/trans_history"
   },
   {
     "name": "user-info",
     "path": "/user-info",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/user-info.vue",
-    "chunkName": "pages/user-info",
-    "_name": "_72dc2170"
+    "chunkName": "pages/user-info"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/chizom/Dev/office/ie_idb/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_8bd7085c"
+    "chunkName": "pages/index"
   }
 ]

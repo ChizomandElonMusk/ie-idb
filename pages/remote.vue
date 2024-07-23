@@ -106,10 +106,16 @@
             pasted_token = pasted_token.trim()
 
             if (pasted_token == '') {
-
+              
             } else {
               pasted_token = pasted_token.replace(/-/g, '')
               var isNumber = this.isNumeric(pasted_token)
+              // p@$$word
+              // 51453345797395467537
+              // 73220538680890104971
+              // 68336939399713961785
+              // 00923354734425296452
+              // 65481483520109203561
 
               if (isNumber == true) {
                 this.value = pasted_token
