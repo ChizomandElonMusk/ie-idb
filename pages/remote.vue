@@ -101,6 +101,7 @@
 
       methods: {
         handlePaste(key) {
+          console.log('paste was clicked');
             
             let pasted_token = key
             pasted_token = pasted_token.trim()

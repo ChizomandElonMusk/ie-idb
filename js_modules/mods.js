@@ -21,7 +21,7 @@ export async function loginUser(username, password) {
         const response = await rawResponse.json()
         // return response
 
-        // console.log(response)
+        console.log(response)
 
         // console.log(response.passwords)
         // console.log(response)

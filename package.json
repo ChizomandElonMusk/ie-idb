@@ -16,6 +16,7 @@
     "@capacitor/app": "^4.1.1",
     "@capacitor/camera": "^4.1.4",
     "@capacitor/cli": "^4.4.0",
+    "@capacitor/clipboard": "^6.0.0",
     "@capacitor/core": "^4.4.0",
     "@capacitor/geolocation": "^4.1.0",
     "@capacitor/ios": "4.5.0",
@@ -33,5 +34,4 @@
     "eslint-config-prettier": "^8.3.0",
     "prettier": "^2.3.2"
   }
-    
 }

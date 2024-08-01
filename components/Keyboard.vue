@@ -19,6 +19,7 @@
   <script>
 //   import 'bootstrap/dist/css/bootstrap.min.css';
   import _ from 'lodash';
+  import { Clipboard } from '@capacitor/clipboard';
   
   export default {
     props: ['selfValue'],
@@ -31,7 +32,15 @@
       };
     },
     methods: {
+
       async paste() {
+        const { type, value } = await Clipboard.read();
+        this.$emit('paste', value)
+
+        console.log(`from clipboard: ${value}`);
+      },
+
+      async paste2() {
         // Access clipboard data
         const clipboardData = await navigator.clipboard.readText();
         this.$emit('paste', clipboardData)
@@ -39,9 +48,11 @@
         // Do something with the clipboard data
         console.log('Pasted content:', clipboardData);
       },
+
       shuffle() {
         this.keys = _.shuffle(this.keys);
       },
+
       press(key) {
         if (this.value.length < 20) {
             this.value = `${this.value}${key}`;
