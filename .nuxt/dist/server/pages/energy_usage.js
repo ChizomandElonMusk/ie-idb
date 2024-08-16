@@ -36,7 +36,7 @@ module.exports = __webpack_require__.p + "img/rainy.ee2659d.svg";
 
 /***/ }),
 
-/***/ 72:
+/***/ 71:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

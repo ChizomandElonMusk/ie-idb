@@ -8,50 +8,55 @@
         </div>
       </div> -->
 
-      <div class="flexcontainer" style="margin-top: 10px;">
-        <div class="flexitem-username">
-          <nuxt-link to="./dashboard" class="btn btn-medium btn-flat red white-text" style="border-radius: 10px 0 0px 10px;">
-            Back
-          </nuxt-link>
-          <b style="font-size: 20px; color: #757575; border-radius: 0 10px 10px 0; padding: 3px;" class="grey white-text">
-            Transaction history
-          </b>
-          <br>
-          <b class="white-text darken-4">
-            .......
-          </b> 
-        </div>
+        <div class="flexcontainer" style="margin-top: 10px;">
+          <div class="flexitem-username">
+            <nuxt-link to="./dashboard" class="btn btn-medium btn-flat red white-text" style="border-radius: 10px 0 0px 10px;">
+              Back
+            </nuxt-link>
+            <b style="font-size: 20px; color: #757575; border-radius: 0 10px 10px 0; padding: 3px;" class="grey white-text">
+              Transaction history
+            </b>
+            <br>
+            <b class="white-text darken-4">
+              .......
+            </b> 
+          </div>
 
-        <div class="flexitem-notification">
-          <!-- <i class="material-icons">notifications</i> -->
+          <div class="flexitem-notification">
+            <!-- <i class="material-icons">notifications</i> -->
+          </div>
         </div>
-      </div>
 
       <!-- <CustomSelect style="margin-top: 10px;" :options="['2 months', '3 months', '4 months', '5 months', '6 months']" :default="'Duration'" class="" v-model="transaction_duration" /> -->
 
       
-      <div class="flexcontainerSearch">
-        
-        <div class=" input-field flexitem-datepicker">
-          <!-- <input type="date" placeholder="From" class="orange btn btn-medium btn-flat black-text" v-model="date_from" style="border-radius: 10px 0 0px 10px; margin-top: 10px;"> -->
-          <input type="date" placeholder="From" v-model="date_from">
+      <div class="container">
+
+        <div class="flexcontainerSearch">
+          <div class=" input-field flexitem-datepicker">
+            <!-- <input type="date" placeholder="From" class="orange btn btn-medium btn-flat black-text" v-model="date_from" style="border-radius: 10px 0 0px 10px; margin-top: 10px;"> -->
+            <input type="date" placeholder="From" v-model="date_from">
+          </div>
+          <div style="width: 3px;"></div>
+          <div class=" input-field flexitem-datepicker">
+            <!-- <input type="date" placeholder="To" class="orange btn btn-medium btn-flat black-text" v-model="date_to" style="border-radius: 0px 10px 10px 0px; margin-top: 10px;"> -->
+            <input type="date" placeholder="To" v-model="date_to">
+          </div>
+          <div class=" input-field flexitem-datepicker">
+            <img src="~assets/images/search.svg" class="responsive-img" style="max-width: 45px;" @click="getDateFrom()">
+            <!-- <button @click="getDateFrom()" class="btn btn-medium btn-flat red white-text" style="border-radius: 10px 10px 10px 10px; margin-top: 10px;">
+              Search
+            </button> -->
+          </div>
         </div>
-        <div style="width: 3px;"></div>
-        <div class=" input-field flexitem-datepicker">
-          <!-- <input type="date" placeholder="To" class="orange btn btn-medium btn-flat black-text" v-model="date_to" style="border-radius: 0px 10px 10px 0px; margin-top: 10px;"> -->
-          <input type="date" placeholder="To" v-model="date_to">
-        </div>
-        <div class=" input-field flexitem-datepicker">
-          <img src="~assets/images/search.svg" class="responsive-img" style="max-width: 45px;" @click="getDateFrom()">
-          <!-- <button @click="getDateFrom()" class="btn btn-medium btn-flat red white-text" style="border-radius: 10px 10px 10px 10px; margin-top: 10px;">
-            Search
-          </button> -->
-        </div>
+
       </div>
 
-      <div class="row" :class="{'hide': hideLoader}">
-        <div class="col s12 center">
-          <img src="~assets/images/logo.png" class="responsive-img heartbeat" style="max-width: 60px;">
+      <div class="container">
+        <div class="row" :class="{'hide': hideLoader}">
+          <div class="col s12 center">
+            <img src="~assets/images/logo.png" class="responsive-img heartbeat" style="max-width: 60px;">
+          </div>
         </div>
       </div>
       
@@ -95,7 +100,7 @@
                         </td>
                         <td>₦{{ formatCurrency(trans.amount) }}</td>
                         <td>{{ formatDateToString(trans.transactionDate) }}</td>
-                        <td><img src="~assets/images/view.svg" v-on:click="getPaymentRec(trans.orderNo, trans.agencyCode)" class="responsive-img" style="max-width: 30px;" alt=""></td>
+                        <td><img src="~assets/images/view.svg" v-on:click="getPaymentRec(trans)" class="responsive-img" style="max-width: 30px;" alt=""></td>
                     </tr>
                     
                 </tbody>
@@ -103,14 +108,34 @@
         </div>
 
       </div>
-
-     
-
-
-      
-
-
       <!-- end of buttons -->
+
+      <div class="row" :class="{'hide': hidePaymentHistoryDetail}">
+
+        <div class="col s12">
+
+            <div class="row">
+                <div class="col s12">
+                    <div class="card red white-text">
+                        <div class="card-content white-text">
+                            <span class="card-title" style="font-weight: 600;">Payment Details</span>
+                            <p><b>Account number:</b> {{ account_num }} </p>
+                            <p><b>Agency Code:</b> {{ agency_code }} </p>
+                            <p><b>Channel:</b> {{ channel }} </p>
+                            <p><b>Amount:</b> ₦{{ formatCurrency(amount) }} </p>
+                            <p><b>Order number:</b> {{ order_number }} </p>
+                            <p><b>Transaction Date:</b> {{ transaction_date }} </p>
+                        </div>
+                        <div class="card-action">
+                            <button class="btn btn-flat white red-text" @click="paymentHistory">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+      </div>
       
   
     </div>
@@ -149,12 +174,19 @@
 
       data() {
         return {
-            transaction_duration: '',
             transactionList: [],
             date_from: '',
             date_to: '',
             hideLoader: true,
             hideElements: true,
+            hidePaymentHistoryDetail: true,
+
+            account_num: '',
+            agency_code: '',
+            channel: '',
+            amount: '',
+            order_number: '',
+            transaction_date: '',
   
         }
       },
@@ -285,6 +317,7 @@
         async paymentHistory() {
           this.hideLoader = false
           this.hideElements = true
+          this.hidePaymentHistoryDetail = true
           this.transactionList = await getPaymentHistory()
           // let pr = await paymentReceipt("20240422113154472007399276", "UT000007")
           // let pr = await paymentReceipt("20240411202745039007724322", "UT000007")
@@ -301,9 +334,15 @@
           }
         },
 
-        async getPaymentRec(orderNo, agencyCode) {
-          console.log(orderNo, agencyCode);
-          let receiptRes = await paymentReceipt(orderNo, agencyCode)
+        async getPaymentRec(trans) {
+          this.account_num = trans.accountNo
+          this.agency_code = trans.agencyCode
+          this.channel = trans.channel
+          this.amount =  trans.amount
+          this.order_number = trans.orderNo
+          this.transaction_date = trans.transactionDate
+          this.hidePaymentHistoryDetail = false
+          this.hideElements = true
         },
         
 

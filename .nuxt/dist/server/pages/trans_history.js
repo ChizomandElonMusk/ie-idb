@@ -1,4 +1,4 @@
-exports.ids = [26,1];
+exports.ids = [25,1];
 exports.modules = {
 
 /***/ 37:
@@ -14,15 +14,15 @@ module.exports = __webpack_require__.p + "img/logo.e97530d.png";
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return loginUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getUserInfo; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return searchPaymentHistory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return searchPaymentHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getPaymentHistory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return registerIntent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return registerIntent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return confirmOtp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return changePassword; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return passwordResetIntent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return confirmPasswordResetToken; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getOnlineStatus; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return paymentReceipt; });
+/* unused harmony export paymentReceipt */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return energyBalance; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return loadToken; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return logOut; });
@@ -2677,14 +2677,14 @@ for(var k in plugins){if(plugins.hasOwnProperty(k)){core_controller.plugins.regi
 
 /***/ }),
 
-/***/ 83:
+/***/ 82:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/trans_history.vue?vue&type=template&id=40ddcb0c
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/trans_history.vue?vue&type=template&id=26d55330
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -2701,19 +2701,21 @@ var render = function render() {
     attrs: {
       "to": "./dashboard"
     }
-  }, [_vm._v("\n        Back\n      ")]), _vm._ssrNode(" <b class=\"grey white-text\" style=\"font-size: 20px; color: #757575; border-radius: 0 10px 10px 0; padding: 3px;\">\n        Transaction history\n      </b> <br> <b class=\"white-text darken-4\">\n        .......\n      </b>")], 2), _vm._ssrNode(" <div class=\"flexitem-notification\"></div>")], 2), _vm._ssrNode(" <div class=\"flexcontainerSearch\"><div class=\"input-field flexitem-datepicker\"><input type=\"date\" placeholder=\"From\"" + _vm._ssrAttr("value", _vm.date_from) + "></div> <div style=\"width: 3px;\"></div> <div class=\"input-field flexitem-datepicker\"><input type=\"date\" placeholder=\"To\"" + _vm._ssrAttr("value", _vm.date_to) + "></div> <div class=\"input-field flexitem-datepicker\"><img" + _vm._ssrAttr("src", __webpack_require__(64)) + " class=\"responsive-img\" style=\"max-width: 45px;\"></div></div> <div" + _vm._ssrClass("row", {
+  }, [_vm._v("\n          Back\n        ")]), _vm._ssrNode(" <b class=\"grey white-text\" style=\"font-size: 20px; color: #757575; border-radius: 0 10px 10px 0; padding: 3px;\">\n          Transaction history\n        </b> <br> <b class=\"white-text darken-4\">\n          .......\n        </b>")], 2), _vm._ssrNode(" <div class=\"flexitem-notification\"></div>")], 2), _vm._ssrNode(" <div class=\"container\"><div class=\"flexcontainerSearch\"><div class=\"input-field flexitem-datepicker\"><input type=\"date\" placeholder=\"From\"" + _vm._ssrAttr("value", _vm.date_from) + "></div> <div style=\"width: 3px;\"></div> <div class=\"input-field flexitem-datepicker\"><input type=\"date\" placeholder=\"To\"" + _vm._ssrAttr("value", _vm.date_to) + "></div> <div class=\"input-field flexitem-datepicker\"><img" + _vm._ssrAttr("src", __webpack_require__(64)) + " class=\"responsive-img\" style=\"max-width: 45px;\"></div></div></div> <div class=\"container\"><div" + _vm._ssrClass("row", {
     'hide': _vm.hideLoader
-  }) + "><div class=\"col s12 center\"><img" + _vm._ssrAttr("src", __webpack_require__(37)) + " class=\"responsive-img heartbeat\" style=\"max-width: 60px;\"></div></div> <div" + _vm._ssrClass("row", {
+  }) + "><div class=\"col s12 center\"><img" + _vm._ssrAttr("src", __webpack_require__(37)) + " class=\"responsive-img heartbeat\" style=\"max-width: 60px;\"></div></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideElements
   }) + "><div class=\"card-panel white\" style=\"border-radius: 10px;\"><canvas id=\"myChart\" style=\"width:100%;max-width:600px\"></canvas></div></div> <div class=\"row\"></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideElements
   }) + "><div class=\"col s12\"><table class=\"striped\"><thead><tr><th>id</th> <th>Amount</th> <th>Date</th> <th>View</th></tr></thead> " + _vm._ssrList(_vm.transactionList, function (trans, index) {
     return "<tbody" + _vm._ssrAttr("id", trans.orderNo) + "><tr><td><a href=\"#!\">" + _vm._ssrEscape("\n                        " + _vm._s(index + 1) + "\n                      ") + "</a></td> <td>" + _vm._ssrEscape("₦" + _vm._s(_vm.formatCurrency(trans.amount))) + "</td> <td>" + _vm._ssrEscape(_vm._s(_vm.formatDateToString(trans.transactionDate))) + "</td> <td><img" + _vm._ssrAttr("src", __webpack_require__(65)) + " alt class=\"responsive-img\" style=\"max-width: 30px;\"></td></tr></tbody>";
-  }) + "</table></div></div>")], 2);
+  }) + "</table></div></div> <div" + _vm._ssrClass("row", {
+    'hide': _vm.hidePaymentHistoryDetail
+  }) + "><div class=\"col s12\"><div class=\"row\"><div class=\"col s12\"><div class=\"card red white-text\"><div class=\"card-content white-text\"><span class=\"card-title\" style=\"font-weight: 600;\">Payment Details</span> <p><b>Account number:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.account_num) + " ") + "</p> <p><b>Agency Code:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.agency_code) + " ") + "</p> <p><b>Channel:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.channel) + " ") + "</p> <p><b>Amount:</b>" + _vm._ssrEscape(" ₦" + _vm._s(_vm.formatCurrency(_vm.amount)) + " ") + "</p> <p><b>Order number:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.order_number) + " ") + "</p> <p><b>Transaction Date:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.transaction_date) + " ") + "</p></div> <div class=\"card-action\"><button class=\"btn btn-flat white red-text\">Close</button></div></div></div></div></div></div>")], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/trans_history.vue?vue&type=template&id=40ddcb0c
+// CONCATENATED MODULE: ./pages/trans_history.vue?vue&type=template&id=26d55330
 
 // EXTERNAL MODULE: ./components/CustomSelect.vue + 4 modules
 var CustomSelect = __webpack_require__(55);
@@ -2753,12 +2755,18 @@ var Chart_default = /*#__PURE__*/__webpack_require__.n(Chart);
 
   data() {
     return {
-      transaction_duration: '',
       transactionList: [],
       date_from: '',
       date_to: '',
       hideLoader: true,
-      hideElements: true
+      hideElements: true,
+      hidePaymentHistoryDetail: true,
+      account_num: '',
+      agency_code: '',
+      channel: '',
+      amount: '',
+      order_number: '',
+      transaction_date: ''
     };
   },
   methods: {
@@ -2782,7 +2790,7 @@ var Chart_default = /*#__PURE__*/__webpack_require__.n(Chart);
           localStorage.clear();
           this.$router.push('./');
         } else {
-          this.transactionList = await Object(mods["n" /* searchPaymentHistory */])("0102327327", date_from, date_to);
+          this.transactionList = await Object(mods["m" /* searchPaymentHistory */])("0102327327", date_from, date_to);
           this.sortDate(this.transactionList);
           this.loadGraph();
         }
@@ -2869,6 +2877,7 @@ var Chart_default = /*#__PURE__*/__webpack_require__.n(Chart);
     async paymentHistory() {
       this.hideLoader = false;
       this.hideElements = true;
+      this.hidePaymentHistoryDetail = true;
       this.transactionList = await Object(mods["f" /* getPaymentHistory */])();
       // let pr = await paymentReceipt("20240422113154472007399276", "UT000007")
       // let pr = await paymentReceipt("20240411202745039007724322", "UT000007")
@@ -2884,9 +2893,15 @@ var Chart_default = /*#__PURE__*/__webpack_require__.n(Chart);
         this.hideElements = false;
       }
     },
-    async getPaymentRec(orderNo, agencyCode) {
-      console.log(orderNo, agencyCode);
-      let receiptRes = await Object(mods["l" /* paymentReceipt */])(orderNo, agencyCode);
+    async getPaymentRec(trans) {
+      this.account_num = trans.accountNo;
+      this.agency_code = trans.agencyCode;
+      this.channel = trans.channel;
+      this.amount = trans.amount;
+      this.order_number = trans.orderNo;
+      this.transaction_date = trans.transactionDate;
+      this.hidePaymentHistoryDetail = false;
+      this.hideElements = true;
     }
   },
   mounted() {

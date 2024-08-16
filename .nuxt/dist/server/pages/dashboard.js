@@ -7,15 +7,15 @@ exports.modules = {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return loginUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getUserInfo; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return searchPaymentHistory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return searchPaymentHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getPaymentHistory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return registerIntent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return registerIntent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return confirmOtp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return changePassword; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return passwordResetIntent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return confirmPasswordResetToken; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getOnlineStatus; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return paymentReceipt; });
+/* unused harmony export paymentReceipt */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return energyBalance; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return loadToken; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return logOut; });
@@ -504,7 +504,7 @@ module.exports = "data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1cz
 
 /***/ }),
 
-/***/ 71:
+/***/ 70:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

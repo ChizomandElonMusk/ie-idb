@@ -11,7 +11,6 @@ const _30ee9894 = () => interopDefault(import('../pages/dashboard.vue' /* webpac
 const _00fe474c = () => interopDefault(import('../pages/energy_usage.vue' /* webpackChunkName: "pages/energy_usage" */))
 const _4c5e1fd3 = () => interopDefault(import('../pages/forgot.vue' /* webpackChunkName: "pages/forgot" */))
 const _f887c22e = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
-const _1169e6e3 = () => interopDefault(import('../pages/purchase_electricity.vue' /* webpackChunkName: "pages/purchase_electricity" */))
 const _c6b82914 = () => interopDefault(import('../pages/remote.vue' /* webpackChunkName: "pages/remote" */))
 const _c69fef8a = () => interopDefault(import('../pages/reset_password.vue' /* webpackChunkName: "pages/reset_password" */))
 const _31426070 = () => interopDefault(import('../pages/sent.vue' /* webpackChunkName: "pages/sent" */))
@@ -63,10 +62,6 @@ export const routerOptions = {
     path: "/login",
     component: _f887c22e,
     name: "login"
-  }, {
-    path: "/purchase_electricity",
-    component: _1169e6e3,
-    name: "purchase_electricity"
   }, {
     path: "/remote",
     component: _c6b82914,

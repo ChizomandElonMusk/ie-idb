@@ -43,7 +43,7 @@ module.exports =
 /******/
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("./" + ({"1":"components/custom-select","2":"components/forgot","3":"components/keyboard","4":"components/login","5":"components/logo","6":"components/meter-input","7":"components/pre-loader","8":"components/sign-up","9":"pages/about","10":"pages/confirm_otp","11":"pages/confirm_otp_reset_password","12":"pages/dashboard","13":"pages/energy_usage","14":"pages/forgot","15":"pages/index","16":"pages/login","17":"pages/purchase_electricity","18":"pages/remote","19":"pages/reset_password","20":"pages/sent","21":"pages/signup","22":"pages/success_forgotten_password_reset","23":"pages/success_password_change","24":"pages/success_reg","25":"pages/test","26":"pages/trans_history","27":"pages/user-info"}[chunkId]||chunkId) + ".js");
+/******/ 			var chunk = require("./" + ({"1":"components/custom-select","2":"components/forgot","3":"components/keyboard","4":"components/login","5":"components/logo","6":"components/meter-input","7":"components/pre-loader","8":"components/sign-up","9":"pages/about","10":"pages/confirm_otp","11":"pages/confirm_otp_reset_password","12":"pages/dashboard","13":"pages/energy_usage","14":"pages/forgot","15":"pages/index","16":"pages/login","17":"pages/remote","18":"pages/reset_password","19":"pages/sent","20":"pages/signup","21":"pages/success_forgotten_password_reset","22":"pages/success_password_change","23":"pages/success_reg","24":"pages/test","25":"pages/trans_history","26":"pages/user-info"}[chunkId]||chunkId) + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -1611,25 +1611,24 @@ function shouldScrollToTop(route) {
 
 
 
-const _cb46bde6 = () => interopDefault(__webpack_require__.e(/* import() | pages/about */ 9).then(__webpack_require__.bind(null, 68)));
-const _3d0565a8 = () => interopDefault(__webpack_require__.e(/* import() | pages/confirm_otp */ 10).then(__webpack_require__.bind(null, 69)));
-const _00cdfe2e = () => interopDefault(__webpack_require__.e(/* import() | pages/confirm_otp_reset_password */ 11).then(__webpack_require__.bind(null, 70)));
-const _30ee9894 = () => interopDefault(__webpack_require__.e(/* import() | pages/dashboard */ 12).then(__webpack_require__.bind(null, 71)));
-const _00fe474c = () => interopDefault(__webpack_require__.e(/* import() | pages/energy_usage */ 13).then(__webpack_require__.bind(null, 72)));
-const _4c5e1fd3 = () => interopDefault(__webpack_require__.e(/* import() | pages/forgot */ 14).then(__webpack_require__.bind(null, 73)));
-const _f887c22e = () => interopDefault(__webpack_require__.e(/* import() | pages/login */ 16).then(__webpack_require__.bind(null, 74)));
-const _1169e6e3 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchase_electricity */ 17).then(__webpack_require__.bind(null, 67)));
-const _c6b82914 = () => interopDefault(__webpack_require__.e(/* import() | pages/remote */ 18).then(__webpack_require__.bind(null, 75)));
-const _c69fef8a = () => interopDefault(__webpack_require__.e(/* import() | pages/reset_password */ 19).then(__webpack_require__.bind(null, 76)));
-const _31426070 = () => interopDefault(__webpack_require__.e(/* import() | pages/sent */ 20).then(__webpack_require__.bind(null, 77)));
-const _4021ab48 = () => interopDefault(__webpack_require__.e(/* import() | pages/signup */ 21).then(__webpack_require__.bind(null, 78)));
-const _f4740b48 = () => interopDefault(__webpack_require__.e(/* import() | pages/success_forgotten_password_reset */ 22).then(__webpack_require__.bind(null, 79)));
-const _ff1d30d0 = () => interopDefault(__webpack_require__.e(/* import() | pages/success_password_change */ 23).then(__webpack_require__.bind(null, 80)));
-const _129ce058 = () => interopDefault(__webpack_require__.e(/* import() | pages/success_reg */ 24).then(__webpack_require__.bind(null, 81)));
-const _57c837c2 = () => interopDefault(__webpack_require__.e(/* import() | pages/test */ 25).then(__webpack_require__.bind(null, 82)));
-const _30899906 = () => interopDefault(__webpack_require__.e(/* import() | pages/trans_history */ 26).then(__webpack_require__.bind(null, 83)));
-const _72dc2170 = () => interopDefault(__webpack_require__.e(/* import() | pages/user-info */ 27).then(__webpack_require__.bind(null, 84)));
-const _8bd7085c = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 15).then(__webpack_require__.bind(null, 85)));
+const _cb46bde6 = () => interopDefault(__webpack_require__.e(/* import() | pages/about */ 9).then(__webpack_require__.bind(null, 67)));
+const _3d0565a8 = () => interopDefault(__webpack_require__.e(/* import() | pages/confirm_otp */ 10).then(__webpack_require__.bind(null, 68)));
+const _00cdfe2e = () => interopDefault(__webpack_require__.e(/* import() | pages/confirm_otp_reset_password */ 11).then(__webpack_require__.bind(null, 69)));
+const _30ee9894 = () => interopDefault(__webpack_require__.e(/* import() | pages/dashboard */ 12).then(__webpack_require__.bind(null, 70)));
+const _00fe474c = () => interopDefault(__webpack_require__.e(/* import() | pages/energy_usage */ 13).then(__webpack_require__.bind(null, 71)));
+const _4c5e1fd3 = () => interopDefault(__webpack_require__.e(/* import() | pages/forgot */ 14).then(__webpack_require__.bind(null, 72)));
+const _f887c22e = () => interopDefault(__webpack_require__.e(/* import() | pages/login */ 16).then(__webpack_require__.bind(null, 73)));
+const _c6b82914 = () => interopDefault(__webpack_require__.e(/* import() | pages/remote */ 17).then(__webpack_require__.bind(null, 74)));
+const _c69fef8a = () => interopDefault(__webpack_require__.e(/* import() | pages/reset_password */ 18).then(__webpack_require__.bind(null, 75)));
+const _31426070 = () => interopDefault(__webpack_require__.e(/* import() | pages/sent */ 19).then(__webpack_require__.bind(null, 76)));
+const _4021ab48 = () => interopDefault(__webpack_require__.e(/* import() | pages/signup */ 20).then(__webpack_require__.bind(null, 77)));
+const _f4740b48 = () => interopDefault(__webpack_require__.e(/* import() | pages/success_forgotten_password_reset */ 21).then(__webpack_require__.bind(null, 78)));
+const _ff1d30d0 = () => interopDefault(__webpack_require__.e(/* import() | pages/success_password_change */ 22).then(__webpack_require__.bind(null, 79)));
+const _129ce058 = () => interopDefault(__webpack_require__.e(/* import() | pages/success_reg */ 23).then(__webpack_require__.bind(null, 80)));
+const _57c837c2 = () => interopDefault(__webpack_require__.e(/* import() | pages/test */ 24).then(__webpack_require__.bind(null, 81)));
+const _30899906 = () => interopDefault(__webpack_require__.e(/* import() | pages/trans_history */ 25).then(__webpack_require__.bind(null, 82)));
+const _72dc2170 = () => interopDefault(__webpack_require__.e(/* import() | pages/user-info */ 26).then(__webpack_require__.bind(null, 83)));
+const _8bd7085c = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 15).then(__webpack_require__.bind(null, 84)));
 const emptyFn = () => {};
 external_vue_default.a.use(external_vue_router_default.a);
 const routerOptions = {
@@ -1666,10 +1665,6 @@ const routerOptions = {
     path: "/login",
     component: _f887c22e,
     name: "login"
-  }, {
-    path: "/purchase_electricity",
-    component: _1169e6e3,
-    name: "purchase_electricity"
   }, {
     path: "/remote",
     component: _c6b82914,
@@ -2521,14 +2516,14 @@ const layouts = {
 // CONCATENATED MODULE: ./.nuxt/components/index.js
 const components_AdminNavBar = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 7)).then(c => wrapFunctional(c.default || c));
 const CustomSelect = () => __webpack_require__.e(/* import() | components/custom-select */ 1).then(__webpack_require__.bind(null, 55)).then(c => wrapFunctional(c.default || c));
-const Forgot = () => __webpack_require__.e(/* import() | components/forgot */ 2).then(__webpack_require__.bind(null, 86)).then(c => wrapFunctional(c.default || c));
+const Forgot = () => __webpack_require__.e(/* import() | components/forgot */ 2).then(__webpack_require__.bind(null, 85)).then(c => wrapFunctional(c.default || c));
 const Keyboard = () => __webpack_require__.e(/* import() | components/keyboard */ 3).then(__webpack_require__.bind(null, 52)).then(c => wrapFunctional(c.default || c));
 const Login = () => __webpack_require__.e(/* import() | components/login */ 4).then(__webpack_require__.bind(null, 54)).then(c => wrapFunctional(c.default || c));
 const Logo = () => __webpack_require__.e(/* import() | components/logo */ 5).then(__webpack_require__.bind(null, 40)).then(c => wrapFunctional(c.default || c));
-const MeterInput = () => __webpack_require__.e(/* import() | components/meter-input */ 6).then(__webpack_require__.bind(null, 87)).then(c => wrapFunctional(c.default || c));
+const MeterInput = () => __webpack_require__.e(/* import() | components/meter-input */ 6).then(__webpack_require__.bind(null, 86)).then(c => wrapFunctional(c.default || c));
 const components_NavBar = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 8)).then(c => wrapFunctional(c.default || c));
 const PreLoader = () => __webpack_require__.e(/* import() | components/pre-loader */ 7).then(__webpack_require__.bind(null, 43)).then(c => wrapFunctional(c.default || c));
-const SignUp = () => __webpack_require__.e(/* import() | components/sign-up */ 8).then(__webpack_require__.bind(null, 88)).then(c => wrapFunctional(c.default || c));
+const SignUp = () => __webpack_require__.e(/* import() | components/sign-up */ 8).then(__webpack_require__.bind(null, 87)).then(c => wrapFunctional(c.default || c));
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

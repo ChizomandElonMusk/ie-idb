@@ -1,4 +1,4 @@
-exports.ids = [18,3];
+exports.ids = [17,3];
 exports.modules = {
 
 /***/ 38:
@@ -7,15 +7,15 @@ exports.modules = {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return loginUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getUserInfo; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return searchPaymentHistory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return searchPaymentHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getPaymentHistory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return registerIntent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return registerIntent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return confirmOtp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return changePassword; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return passwordResetIntent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return confirmPasswordResetToken; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getOnlineStatus; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return paymentReceipt; });
+/* unused harmony export paymentReceipt */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return energyBalance; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return loadToken; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return logOut; });
@@ -618,7 +618,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 75:
+/***/ 74:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

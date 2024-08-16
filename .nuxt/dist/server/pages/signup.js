@@ -1,4 +1,4 @@
-exports.ids = [21,5];
+exports.ids = [20,5];
 exports.modules = {
 
 /***/ 37:
@@ -14,15 +14,15 @@ module.exports = __webpack_require__.p + "img/logo.e97530d.png";
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return loginUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getUserInfo; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return searchPaymentHistory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return searchPaymentHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getPaymentHistory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return registerIntent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return registerIntent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return confirmOtp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return changePassword; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return passwordResetIntent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return confirmPasswordResetToken; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getOnlineStatus; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return paymentReceipt; });
+/* unused harmony export paymentReceipt */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return energyBalance; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return loadToken; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return logOut; });
@@ -514,7 +514,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 78:
+/***/ 77:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -571,7 +571,7 @@ var mods = __webpack_require__(38);
           html: '<b class="yellow-text">Please enter a valid meter number</b>'
         });
       } else {
-        let token = await Object(mods["m" /* registerIntent */])(this.meter_number);
+        let token = await Object(mods["l" /* registerIntent */])(this.meter_number);
         if (token == undefined) {
           M.toast({
             html: '<b class="red-text">Network error!</b>'

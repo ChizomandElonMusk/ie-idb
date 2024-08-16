@@ -14,15 +14,15 @@ module.exports = __webpack_require__.p + "img/logo.e97530d.png";
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return loginUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getUserInfo; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return searchPaymentHistory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return searchPaymentHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getPaymentHistory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return registerIntent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return registerIntent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return confirmOtp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return changePassword; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return passwordResetIntent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return confirmPasswordResetToken; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getOnlineStatus; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return paymentReceipt; });
+/* unused harmony export paymentReceipt */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return energyBalance; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return loadToken; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return logOut; });
@@ -512,14 +512,14 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 85:
+/***/ 84:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=0ddc55d4
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=0f45dae9
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -547,7 +547,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=0ddc55d4
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=0f45dae9
 
 // EXTERNAL MODULE: ./assets/images/angled_background.jpg
 var angled_background = __webpack_require__(39);
@@ -579,9 +579,11 @@ var mods = __webpack_require__(38);
       backgroundUrl: angled_background_default.a,
       // username: 'cechehieuka@ikejaelectric.com',
       // password: 'Chizom.@1',
-      username: 'test@gmail.com',
+      username: '',
+      // username: 'test@gmail.com',
       username2: '',
-      password: 'p@$$word',
+      // password: 'p@$$word',
+      password: '',
       password2: '',
       hidePreLoader: false,
       startHeartBeat: false
