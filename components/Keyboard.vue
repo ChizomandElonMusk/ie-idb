@@ -34,6 +34,7 @@
     methods: {
 
       async paste() {
+        console.log('was clicked');
         const { type, value } = await Clipboard.read();
         this.$emit('paste', value)
 

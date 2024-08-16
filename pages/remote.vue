@@ -100,6 +100,50 @@
       },
 
       methods: {
+        // handlePaste(key) {
+        //   console.log('Paste was handled');
+          
+        //   let pasted_token = key.trim();
+
+        //   if (pasted_token === '') {
+        //     this.showToast('Please paste a non-empty value', 'red');
+        //     return;
+        //   }
+
+        //   pasted_token = pasted_token.replace(/-/g, '');
+          
+        //   if (this.isValidMeterNumber(pasted_token)) {
+        //     this.value = pasted_token;
+        //     console.log('Valid token pasted:', pasted_token);
+        //     this.showToast('Token code successfully pasted', 'green');
+        //   } else {
+        //     console.log('Invalid token pasted:', pasted_token);
+        //     this.showToast('Please check token and try again', 'red');
+        //   }
+        // },
+        // isValidMeterNumber(number) {
+        //   // Adjust this regex pattern to match your specific meter number format
+        //   const meterNumberPattern = /^\d{20}$/;
+        //   return meterNumberPattern.test(number);
+        // },
+        // showToast(message, color) {
+        //   // Assuming you're using Materialize for toasts
+        //   M.toast({html: `<b class="${color}-text">${this.escapeHtml(message)}</b>`});
+        // },
+        // escapeHtml(unsafe) {
+        //   return unsafe
+        //     .replace(/&/g, "&amp;")
+        //     .replace(/</g, "&lt;")
+        //     .replace(/>/g, "&gt;")
+        //     .replace(/"/g, "&quot;")
+        //     .replace(/'/g, "&#039;");
+        // },
+        // handlePasteError(error) {
+        //   console.error('Paste error:', error);
+        //   this.showToast(error, 'red');
+        // },
+
+
         handlePaste(key) {
           console.log('paste was clicked');
             
@@ -112,11 +156,10 @@
               pasted_token = pasted_token.replace(/-/g, '')
               var isNumber = this.isNumeric(pasted_token)
               // p@$$word
-              // 51453345797395467537
-              // 73220538680890104971
-              // 68336939399713961785
-              // 00923354734425296452
-              // 65481483520109203561
+              // 32675209210005048265
+              // 09658137087802937762
+              // 29160606951104018175
+              // 47785785788471319427
 
               if (isNumber == true) {
                 this.value = pasted_token
