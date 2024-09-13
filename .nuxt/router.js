@@ -13,7 +13,9 @@ const _4c5e1fd3 = () => interopDefault(import('../pages/forgot.vue' /* webpackCh
 const _f887c22e = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
 const _c6b82914 = () => interopDefault(import('../pages/remote.vue' /* webpackChunkName: "pages/remote" */))
 const _c69fef8a = () => interopDefault(import('../pages/reset_password.vue' /* webpackChunkName: "pages/reset_password" */))
+const _0d2eaef2 = () => interopDefault(import('../pages/reset_password2.vue' /* webpackChunkName: "pages/reset_password2" */))
 const _31426070 = () => interopDefault(import('../pages/sent.vue' /* webpackChunkName: "pages/sent" */))
+const _64c5f2d3 = () => interopDefault(import('../pages/settings.vue' /* webpackChunkName: "pages/settings" */))
 const _4021ab48 = () => interopDefault(import('../pages/signup.vue' /* webpackChunkName: "pages/signup" */))
 const _f4740b48 = () => interopDefault(import('../pages/success_forgotten_password_reset.vue' /* webpackChunkName: "pages/success_forgotten_password_reset" */))
 const _ff1d30d0 = () => interopDefault(import('../pages/success_password_change.vue' /* webpackChunkName: "pages/success_password_change" */))
@@ -71,9 +73,17 @@ export const routerOptions = {
     component: _c69fef8a,
     name: "reset_password"
   }, {
+    path: "/reset_password2",
+    component: _0d2eaef2,
+    name: "reset_password2"
+  }, {
     path: "/sent",
     component: _31426070,
     name: "sent"
+  }, {
+    path: "/settings",
+    component: _64c5f2d3,
+    name: "settings"
   }, {
     path: "/signup",
     component: _4021ab48,
