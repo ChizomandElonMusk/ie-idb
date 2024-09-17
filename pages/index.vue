@@ -85,8 +85,8 @@ export default {
   data() {
     return {
       backgroundUrl,
-      username: 'cechehieuka@ikejaelectric.com',
-      password: 'Chizom@2',
+      username: '',
+      password: '',
       // username: '',
       // username: 'test@gmail.com',
       // username2: '',

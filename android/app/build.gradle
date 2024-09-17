@@ -1,11 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
-
-    namespace 'com.ikejaelectric.mobiform'
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.ikejaelectric.mobiform"
+        applicationId "com.ikejaelectric.idb"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

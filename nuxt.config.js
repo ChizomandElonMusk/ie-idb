@@ -50,6 +50,17 @@ export default {
     '@nuxtjs/axios'
   ],
 
+  // start of for icon purpose
+  capacitor: {
+    icon: 'assets/icon.png',
+    splash: 'assets/splash.png',
+  },  
+
+  generate: {
+    dir: 'dist'
+  },
+  // end of for icon purpose then run 'npx capacitor-assets generate'
+
   axios: {
     // baseURL: process.env.API_URL,
   },
