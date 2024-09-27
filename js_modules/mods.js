@@ -107,7 +107,7 @@ export async function getPaymentHistory() {
     let token = localStorage.getItem('jdotwdott')
     var passwords = ""
     passwords = {
-        param: "0102327327",
+        param: "",
     }
     passwords = JSON.stringify(passwords)
 

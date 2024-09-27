@@ -60,14 +60,14 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 45:
+/***/ 41:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/home.adfced5.svg";
 
 /***/ }),
 
-/***/ 71:
+/***/ 75:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -103,7 +103,7 @@ var render = function render() {
       "filter": "hue-rotate(180deg)"
     },
     attrs: {
-      "src": __webpack_require__(45),
+      "src": __webpack_require__(41),
       "alt": ""
     }
   })])], 1)])], 2)], 2);

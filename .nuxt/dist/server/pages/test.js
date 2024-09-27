@@ -15,14 +15,14 @@ module.exports = __webpack_require__.p + "img/angled_background.3974983.jpg";
 
 /***/ }),
 
-/***/ 67:
+/***/ 71:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "videos/scm_video.fab312d.mp4";
 
 /***/ }),
 
-/***/ 87:
+/***/ 91:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -41,7 +41,7 @@ var render = function render() {
     'hide': _vm.hideAnimation
   }) + "><div class=\"col s12 m6\" style=\"margin-top: 50px\"><div class=\"row center\"><div class=\"col s12\"><img" + _vm._ssrAttr("src", __webpack_require__(37)) + " alt class=\"responsive-img slide-in-bck-bottom\" style=\"width: 90px; height: 90px;\"></div> <div class=\"col s12\"><b class=\"text-focus-in\" style=\"font-weight: 700; font-size: 30px;\">\n              SCM CAPITAL\n            </b></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
     'hide': _vm.hideScmVideo
-  }) + ">", "</div>", [_vm._ssrNode("<div class=\"col s12 m6 video-bg-container\">", "</div>", [_vm._ssrNode("<video autoplay=\"autoplay\" muted=\"muted\" loop=\"loop\" playsinline id=\"video-background\"><source" + _vm._ssrAttr("src", __webpack_require__(67)) + " type=\"video/mp4\">\n          Your browser does not support the video tag.\n        </video> "), _vm._ssrNode("<div class=\"container\" style=\"margin-top: 150%;\">", "</div>", [_vm._ssrNode("<div class=\"row\">", "</div>", [_vm._ssrNode("<div class=\"col s12\"></div> "), _vm._ssrNode("<div class=\"col s12\">", "</div>", [_vm._ssrNode("<div class=\"\">", "</div>", [_vm._ssrNode("<div class=\"card-content\">", "</div>", [_vm._ssrNode("<div class=\"row fade-in-bck\"><div class=\"col s12\"><div class=\"image-text-container\"><img" + _vm._ssrAttr("src", __webpack_require__(37)) + " alt class=\"responsive-img\" style=\"width: 50px; height: 50px;\"> <b class=\"image-text\" style=\"font-weight: 700; font-size: 30px; \">\n                            SCM CAPITAL\n                          </b></div></div></div> "), _vm._ssrNode("<div class=\"center\">", "</div>", [_vm._ssrNode("<div class=\"row\">", "</div>", [_vm._ssrNode("<div class=\"input-field\">", "</div>", [_vm._ssrNode("<button class=\"scmColor btn btn-large col s12\" style=\"border-radius:10px; margin-bottom: 30px;\">\n                                Log in\n                            </button> "), _c('nuxt-link', {
+  }) + ">", "</div>", [_vm._ssrNode("<div class=\"col s12 m6 video-bg-container\">", "</div>", [_vm._ssrNode("<video autoplay=\"autoplay\" muted=\"muted\" loop=\"loop\" playsinline id=\"video-background\"><source" + _vm._ssrAttr("src", __webpack_require__(71)) + " type=\"video/mp4\">\n          Your browser does not support the video tag.\n        </video> "), _vm._ssrNode("<div class=\"container\" style=\"margin-top: 150%;\">", "</div>", [_vm._ssrNode("<div class=\"row\">", "</div>", [_vm._ssrNode("<div class=\"col s12\"></div> "), _vm._ssrNode("<div class=\"col s12\">", "</div>", [_vm._ssrNode("<div class=\"\">", "</div>", [_vm._ssrNode("<div class=\"card-content\">", "</div>", [_vm._ssrNode("<div class=\"row fade-in-bck\"><div class=\"col s12\"><div class=\"image-text-container\"><img" + _vm._ssrAttr("src", __webpack_require__(37)) + " alt class=\"responsive-img\" style=\"width: 50px; height: 50px;\"> <b class=\"image-text\" style=\"font-weight: 700; font-size: 30px; \">\n                            SCM CAPITAL\n                          </b></div></div></div> "), _vm._ssrNode("<div class=\"center\">", "</div>", [_vm._ssrNode("<div class=\"row\">", "</div>", [_vm._ssrNode("<div class=\"input-field\">", "</div>", [_vm._ssrNode("<button class=\"scmColor btn btn-large col s12\" style=\"border-radius:10px; margin-bottom: 30px;\">\n                                Log in\n                            </button> "), _c('nuxt-link', {
     staticClass: "black white-text btn btn-large col s12",
     staticStyle: {
       "border-radius": "10px"

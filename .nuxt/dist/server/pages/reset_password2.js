@@ -119,7 +119,7 @@ async function getPaymentHistory() {
   let token = localStorage.getItem('jdotwdott');
   var passwords = "";
   passwords = {
-    param: "0102327327"
+    param: ""
   };
   passwords = JSON.stringify(passwords);
   try {
@@ -448,14 +448,14 @@ function logOut() {
 
 /***/ }),
 
-/***/ 41:
+/***/ 45:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/settings.c5edcc8.svg";
 
 /***/ }),
 
-/***/ 80:
+/***/ 84:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -482,7 +482,7 @@ var render = function render() {
       "filter": "hue-rotate(180deg)"
     },
     attrs: {
-      "src": __webpack_require__(41),
+      "src": __webpack_require__(45),
       "alt": ""
     }
   }) : _vm._e()])], 1)], 2), _vm._ssrNode(" <div class=\"row\" data-v-0173d390><div class=\"flexcontainerbtn\" data-v-0173d390><div class=\"col s12 m6\" style=\"margin-top: 100px\" data-v-0173d390><form data-v-0173d390><div class=\"row\" data-v-0173d390><div class=\"input-field col s12\" data-v-0173d390><input type=\"password\" placeholder=\"New password\" id=\"_newpassword\"" + _vm._ssrAttr("value", _vm.new_password) + " class=\"black-text\" data-v-0173d390> <label for=\"new_password\" data-v-0173d390>New Password</label></div></div> <div class=\"row\" data-v-0173d390><div class=\"input-field col s12\" data-v-0173d390><input type=\"password\" placeholder=\"Confirm password\" id=\"confirm_password\"" + _vm._ssrAttr("value", _vm.confirm_password) + " class=\"black-text\" data-v-0173d390> <label for=\"confirm_password\" data-v-0173d390>Confirm Password</label></div></div> <div class=\"row\" data-v-0173d390><div class=\"input-field col s12 center\" data-v-0173d390><button class=\"red btn btn-large col s12\" style=\"border-radius: 10px 10px 10px 10px;\" data-v-0173d390>\n                                Proceed\n                            </button></div></div></form></div></div></div>")], 2);

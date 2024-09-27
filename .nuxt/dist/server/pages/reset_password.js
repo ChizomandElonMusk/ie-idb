@@ -119,7 +119,7 @@ async function getPaymentHistory() {
   let token = localStorage.getItem('jdotwdott');
   var passwords = "";
   passwords = {
-    param: "0102327327"
+    param: ""
   };
   passwords = JSON.stringify(passwords);
   try {
@@ -458,7 +458,7 @@ module.exports = __webpack_require__.p + "img/angled_background.3974983.jpg";
 /***/ 41:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/settings.c5edcc8.svg";
+module.exports = __webpack_require__.p + "img/home.adfced5.svg";
 
 /***/ }),
 
@@ -512,21 +512,21 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 79:
+/***/ 83:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/reset_password.vue?vue&type=template&id=92f6bd9e
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/reset_password.vue?vue&type=template&id=290ed69e
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
     staticClass: "container",
     staticStyle: {
-      "padding-top": "40px"
+      "padding-top": "0px"
     }
   }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\">", "</div>", [_vm._ssrNode("<div class=\"flexitem-username\"><b style=\"font-size: 20px; color: #757575;\">\n        Reset Password\n      </b> <br></div> "), _vm._ssrNode("<div class=\"flexitem-notification\">", "</div>", [_c('nuxt-link', {
     attrs: {
@@ -546,7 +546,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/reset_password.vue?vue&type=template&id=92f6bd9e
+// CONCATENATED MODULE: ./pages/reset_password.vue?vue&type=template&id=290ed69e
 
 // EXTERNAL MODULE: ./assets/images/angled_background.jpg
 var angled_background = __webpack_require__(39);

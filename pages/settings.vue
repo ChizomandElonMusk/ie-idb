@@ -1,5 +1,5 @@
 <template>
-    <div style="padding-top: 40px;" class="container">
+    <div style="padding-top: 0px;" class="container">
         <!-- <div class="row">
           <div>
             <h6 class="red-text" style="font-weight: 100; margin-bottom: 20px;">

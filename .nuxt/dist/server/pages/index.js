@@ -126,7 +126,7 @@ async function getPaymentHistory() {
   let token = localStorage.getItem('jdotwdott');
   var passwords = "";
   passwords = {
-    param: "0102327327"
+    param: ""
   };
   passwords = JSON.stringify(passwords);
   try {
@@ -512,22 +512,22 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 90:
+/***/ 94:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=601f284b
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=066ea28a
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', [_vm._ssrNode("<div class=\"row full-width\">", "</div>", [_vm._ssrNode("<div class=\"col s12 m6\" style=\"margin-top: 130px\">", "</div>", [_vm._ssrNode("<div class=\"container\">", "</div>", [_vm._ssrNode("<div" + _vm._ssrClass("row", {
     'hide': _vm.hidePreLoader
-  }) + "><div class=\"col s12 center\"><img" + _vm._ssrAttr("src", __webpack_require__(37)) + _vm._ssrClass("responsive-img", {
+  }) + "><div class=\"col s12 center text-focus-in\"><img" + _vm._ssrAttr("src", __webpack_require__(37)) + _vm._ssrClass("responsive-img", {
     'heartbeat': _vm.startHeartBeat
-  }) + " style=\"max-width: 60px;\"></div></div> <div class=\"row\"><h5 class=\"center red-text\">\n            IDB <b style=\"font-size: 10px; font-weight: 300;\">Alpha version 0.0.1</b></h5></div> "), _vm._ssrNode("<form>", "</form>", [_vm._ssrNode("<div class=\"row\"><div class=\"input-field col s12\"><input type=\"text\" placeholder id=\"username\"" + _vm._ssrAttr("value", _vm.username) + " class=\"black-text focus\"> <label for=\"username\">Username</label></div></div> <div class=\"row\"><div class=\"input-field col s12\"><input type=\"password\" placeholder id=\"password\"" + _vm._ssrAttr("value", _vm.password) + " class=\"black-text\"> <label for=\"password\">Password</label></div></div> <div class=\"row\"><div class=\"input-field col s12 center\"><button class=\"red btn btn-large col s12\" style=\"border-radius: 10px 10px 10px 10px;\">\n                Login\n              </button></div></div> "), _vm._ssrNode("<div class=\"row\">", "</div>", [_vm._ssrNode("<div class=\"input-field col s12 center\">", "</div>", [_vm._ssrNode("\n              Create a free account\n              "), _c('nuxt-link', {
+  }) + " style=\"max-width: 60px;\"></div></div> <div class=\"row\"><h5 class=\"center red-text tracking-in-expand\" style=\"font-size: 30px; font-weight: 700;\">\n            IDB \n            </h5></div> "), _vm._ssrNode("<form>", "</form>", [_vm._ssrNode("<div class=\"row\"><div class=\"input-field col s12\"><input type=\"text\" placeholder id=\"username\"" + _vm._ssrAttr("value", _vm.username) + " class=\"black-text focus\"> <label for=\"username\">Username</label></div></div> <div class=\"row\"><div class=\"input-field col s12\"><input type=\"password\" placeholder id=\"password\"" + _vm._ssrAttr("value", _vm.password) + " class=\"black-text\"> <label for=\"password\">Password</label></div></div> <div class=\"row\"><div class=\"input-field col s12 center\"><button class=\"red btn btn-large col s12\" style=\"border-radius: 10px 10px 10px 10px;\">\n                Login\n              </button></div></div> "), _vm._ssrNode("<div class=\"row\">", "</div>", [_vm._ssrNode("<div class=\"input-field col s12 center\">", "</div>", [_vm._ssrNode("\n              Create a free account\n              "), _c('nuxt-link', {
     staticStyle: {
       "width": "300px"
     },
@@ -547,7 +547,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=601f284b
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=066ea28a
 
 // EXTERNAL MODULE: ./assets/images/angled_background.jpg
 var angled_background = __webpack_require__(39);

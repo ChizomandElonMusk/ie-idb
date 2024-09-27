@@ -7,15 +7,16 @@
         <div class="container">
 
           <div class="row" :class="{ 'hide': hidePreLoader }">
-            <div class="col s12 center">
+            <div class="col s12 center text-focus-in">
               <img src="~assets/images/logo.png" class="responsive-img" :class="{ 'heartbeat': startHeartBeat }"
                 style="max-width: 60px;">
             </div>
           </div>
 
           <div class="row">
-            <h5 class="center red-text">
-              IDB <b style="font-size: 10px; font-weight: 300;">Alpha version 0.0.1</b>
+            <h5 class="center red-text tracking-in-expand" style="font-size: 30px; font-weight: 700;">
+              IDB 
+              <!-- <b style="font-size: 10px; font-weight: 300;">Alpha version 0.0.1</b> -->
             </h5>
             <!-- <PreLoader class="center" :class="{'hide': hidePreLoader}"/> -->
 

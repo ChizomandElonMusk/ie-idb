@@ -68,7 +68,7 @@
   export default {
     data() {
         return {
-            meter_number: '0000071941',
+            meter_number: '',
             hidePreLoader: true,
             backgroundUrl,
         };

@@ -1,5 +1,5 @@
 <template>
-  <div style="padding-top: 40px;" class="container">
+  <div style="padding-top: 0px;" class="container">
 
     <div class="flexcontainer" style="margin-top: 10px;">
       <div class="flexitem-username">
@@ -12,7 +12,7 @@
 
       <div class="flexitem-notification">
         <nuxt-link to="./settings">
-          <img src="~assets/images/settings.svg" class="responsive-img"
+          <img src="~assets/images/home.svg" class="responsive-img"
             style="max-width: 30px; filter: hue-rotate(180deg);" alt="">
         </nuxt-link>
       </div>

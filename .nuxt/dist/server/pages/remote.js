@@ -119,7 +119,7 @@ async function getPaymentHistory() {
   let token = localStorage.getItem('jdotwdott');
   var passwords = "";
   passwords = {
-    param: "0102327327"
+    param: ""
   };
   passwords = JSON.stringify(passwords);
   try {
@@ -448,6 +448,13 @@ function logOut() {
 
 /***/ }),
 
+/***/ 41:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/home.adfced5.svg";
+
+/***/ }),
+
 /***/ 42:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -619,31 +626,41 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 78:
+/***/ 82:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/remote.vue?vue&type=template&id=8fbd7c7c&scoped=true
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/remote.vue?vue&type=template&id=53efe9fc&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
     staticClass: "container",
     staticStyle: {
-      "padding-top": "60px"
+      "padding-top": "0px"
     }
-  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\" data-v-8fbd7c7c>", "</div>", [_vm._ssrNode("<div class=\"flexitem-username\" data-v-8fbd7c7c>", "</div>", [_c('nuxt-link', {
-    staticClass: "btn btn-medium btn-flat red white-text",
-    staticStyle: {
-      "border-radius": "10px 0 0px 10px"
-    },
+  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\" data-v-53efe9fc>", "</div>", [_vm._ssrNode("<div class=\"flexitem-username\" data-v-53efe9fc><b style=\"font-size: 20px; color: #757575;\" data-v-53efe9fc>\n        Remote token\n      </b> <br data-v-53efe9fc></div> "), _vm._ssrNode("<div class=\"flexitem-notification\" data-v-53efe9fc>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "./dashboard"
     }
-  }, [_vm._v("\n        Back\n      ")]), _vm._ssrNode(" <b class=\"grey white-text\" style=\"font-size: 20px; color: #757575; border-radius: 0 10px 10px 0; padding: 3px;\" data-v-8fbd7c7c>\n        Remote token\n      </b> <br data-v-8fbd7c7c> <b class=\"white-text darken-4\" data-v-8fbd7c7c>\n        .......\n      </b>")], 2), _vm._ssrNode(" <div class=\"flexitem-notification\" data-v-8fbd7c7c></div>")], 2), _vm._ssrNode(" <div class=\"row\" style=\"margin-top: 20px;\" data-v-8fbd7c7c><b class=\"grey-text darken-4\" data-v-8fbd7c7c>" + _vm._ssrEscape("\n        Meter number: " + _vm._s(_vm.meter_number) + "\n      ") + "</b> <div class=\"card-panel red\" style=\"border-radius: 10px;\" data-v-8fbd7c7c><input type=\"text\" name=\"token\" maxlength=\"20\" autocomplete=\"off\" placeholder=\"Enter token\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.value) + " class=\"white-text center\" style=\"border-bottom: 0; font-size: 20px;\" data-v-8fbd7c7c></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-8fbd7c7c>", "</div>", [_c('Keyboard', {
+  }, [_c('img', {
+    staticClass: "responsive-img",
+    staticStyle: {
+      "max-width": "30px",
+      "filter": "hue-rotate(180deg)"
+    },
+    attrs: {
+      "src": __webpack_require__(41),
+      "alt": ""
+    }
+  })])], 1)], 2), _vm._ssrNode(" <div class=\"row\" style=\"margin-top: 20px;\" data-v-53efe9fc><b class=\"grey-text darken-4\" data-v-53efe9fc>\n      Meter number: \n      <b" + _vm._ssrClass(null, {
+    'hide': _vm.hideMeterNumber
+  }) + " data-v-53efe9fc>" + _vm._ssrEscape("\n        " + _vm._s(_vm.meter_number) + "\n      ") + "</b> <b" + _vm._ssrClass("wave-dots", {
+    'hide': _vm.hideWaveDot
+  }) + " data-v-53efe9fc><span data-v-53efe9fc>.</span><span data-v-53efe9fc>.</span><span data-v-53efe9fc>.</span><span data-v-53efe9fc>.</span></b></b> <div class=\"card-panel red\" style=\"border-radius: 10px;\" data-v-53efe9fc><input type=\"text\" name=\"token\" maxlength=\"20\" autocomplete=\"off\" placeholder=\"Enter token\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.value) + " class=\"white-text center\" style=\"border-bottom: 0; font-size: 20px;\" data-v-53efe9fc></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-53efe9fc>", "</div>", [_c('Keyboard', {
     attrs: {
       "selfValue": _vm.value
     },
@@ -653,11 +670,11 @@ var render = function render() {
       },
       "paste": _vm.handlePaste
     }
-  })], 1), _vm._ssrNode(" <div class=\"row\" style=\"margin-top: 20px;\" data-v-8fbd7c7c><button class=\"btn btn-large col s12 orange black-text\" style=\"border-radius: 10px; font-weight: 400;\" data-v-8fbd7c7c><b data-v-8fbd7c7c>Load token</b></button></div> <br data-v-8fbd7c7c>")], 2);
+  })], 1), _vm._ssrNode(" <div class=\"row\" style=\"margin-top: 20px;\" data-v-53efe9fc><button class=\"btn btn-large col s12 orange black-text\" style=\"border-radius: 10px; font-weight: 400;\" data-v-53efe9fc><b data-v-53efe9fc>Load token</b></button></div> <br data-v-53efe9fc>")], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/remote.vue?vue&type=template&id=8fbd7c7c&scoped=true
+// CONCATENATED MODULE: ./pages/remote.vue?vue&type=template&id=53efe9fc&scoped=true
 
 // EXTERNAL MODULE: ./components/Keyboard.vue + 4 modules
 var Keyboard = __webpack_require__(54);
@@ -677,7 +694,9 @@ var mods = __webpack_require__(38);
     return {
       value: '',
       pastedContent: '',
-      meter_number: ''
+      meter_number: '',
+      hideMeterNumber: true,
+      hideWaveDot: false
     };
   },
   methods: {
@@ -731,12 +750,6 @@ var mods = __webpack_require__(38);
       if (pasted_token == '') {} else {
         pasted_token = pasted_token.replace(/-/g, '');
         var isNumber = this.isNumeric(pasted_token);
-        // p@$$word
-        // 32675209210005048265
-        // 09658137087802937762
-        // 29160606951104018175
-        // 47785785788471319427
-
         if (isNumber == true) {
           this.value = pasted_token;
           console.log('key pressed: ', key);
@@ -779,8 +792,13 @@ var mods = __webpack_require__(38);
       }
     },
     async getUserDetails() {
+      this.meter_number = this.meter_number.trim();
       let user_info = await Object(mods["g" /* getUserInfo */])();
       this.meter_number = user_info.meterNumber;
+      if (this.meter_number != '') {
+        this.hideMeterNumber = false;
+        this.hideWaveDot = true;
+      }
     }
   },
   mounted() {
@@ -812,7 +830,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "8fbd7c7c",
+  "53efe9fc",
   "e5135722"
   
 )

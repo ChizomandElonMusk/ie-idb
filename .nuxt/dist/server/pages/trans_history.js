@@ -126,7 +126,7 @@ async function getPaymentHistory() {
   let token = localStorage.getItem('jdotwdott');
   var passwords = "";
   passwords = {
-    param: "0102327327"
+    param: ""
   };
   passwords = JSON.stringify(passwords);
   try {
@@ -455,6 +455,13 @@ function logOut() {
 
 /***/ }),
 
+/***/ 41:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/home.adfced5.svg";
+
+/***/ }),
+
 /***/ 43:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -500,7 +507,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 57:
+/***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -594,21 +601,21 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 68:
+/***/ 72:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/search.a28e282.svg";
 
 /***/ }),
 
-/***/ 69:
+/***/ 73:
 /***/ (function(module, exports) {
 
 module.exports = "data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIFRyYW5zZm9ybWVkIGJ5OiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4KPHN2ZyBmaWxsPSIjZWQxZDFkIiB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9Ii0zLjUgMCAzMiAzMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0cm9rZT0iI2VkMWQxZCI+Cg08ZyBpZD0iU1ZHUmVwb19iZ0NhcnJpZXIiIHN0cm9rZS13aWR0aD0iMCIvPgoNPGcgaWQ9IlNWR1JlcG9fdHJhY2VyQ2FycmllciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cg08ZyBpZD0iU1ZHUmVwb19pY29uQ2FycmllciI+IDx0aXRsZT52aWV3PC90aXRsZT4gPHBhdGggZD0iTTEyLjQwNiAxMy44NDRjMS4xODggMCAyLjE1NiAwLjk2OSAyLjE1NiAyLjE1NnMtMC45NjkgMi4xMjUtMi4xNTYgMi4xMjUtMi4xMjUtMC45MzgtMi4xMjUtMi4xMjUgMC45MzgtMi4xNTYgMi4xMjUtMi4xNTZ6TTEyLjQwNiA4LjUzMWM3LjA2MyAwIDEyLjE1NiA2LjYyNSAxMi4xNTYgNi42MjUgMC4zNDQgMC40MzggMC4zNDQgMS4yMTkgMCAxLjY1NiAwIDAtNS4wOTQgNi42MjUtMTIuMTU2IDYuNjI1cy0xMi4xNTYtNi42MjUtMTIuMTU2LTYuNjI1Yy0wLjM0NC0wLjQzOC0wLjM0NC0xLjIxOSAwLTEuNjU2IDAgMCA1LjA5NC02LjYyNSAxMi4xNTYtNi42MjV6TTEyLjQwNiAyMS4zNDRjMi45MzggMCA1LjM0NC0yLjQwNiA1LjM0NC01LjM0NHMtMi40MDYtNS4zNDQtNS4zNDQtNS4zNDQtNS4zNDQgMi40MDYtNS4zNDQgNS4zNDQgMi40MDYgNS4zNDQgNS4zNDQgNS4zNDR6Ii8+IDwvZz4KDTwvc3ZnPg=="
 
 /***/ }),
 
-/***/ 70:
+/***/ 74:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -2677,48 +2684,54 @@ for(var k in plugins){if(plugins.hasOwnProperty(k)){core_controller.plugins.regi
 
 /***/ }),
 
-/***/ 88:
+/***/ 92:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/trans_history.vue?vue&type=template&id=26d55330
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/trans_history.vue?vue&type=template&id=37680e49
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
     staticClass: "container",
     staticStyle: {
-      "padding-top": "60px"
+      "padding-top": "0px"
     }
-  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\">", "</div>", [_vm._ssrNode("<div class=\"flexitem-username\">", "</div>", [_c('nuxt-link', {
-    staticClass: "btn btn-medium btn-flat red white-text",
-    staticStyle: {
-      "border-radius": "10px 0 0px 10px"
-    },
+  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\">", "</div>", [_vm._ssrNode("<div class=\"flexitem-username\"><b style=\"font-size: 20px; color: #757575;\">\n        Transaction history\n      </b> <br></div> "), _c('nuxt-link', {
     attrs: {
       "to": "./dashboard"
     }
-  }, [_vm._v("\n          Back\n        ")]), _vm._ssrNode(" <b class=\"grey white-text\" style=\"font-size: 20px; color: #757575; border-radius: 0 10px 10px 0; padding: 3px;\">\n          Transaction history\n        </b> <br> <b class=\"white-text darken-4\">\n          .......\n        </b>")], 2), _vm._ssrNode(" <div class=\"flexitem-notification\"></div>")], 2), _vm._ssrNode(" <div class=\"container\"><div class=\"flexcontainerSearch\"><div class=\"input-field flexitem-datepicker\"><input type=\"date\" placeholder=\"From\"" + _vm._ssrAttr("value", _vm.date_from) + "></div> <div style=\"width: 3px;\"></div> <div class=\"input-field flexitem-datepicker\"><input type=\"date\" placeholder=\"To\"" + _vm._ssrAttr("value", _vm.date_to) + "></div> <div class=\"input-field flexitem-datepicker\"><img" + _vm._ssrAttr("src", __webpack_require__(68)) + " class=\"responsive-img\" style=\"max-width: 45px;\"></div></div></div> <div class=\"container\"><div" + _vm._ssrClass("row", {
+  }, [_c('img', {
+    staticClass: "responsive-img",
+    staticStyle: {
+      "max-width": "30px",
+      "filter": "hue-rotate(180deg)"
+    },
+    attrs: {
+      "src": __webpack_require__(41),
+      "alt": ""
+    }
+  })])], 2), _vm._ssrNode(" <div class=\"container\"><div class=\"flexcontainerSearch\"><div class=\"input-field flexitem-datepicker\"><input type=\"date\" placeholder=\"From\"" + _vm._ssrAttr("value", _vm.date_from) + "></div> <div style=\"width: 3px;\"></div> <div class=\"input-field flexitem-datepicker\"><input type=\"date\" placeholder=\"To\"" + _vm._ssrAttr("value", _vm.date_to) + "></div> <div class=\"input-field flexitem-datepicker\"><img" + _vm._ssrAttr("src", __webpack_require__(72)) + " class=\"responsive-img\" style=\"max-width: 45px;\"></div></div></div> <div class=\"container\"><div" + _vm._ssrClass("row", {
     'hide': _vm.hideLoader
   }) + "><div class=\"col s12 center\"><img" + _vm._ssrAttr("src", __webpack_require__(37)) + " class=\"responsive-img heartbeat\" style=\"max-width: 60px;\"></div></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideElements
   }) + "><div class=\"card-panel white\" style=\"border-radius: 10px;\"><canvas id=\"myChart\" style=\"width:100%;max-width:600px\"></canvas></div></div> <div class=\"row\"></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideElements
   }) + "><div class=\"col s12\"><table class=\"striped\"><thead><tr><th>id</th> <th>Amount</th> <th>Date</th> <th>View</th></tr></thead> " + _vm._ssrList(_vm.transactionList, function (trans, index) {
-    return "<tbody" + _vm._ssrAttr("id", trans.orderNo) + "><tr><td><a href=\"#!\">" + _vm._ssrEscape("\n                        " + _vm._s(index + 1) + "\n                      ") + "</a></td> <td>" + _vm._ssrEscape("₦" + _vm._s(_vm.formatCurrency(trans.amount))) + "</td> <td>" + _vm._ssrEscape(_vm._s(_vm.formatDateToString(trans.transactionDate))) + "</td> <td><img" + _vm._ssrAttr("src", __webpack_require__(69)) + " alt class=\"responsive-img\" style=\"max-width: 30px;\"></td></tr></tbody>";
+    return "<tbody" + _vm._ssrAttr("id", trans.orderNo) + "><tr><td><a href=\"#!\">" + _vm._ssrEscape("\n                " + _vm._s(index + 1) + "\n              ") + "</a></td> <td>" + _vm._ssrEscape("₦" + _vm._s(_vm.formatCurrency(trans.amount))) + "</td> <td>" + _vm._ssrEscape(_vm._s(_vm.formatDateToString(trans.transactionDate))) + "</td> <td><img" + _vm._ssrAttr("src", __webpack_require__(73)) + " alt class=\"responsive-img\" style=\"max-width: 30px;\"></td></tr></tbody>";
   }) + "</table></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hidePaymentHistoryDetail
-  }) + "><div class=\"col s12\"><div class=\"row\"><div class=\"col s12\"><div class=\"card red white-text\"><div class=\"card-content white-text\"><span class=\"card-title\" style=\"font-weight: 600;\">Payment Details</span> <p><b>Account number:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.account_num) + " ") + "</p> <p><b>Agency Code:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.agency_code) + " ") + "</p> <p><b>Channel:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.channel) + " ") + "</p> <p><b>Amount:</b>" + _vm._ssrEscape(" ₦" + _vm._s(_vm.formatCurrency(_vm.amount)) + " ") + "</p> <p><b>Order number:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.order_number) + " ") + "</p> <p><b>Transaction Date:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.transaction_date) + " ") + "</p></div> <div class=\"card-action\"><button class=\"btn btn-flat white red-text\">Close</button></div></div></div></div></div></div>")], 2);
+  }) + "><div class=\"col s12\"><div class=\"row\"><div class=\"col s12\"><div class=\"card red white-text\"><div class=\"card-content white-text\"><span class=\"card-title\" style=\"font-weight: 600;\">Payment Details</span> <p><b>Account number:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.account_num) + " ") + "</p> <p><b>Amount:</b>" + _vm._ssrEscape(" ₦" + _vm._s(_vm.formatCurrency(_vm.amount)) + " ") + "</p> <p><b>Order number:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.order_number) + " ") + "</p> <p><b>Transaction Date:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.transaction_date) + " ") + "</p></div> <div class=\"card-action\"><button class=\"btn btn-flat white red-text\">Close</button></div></div></div></div></div></div>")], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/trans_history.vue?vue&type=template&id=26d55330
+// CONCATENATED MODULE: ./pages/trans_history.vue?vue&type=template&id=37680e49
 
 // EXTERNAL MODULE: ./components/CustomSelect.vue + 4 modules
-var CustomSelect = __webpack_require__(57);
+var CustomSelect = __webpack_require__(58);
 
 // EXTERNAL MODULE: ./js_modules/mods.js
 var mods = __webpack_require__(38);
@@ -2727,7 +2740,7 @@ var mods = __webpack_require__(38);
 var external_moment_ = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./assets/js/Chart.js
-var Chart = __webpack_require__(70);
+var Chart = __webpack_require__(74);
 var Chart_default = /*#__PURE__*/__webpack_require__.n(Chart);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/trans_history.vue?vue&type=script&lang=js
@@ -2771,6 +2784,7 @@ var Chart_default = /*#__PURE__*/__webpack_require__.n(Chart);
   },
   methods: {
     async getDateFrom() {
+      this.hidePaymentHistoryDetail = true;
       this.date_from = this.date_from.trim();
       this.date_to = this.date_to.trim();
       this.hideLoader = false;

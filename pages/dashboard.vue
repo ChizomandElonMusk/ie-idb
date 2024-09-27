@@ -1,5 +1,5 @@
 <template>
-  <div style="padding-top: 40px;" class="container">
+  <div style="padding-top: 0px;" class="container">
     <!-- <div class="row">
         <div>
           <h6 class="red-text" style="font-weight: 100; margin-bottom: 20px;">
@@ -20,7 +20,7 @@
       <div class="flexitem-notification" @click="logOut()">
         <nuxt-link to="/settings">
           <img src="~assets/images/settings.svg" class="responsive-img"
-          style="max-width: 30px; filter: hue-rotate(180deg);" alt="">
+            style="max-width: 30px; filter: hue-rotate(180deg);" alt="">
         </nuxt-link>
       </div>
       <!-- <div class="flexitem-notification" @click="logOut()">
@@ -31,11 +31,75 @@
     <!-- #666060 color for svg -->
 
     <div class="row">
-      <b class="grey-text darken-4">
+      <b class="grey-text darken-4" :class="{'hide': hideAccountName}">
         {{ account_name }}
       </b>
+      <b class="wave-dots" :class="{'hide': hideWaveDot}">
+          <span>.</span><span>.</span><span>.</span><span>.</span>
+        </b>
       <br>
-      <div class="card-panel red" style="border-radius: 10px;">
+
+
+      <!-- start of loading card  -->
+      <div class="card-panel red loading" :class="{'hide': hideLazyLoad}" style="border-radius: 10px;">
+
+        <div class="flexcontainerinfo">
+
+          <div class="white-text flex-icon-day">
+            <!-- <img src="~assets/images/bulb_off.svg" class="responsive-img"
+              style="max-width: 50px;" alt=""> -->
+
+          </div>
+
+          <div class="flex-time">
+            <span class="red-text" style="font-size: 12px;">
+              <!-- {{ dashboard_date }} -->
+            </span>
+            <br>
+
+            <span class="red-text" style="font-weight: 600; font-size: 10px;">
+              <!-- Account number: -->
+            </span>
+            <br>
+
+            <span class="red-text" style="font-weight: 300; font-size: 12px;">
+              <!-- {{ account_number }} -->
+            </span>
+            <br>
+
+            <span class="red-text" style="font-weight: 600; font-size: 10px;">
+              <!-- Meter number: -->
+            </span><br>
+            <span class="red-text" style="font-weight: 300; font-size: 12px;">
+              <!-- {{ meter_number }} -->
+            </span>
+
+          </div>
+
+          <div class="flex-temperature" >
+           
+            <!-- <span class="white-text" style="font-size: 20px;">
+</span> -->
+          </div>
+
+        </div>
+
+        <div class="flexcontainerinfo" style="margin-top: 5px;">
+
+          <div class="white-text flex-meter-number">
+            <!-- <b class="black-text" style="background-color: yellow; padding: 5px; border-radius: 10px;">Meter number:</b> {{ meter_number }} -->
+          </div>
+
+        </div>
+
+      </div>
+      <!-- end of loading card  -->
+
+
+
+
+      <!-- start of data card  -->
+      <div class="card-panel red" :class="{'hide': hideCardData}" style="border-radius: 10px;">
 
         <div class="flexcontainerinfo">
 
@@ -74,10 +138,10 @@
           </div>
 
           <div class="flex-temperature" :class="{ 'hide': defaultData }">
-            <b style="background-color: yellow; padding: 5px; border-radius: 10px;">Band:</b> <br>
-            <span class="white-text" style="font-size: 20px;">
-              {{ getFirstLetter(tariff) }}
-            </span>
+            <b style="background-color: yellow; padding: 5px; border-radius: 7px; font-size: 10px;">Band - {{ tariff
+              }}</b> <br>
+            <!-- <span class="white-text" style="font-size: 20px;">
+    </span> -->
           </div>
 
 
@@ -103,6 +167,7 @@
         </div>
 
       </div>
+      <!-- end of data card  -->
 
     </div>
 
@@ -197,12 +262,14 @@
 
         <div class="center">
 
-          <h4 class="white-text">
-            Ads
-          </h4>
+          <a href="https://www.ikejaelectric.com/contact/" target="_blank">
+            <img src="~assets/images/customer_care.svg" class="responsive-img"
+              style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
+            <br>
+          </a>
 
-          <b class="white-text" style="font-size: 20px; font-weight: 700;">
-            ...
+          <b class="white-text" style="font-size: 10px; font-weight: 700;">
+            Customer Care
           </b>
 
         </div>
@@ -247,6 +314,11 @@ export default {
       defaultData: false,
       energyBalance: true,
       energy_balance_data: 'Please wait...',
+
+      hideCardData: true,
+      hideLazyLoad: false,
+      hideAccountName: true, 
+      hideWaveDot: false,
 
     }
   },
@@ -298,20 +370,38 @@ export default {
         this.$router.push('./')
       } else {
 
+        this.account_name = this.account_name.trim()
         this.account_name = user_info.accountName
+        if(this.account_name != '') {
+          this.hideAccountName = false
+          this.hideWaveDot = true
+        }
         this.account_number = user_info.accountNumber
         this.meter_number = user_info.meterNumber
-        this.tariff = user_info.tariff
+        this.tariff = user_info.feederBand
         let user_online_status = await getOnlineStatus()
-        this.online_status = user_online_status.message.toLowerCase()
-        console.log('here is the ut ', this.account_name);
+        if (user_online_status.message == 'Error encountered while processing request!') {
+          this.online_status = 'offline'
+          console.log('no timeer online was called');
+        } else {
+          this.online_status = user_online_status.message.toLowerCase()
+        }
+
+        this.hideLazyLoad = true
+        this.hideCardData = false
+        // console.log('this is for online status ', this.user_online_status);
+        // console.log('here is the ut ', this.account_name);
       }
     },
 
     async getOnlineStatusRoutineCall() {
       let user_online_status = await getOnlineStatus()
-      this.online_status = user_online_status.message.toLowerCase()
-      // console.log('light api was called');
+      if (user_online_status.message == 'Error encountered while processing request!') {
+        this.online_status = 'offline'
+        console.log('>> with timeer online was called');
+      } else {
+        this.online_status = user_online_status.message.toLowerCase()
+      }
 
     },
 
@@ -365,4 +455,41 @@ export default {
 </script>
 
 
-<style scoped></style>
+<style scoped>
+
+.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0)
+    );
+    transform: skewX(-25deg);
+    animation: glassReflection 2s linear infinite;
+}
+
+@keyframes glassReflection {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 200%;
+    }
+}
+
+.flexcontainerinfo {
+    position: relative;
+    z-index: 1;
+}
+</style>

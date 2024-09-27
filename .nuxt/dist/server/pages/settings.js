@@ -119,7 +119,7 @@ async function getPaymentHistory() {
   let token = localStorage.getItem('jdotwdott');
   var passwords = "";
   passwords = {
-    param: "0102327327"
+    param: ""
   };
   passwords = JSON.stringify(passwords);
   try {
@@ -448,51 +448,51 @@ function logOut() {
 
 /***/ }),
 
-/***/ 45:
+/***/ 41:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/home.adfced5.svg";
 
 /***/ }),
 
-/***/ 64:
+/***/ 68:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/reset_password.8c60061.svg";
 
 /***/ }),
 
-/***/ 65:
+/***/ 69:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/about.a1dd1d9.svg";
 
 /***/ }),
 
-/***/ 66:
+/***/ 70:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/logout_white.c2bc90c.svg";
 
 /***/ }),
 
-/***/ 82:
+/***/ 86:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/settings.vue?vue&type=template&id=447e2b5c&scoped=true
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/settings.vue?vue&type=template&id=12819368&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
     staticClass: "container",
     staticStyle: {
-      "padding-top": "40px"
+      "padding-top": "0px"
     }
-  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\" data-v-447e2b5c>", "</div>", [_vm._ssrNode("<div class=\"flexitem-username\" data-v-447e2b5c><b style=\"font-size: 20px; color: #757575;\" data-v-447e2b5c>\n                Settings\n            </b> <br data-v-447e2b5c></div> "), _vm._ssrNode("<div class=\"flexitem-notification\" data-v-447e2b5c>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\" data-v-12819368>", "</div>", [_vm._ssrNode("<div class=\"flexitem-username\" data-v-12819368><b style=\"font-size: 20px; color: #757575;\" data-v-12819368>\n                Settings\n            </b> <br data-v-12819368></div> "), _vm._ssrNode("<div class=\"flexitem-notification\" data-v-12819368>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "./dashboard"
     }
@@ -503,10 +503,10 @@ var render = function render() {
       "filter": "hue-rotate(180deg)"
     },
     attrs: {
-      "src": __webpack_require__(45),
+      "src": __webpack_require__(41),
       "alt": ""
     }
-  })])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-447e2b5c>", "</div>", [_vm._ssrNode("<div class=\"flexcontainerbtn\" data-v-447e2b5c>", "</div>", [_vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-447e2b5c>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-447e2b5c>", "</div>", [_c('nuxt-link', {
+  })])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-12819368>", "</div>", [_vm._ssrNode("<div class=\"flexcontainerbtn\" data-v-12819368>", "</div>", [_vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-12819368>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-12819368>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "./reset_password"
     }
@@ -517,12 +517,12 @@ var render = function render() {
       "filter": "hue-rotate(180deg)"
     },
     attrs: {
-      "src": __webpack_require__(64),
+      "src": __webpack_require__(68),
       "alt": ""
     }
   }), _vm._v(" "), _c('p', {
     staticClass: "button-text white-text"
-  }, [_vm._v("\n                        Reset Password\n                    ")])])], 1)]), _vm._ssrNode(" <div style=\"width: 10px;\" data-v-447e2b5c></div> "), _vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-447e2b5c>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-447e2b5c>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("\n                        Reset Password\n                    ")])])], 1)]), _vm._ssrNode(" <div style=\"width: 10px;\" data-v-12819368></div> "), _vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-12819368>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-12819368>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "./about"
     }
@@ -533,16 +533,16 @@ var render = function render() {
       "filter": "hue-rotate(180deg)"
     },
     attrs: {
-      "src": __webpack_require__(65),
+      "src": __webpack_require__(69),
       "alt": ""
     }
   }), _vm._v(" "), _c('p', {
     staticClass: "button-text white-text"
-  }, [_vm._v("\n                            About\n                        ")])])], 1)])], 2)]), _vm._ssrNode(" <div class=\"row\" data-v-447e2b5c><div class=\"flexcontainerbtn\" data-v-447e2b5c><div class=\"card-panel red flex-buttons\" style=\"border-radius: 10px;\" data-v-447e2b5c><div class=\"white-text center boarder-top\" data-v-447e2b5c><div to=\"./trans_history\" data-v-447e2b5c><img" + _vm._ssrAttr("src", __webpack_require__(66)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-447e2b5c> <p class=\"button-text white-text\" data-v-447e2b5c>\n                            Logout\n                        </p></div></div></div></div></div>")], 2);
+  }, [_vm._v("\n                            About\n                        ")])])], 1)])], 2)]), _vm._ssrNode(" <div class=\"row\" data-v-12819368><div class=\"flexcontainerbtn\" data-v-12819368><div class=\"card-panel red flex-buttons\" style=\"border-radius: 10px;\" data-v-12819368><div class=\"white-text center boarder-top\" data-v-12819368><div to=\"./trans_history\" data-v-12819368><img" + _vm._ssrAttr("src", __webpack_require__(70)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-12819368> <p class=\"button-text white-text\" data-v-12819368>\n                            Logout\n                        </p></div></div></div></div></div>")], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/settings.vue?vue&type=template&id=447e2b5c&scoped=true
+// CONCATENATED MODULE: ./pages/settings.vue?vue&type=template&id=12819368&scoped=true
 
 // EXTERNAL MODULE: ./js_modules/mods.js
 var mods = __webpack_require__(38);
@@ -686,7 +686,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "447e2b5c",
+  "12819368",
   "6aa2018c"
   
 )

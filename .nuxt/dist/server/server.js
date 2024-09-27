@@ -812,7 +812,7 @@ __webpack_require__(4).default("5135230c", content, true)
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(3);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".responsive-button{align-items:center;border-radius:20px;display:flex}.responsive-button:hover{background-color:#0056b3}.button-icon{height:auto;margin-right:10px;width:30px}.button-text{flex:1}.arrow-up{border-bottom:10px solid #000;border-left:10px solid transparent;border-right:10px solid transparent;height:0;width:0}.video-bg-container{height:100vh;overflow:hidden;position:relative;width:100%}#video-background{height:100%;left:0;-o-object-fit:cover;object-fit:cover;position:absolute;top:0;width:100%}.button-container{bottom:0;justify-content:space-between;position:absolute;z-index:1}input::-moz-placeholder{color:#fff}input::placeholder{color:#fff}.flexcontainer,.flexitem-username{align-items:center;display:flex}.flexitem-username{flex-grow:1}.flexcontainerinfo{display:flex}.flex-icon-day{flex-grow:1;font-size:40px}.flex-meter-number,.flex-temperature,.flex-time{flex-grow:1}.flexcontainerbtn{display:flex;justify-content:space-between}.flex-buttons{flex-grow:1;padding:5px}.flexcontainerSearch,.flexitem-datepicker{align-items:center;display:flex}.flexitem-datepicker{flex-grow:1}.boarder-top{margin-top:15px}.button-text{font-weight:600}.input-field>label{color:gray;cursor:text;font-size:1rem;left:0;position:absolute;text-align:left;text-align:initial;top:0;transform:translateY(12px);transform-origin:0 100%;transition:transform .2s ease-out,color .2s ease-out}.input-field input:focus+label{color:gray!important}.row .input-field input:focus{border-bottom:1px solid gray!important;box-shadow:0 1px 0 0 gray!important}.full-width{height:100vh!important;margin:0}.row{margin-bottom:0!important}.overlay-red{background-color:#f44336;cursor:pointer;z-index:2}.customButtonColor{background-color:#12121a}::-moz-placeholder{color:gray}::placeholder{color:gray}nav .brand-logo,nav ul a{color:#444}p{line-height:2rem}.sidenav-trigger{color:#26a69a}.parallax-container{color:hsla(0,0%,100%,.9);height:auto;line-height:0;min-height:380px}.parallax-container .section{width:100%}@media only screen and (max-width:992px){.parallax-container .section{position:absolute;top:40%}#index-banner .section{top:10%}}@media only screen and (max-width:600px){#index-banner .section{top:0}}.icon-block{padding:0 15px}.icon-block .material-icons{font-size:inherit}footer.page-footer{margin:0}.heartbeat{animation:heartbeat 1.5s ease-in-out infinite both}@keyframes heartbeat{0%{animation-timing-function:ease-out;transform:scale(1);transform-origin:center center}10%{animation-timing-function:ease-in;transform:scale(.91)}17%{animation-timing-function:ease-out;transform:scale(.98)}33%{animation-timing-function:ease-in;transform:scale(.87)}45%{animation-timing-function:ease-out;transform:scale(1)}}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, ".responsive-button{align-items:center;border-radius:20px;display:flex}.responsive-button:hover{background-color:#0056b3}.button-icon{height:auto;margin-right:10px;width:30px}.button-text{flex:1}.arrow-up{border-bottom:10px solid #000;border-left:10px solid transparent;border-right:10px solid transparent;height:0;width:0}.video-bg-container{height:100vh;overflow:hidden;position:relative;width:100%}#video-background{height:100%;left:0;-o-object-fit:cover;object-fit:cover;position:absolute;top:0;width:100%}.button-container{bottom:0;justify-content:space-between;position:absolute;z-index:1}input::-moz-placeholder{color:#fff}input::placeholder{color:#fff}.flexcontainer,.flexitem-username{align-items:center;display:flex}.flexitem-username{flex-grow:1}.flexcontainerinfo{display:flex}.flex-icon-day{flex-grow:1;font-size:40px}.flex-meter-number,.flex-temperature,.flex-time{flex-grow:1}.flexcontainerbtn{display:flex;justify-content:space-between}.flex-buttons{flex-grow:1;padding:5px}.flexcontainerSearch,.flexitem-datepicker{align-items:center;display:flex}.flexitem-datepicker{flex-grow:1}.boarder-top{margin-top:15px}.button-text{font-weight:600}.input-field>label{color:gray;cursor:text;font-size:1rem;left:0;position:absolute;text-align:left;text-align:initial;top:0;transform:translateY(12px);transform-origin:0 100%;transition:transform .2s ease-out,color .2s ease-out}.input-field input:focus+label{color:gray!important}.row .input-field input:focus{border-bottom:1px solid gray!important;box-shadow:0 1px 0 0 gray!important}.full-width{height:100vh!important;margin:0}.row{margin-bottom:0!important}.overlay-red{background-color:#f44336;cursor:pointer;z-index:2}.customButtonColor{background-color:#12121a}::-moz-placeholder{color:gray}::placeholder{color:gray}nav .brand-logo,nav ul a{color:#444}p{line-height:2rem}.sidenav-trigger{color:#26a69a}.parallax-container{color:hsla(0,0%,100%,.9);height:auto;line-height:0;min-height:380px}.parallax-container .section{width:100%}@media only screen and (max-width:992px){.parallax-container .section{position:absolute;top:40%}#index-banner .section{top:10%}}@media only screen and (max-width:600px){#index-banner .section{top:0}}.icon-block{padding:0 15px}.icon-block .material-icons{font-size:inherit}footer.page-footer{margin:0}.heartbeat{animation:heartbeat 1.5s ease-in-out infinite both}@keyframes heartbeat{0%{animation-timing-function:ease-out;transform:scale(1);transform-origin:center center}10%{animation-timing-function:ease-in;transform:scale(.91)}17%{animation-timing-function:ease-out;transform:scale(.98)}33%{animation-timing-function:ease-in;transform:scale(.87)}45%{animation-timing-function:ease-out;transform:scale(1)}}.tracking-in-expand{animation:tracking-in-expand 2s cubic-bezier(.215,.61,.355,1) both}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}to{opacity:1}}.text-focus-in{animation:text-focus-in .7s cubic-bezier(.55,.085,.68,.53) both}@keyframes text-focus-in{0%{filter:blur(12px);opacity:0}to{filter:blur(0);opacity:1}}.wave-dots{font-size:13px;letter-spacing:4px}.wave-dots span{animation:wave 1.5s ease-in-out infinite;display:inline-block}.wave-dots span:nth-child(2){animation-delay:.2s}.wave-dots span:nth-child(3){animation-delay:.4s}.wave-dots span:nth-child(4){animation-delay:.6s}@keyframes wave{0%,to{transform:translateY(0)}50%{transform:translateY(-10px)}}", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {};
 module.exports = ___CSS_LOADER_EXPORT___;
@@ -1611,26 +1611,26 @@ function shouldScrollToTop(route) {
 
 
 
-const _cb46bde6 = () => interopDefault(__webpack_require__.e(/* import() | pages/about */ 9).then(__webpack_require__.bind(null, 71)));
-const _3d0565a8 = () => interopDefault(__webpack_require__.e(/* import() | pages/confirm_otp */ 10).then(__webpack_require__.bind(null, 72)));
-const _00cdfe2e = () => interopDefault(__webpack_require__.e(/* import() | pages/confirm_otp_reset_password */ 11).then(__webpack_require__.bind(null, 73)));
-const _30ee9894 = () => interopDefault(__webpack_require__.e(/* import() | pages/dashboard */ 12).then(__webpack_require__.bind(null, 74)));
-const _00fe474c = () => interopDefault(__webpack_require__.e(/* import() | pages/energy_usage */ 13).then(__webpack_require__.bind(null, 75)));
-const _4c5e1fd3 = () => interopDefault(__webpack_require__.e(/* import() | pages/forgot */ 14).then(__webpack_require__.bind(null, 76)));
-const _f887c22e = () => interopDefault(__webpack_require__.e(/* import() | pages/login */ 16).then(__webpack_require__.bind(null, 77)));
-const _c6b82914 = () => interopDefault(__webpack_require__.e(/* import() | pages/remote */ 17).then(__webpack_require__.bind(null, 78)));
-const _c69fef8a = () => interopDefault(__webpack_require__.e(/* import() | pages/reset_password */ 18).then(__webpack_require__.bind(null, 79)));
-const _0d2eaef2 = () => interopDefault(__webpack_require__.e(/* import() | pages/reset_password2 */ 19).then(__webpack_require__.bind(null, 80)));
-const _31426070 = () => interopDefault(__webpack_require__.e(/* import() | pages/sent */ 20).then(__webpack_require__.bind(null, 81)));
-const _64c5f2d3 = () => interopDefault(__webpack_require__.e(/* import() | pages/settings */ 21).then(__webpack_require__.bind(null, 82)));
-const _4021ab48 = () => interopDefault(__webpack_require__.e(/* import() | pages/signup */ 22).then(__webpack_require__.bind(null, 83)));
-const _f4740b48 = () => interopDefault(__webpack_require__.e(/* import() | pages/success_forgotten_password_reset */ 23).then(__webpack_require__.bind(null, 84)));
-const _ff1d30d0 = () => interopDefault(__webpack_require__.e(/* import() | pages/success_password_change */ 24).then(__webpack_require__.bind(null, 85)));
-const _129ce058 = () => interopDefault(__webpack_require__.e(/* import() | pages/success_reg */ 25).then(__webpack_require__.bind(null, 86)));
-const _57c837c2 = () => interopDefault(__webpack_require__.e(/* import() | pages/test */ 26).then(__webpack_require__.bind(null, 87)));
-const _30899906 = () => interopDefault(__webpack_require__.e(/* import() | pages/trans_history */ 27).then(__webpack_require__.bind(null, 88)));
-const _72dc2170 = () => interopDefault(__webpack_require__.e(/* import() | pages/user-info */ 28).then(__webpack_require__.bind(null, 89)));
-const _8bd7085c = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 15).then(__webpack_require__.bind(null, 90)));
+const _cb46bde6 = () => interopDefault(__webpack_require__.e(/* import() | pages/about */ 9).then(__webpack_require__.bind(null, 75)));
+const _3d0565a8 = () => interopDefault(__webpack_require__.e(/* import() | pages/confirm_otp */ 10).then(__webpack_require__.bind(null, 76)));
+const _00cdfe2e = () => interopDefault(__webpack_require__.e(/* import() | pages/confirm_otp_reset_password */ 11).then(__webpack_require__.bind(null, 77)));
+const _30ee9894 = () => interopDefault(__webpack_require__.e(/* import() | pages/dashboard */ 12).then(__webpack_require__.bind(null, 78)));
+const _00fe474c = () => interopDefault(__webpack_require__.e(/* import() | pages/energy_usage */ 13).then(__webpack_require__.bind(null, 79)));
+const _4c5e1fd3 = () => interopDefault(__webpack_require__.e(/* import() | pages/forgot */ 14).then(__webpack_require__.bind(null, 80)));
+const _f887c22e = () => interopDefault(__webpack_require__.e(/* import() | pages/login */ 16).then(__webpack_require__.bind(null, 81)));
+const _c6b82914 = () => interopDefault(__webpack_require__.e(/* import() | pages/remote */ 17).then(__webpack_require__.bind(null, 82)));
+const _c69fef8a = () => interopDefault(__webpack_require__.e(/* import() | pages/reset_password */ 18).then(__webpack_require__.bind(null, 83)));
+const _0d2eaef2 = () => interopDefault(__webpack_require__.e(/* import() | pages/reset_password2 */ 19).then(__webpack_require__.bind(null, 84)));
+const _31426070 = () => interopDefault(__webpack_require__.e(/* import() | pages/sent */ 20).then(__webpack_require__.bind(null, 85)));
+const _64c5f2d3 = () => interopDefault(__webpack_require__.e(/* import() | pages/settings */ 21).then(__webpack_require__.bind(null, 86)));
+const _4021ab48 = () => interopDefault(__webpack_require__.e(/* import() | pages/signup */ 22).then(__webpack_require__.bind(null, 87)));
+const _f4740b48 = () => interopDefault(__webpack_require__.e(/* import() | pages/success_forgotten_password_reset */ 23).then(__webpack_require__.bind(null, 88)));
+const _ff1d30d0 = () => interopDefault(__webpack_require__.e(/* import() | pages/success_password_change */ 24).then(__webpack_require__.bind(null, 89)));
+const _129ce058 = () => interopDefault(__webpack_require__.e(/* import() | pages/success_reg */ 25).then(__webpack_require__.bind(null, 90)));
+const _57c837c2 = () => interopDefault(__webpack_require__.e(/* import() | pages/test */ 26).then(__webpack_require__.bind(null, 91)));
+const _30899906 = () => interopDefault(__webpack_require__.e(/* import() | pages/trans_history */ 27).then(__webpack_require__.bind(null, 92)));
+const _72dc2170 = () => interopDefault(__webpack_require__.e(/* import() | pages/user-info */ 28).then(__webpack_require__.bind(null, 93)));
+const _8bd7085c = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 15).then(__webpack_require__.bind(null, 94)));
 const emptyFn = () => {};
 external_vue_default.a.use(external_vue_router_default.a);
 const routerOptions = {
@@ -2525,15 +2525,15 @@ const layouts = {
 });
 // CONCATENATED MODULE: ./.nuxt/components/index.js
 const components_AdminNavBar = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 7)).then(c => wrapFunctional(c.default || c));
-const CustomSelect = () => __webpack_require__.e(/* import() | components/custom-select */ 1).then(__webpack_require__.bind(null, 57)).then(c => wrapFunctional(c.default || c));
-const Forgot = () => __webpack_require__.e(/* import() | components/forgot */ 2).then(__webpack_require__.bind(null, 91)).then(c => wrapFunctional(c.default || c));
+const CustomSelect = () => __webpack_require__.e(/* import() | components/custom-select */ 1).then(__webpack_require__.bind(null, 58)).then(c => wrapFunctional(c.default || c));
+const Forgot = () => __webpack_require__.e(/* import() | components/forgot */ 2).then(__webpack_require__.bind(null, 95)).then(c => wrapFunctional(c.default || c));
 const Keyboard = () => __webpack_require__.e(/* import() | components/keyboard */ 3).then(__webpack_require__.bind(null, 54)).then(c => wrapFunctional(c.default || c));
-const Login = () => __webpack_require__.e(/* import() | components/login */ 4).then(__webpack_require__.bind(null, 56)).then(c => wrapFunctional(c.default || c));
+const Login = () => __webpack_require__.e(/* import() | components/login */ 4).then(__webpack_require__.bind(null, 57)).then(c => wrapFunctional(c.default || c));
 const Logo = () => __webpack_require__.e(/* import() | components/logo */ 5).then(__webpack_require__.bind(null, 40)).then(c => wrapFunctional(c.default || c));
-const MeterInput = () => __webpack_require__.e(/* import() | components/meter-input */ 6).then(__webpack_require__.bind(null, 92)).then(c => wrapFunctional(c.default || c));
+const MeterInput = () => __webpack_require__.e(/* import() | components/meter-input */ 6).then(__webpack_require__.bind(null, 96)).then(c => wrapFunctional(c.default || c));
 const components_NavBar = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 8)).then(c => wrapFunctional(c.default || c));
 const PreLoader = () => __webpack_require__.e(/* import() | components/pre-loader */ 7).then(__webpack_require__.bind(null, 44)).then(c => wrapFunctional(c.default || c));
-const SignUp = () => __webpack_require__.e(/* import() | components/sign-up */ 8).then(__webpack_require__.bind(null, 93)).then(c => wrapFunctional(c.default || c));
+const SignUp = () => __webpack_require__.e(/* import() | components/sign-up */ 8).then(__webpack_require__.bind(null, 97)).then(c => wrapFunctional(c.default || c));
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
