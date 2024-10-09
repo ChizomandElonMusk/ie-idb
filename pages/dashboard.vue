@@ -31,17 +31,17 @@
     <!-- #666060 color for svg -->
 
     <div class="row">
-      <b class="grey-text darken-4" :class="{'hide': hideAccountName}">
+      <b class="grey-text darken-4" :class="{ 'hide': hideAccountName }">
         {{ account_name }}
       </b>
-      <b class="wave-dots" :class="{'hide': hideWaveDot}">
-          <span>.</span><span>.</span><span>.</span><span>.</span>
-        </b>
+      <b class="wave-dots" :class="{ 'hide': hideWaveDot }">
+        <span>.</span><span>.</span><span>.</span><span>.</span>
+      </b>
       <br>
 
 
       <!-- start of loading card  -->
-      <div class="card-panel red loading" :class="{'hide': hideLazyLoad}" style="border-radius: 10px;">
+      <div class="card-panel red loading" :class="{ 'hide': hideLazyLoad }" style="border-radius: 10px;">
 
         <div class="flexcontainerinfo">
 
@@ -76,8 +76,8 @@
 
           </div>
 
-          <div class="flex-temperature" >
-           
+          <div class="flex-temperature">
+
             <!-- <span class="white-text" style="font-size: 20px;">
 </span> -->
           </div>
@@ -99,7 +99,7 @@
 
 
       <!-- start of data card  -->
-      <div class="card-panel red" :class="{'hide': hideCardData}" style="border-radius: 10px;">
+      <div class="card-panel red" :class="{ 'hide': hideCardData }" style="border-radius: 10px;">
 
         <div class="flexcontainerinfo">
 
@@ -317,26 +317,20 @@ export default {
 
       hideCardData: true,
       hideLazyLoad: false,
-      hideAccountName: true, 
+      hideAccountName: true,
       hideWaveDot: false,
 
     }
   },
 
   methods: {
-    logOut() {
-      if (process.client) {
-        localStorage.clear()
-        window.location = './'
-      }
-    },
 
     async showEnergyUsage() {
       this.energy_balance_data = 'Please wait...'
       this.defaultData = true
       this.energyBalance = false
       let ebdata = await energyBalance()
-      console.log(ebdata);
+      ////console.log(ebdata);
       if (ebdata.data == undefined || ebdata.data == null) {
         this.energy_balance_data = 'Network error. Try again later'
       } else {
@@ -372,7 +366,7 @@ export default {
 
         this.account_name = this.account_name.trim()
         this.account_name = user_info.accountName
-        if(this.account_name != '') {
+        if (this.account_name != '') {
           this.hideAccountName = false
           this.hideWaveDot = true
         }
@@ -382,23 +376,22 @@ export default {
         let user_online_status = await getOnlineStatus()
         if (user_online_status.message == 'Error encountered while processing request!') {
           this.online_status = 'offline'
-          console.log('no timeer online was called');
+          ////console.log('no timeer online was called');
         } else {
           this.online_status = user_online_status.message.toLowerCase()
         }
 
         this.hideLazyLoad = true
         this.hideCardData = false
-        // console.log('this is for online status ', this.user_online_status);
-        // console.log('here is the ut ', this.account_name);
+        // ////console.log('this is for online status ', this.user_online_status);
+        // ////console.log('here is the ut ', this.account_name);
       }
     },
 
     async getOnlineStatusRoutineCall() {
       let user_online_status = await getOnlineStatus()
-      if (user_online_status.message == 'Error encountered while processing request!') {
+      if (user_online_status.message == 'Error encountered while processing request!' || user_online_status.message == 'Token expired!') {
         this.online_status = 'offline'
-        console.log('>> with timeer online was called');
       } else {
         this.online_status = user_online_status.message.toLowerCase()
       }
@@ -438,7 +431,7 @@ export default {
   },
 
   mounted() {
-    console.log('calling getUserDetails');
+    ////console.log('calling getUserDetails');
     this.getUserDetails()
     this.greetUser()
     const currentDate = new Date();
@@ -456,40 +449,38 @@ export default {
 
 
 <style scoped>
-
 .loading {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .loading::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0.3),
-        rgba(255, 255, 255, 0)
-    );
-    transform: skewX(-25deg);
-    animation: glassReflection 2s linear infinite;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0));
+  transform: skewX(-25deg);
+  animation: glassReflection 2s linear infinite;
 }
 
 @keyframes glassReflection {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 200%;
-    }
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 200%;
+  }
 }
 
 .flexcontainerinfo {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 </style>

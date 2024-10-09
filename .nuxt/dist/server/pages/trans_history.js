@@ -44,13 +44,13 @@ async function loginUser(username, password) {
     const response = await rawResponse.json();
     // return response
 
-    console.log(response);
+    //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     return response;
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -74,19 +74,17 @@ async function getUserInfo() {
       body: passwords
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     return response;
   } catch (error) {
-    console.log(error);
-    M.toast({
-      html: `<b class="red-text">${error}</b>`
-    });
+    //console.log(error)
+    // M.toast({html: `<b class="red-text">${error}</b>`})
   }
 }
 async function searchPaymentHistory(account_number, start_date, end_date) {
@@ -107,16 +105,16 @@ async function searchPaymentHistory(account_number, start_date, end_date) {
       body: passwords
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -140,16 +138,16 @@ async function getPaymentHistory() {
       body: passwords
     });
     const response = await rawResponse.json();
-    // console.log(response)
+    // //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -171,16 +169,16 @@ async function registerIntent(meterNumber) {
       body: user_meter_number
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -204,16 +202,16 @@ async function confirmOtp(otp) {
       body: userOtp
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -237,16 +235,16 @@ async function changePassword(newPassword, confirmPassword) {
       body: userPasswords
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -268,16 +266,16 @@ async function passwordResetIntent(username) {
       body: usernameReq
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -301,16 +299,16 @@ async function confirmPasswordResetToken(otp) {
       body: userOtp
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -335,19 +333,17 @@ async function getOnlineStatus() {
       // body: userMeterNumber,
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
-    M.toast({
-      html: `<b class="red-text">${error}</b>`
-    });
+    //console.log(error)
+    // M.toast({html: `<b class="red-text">${error}</b>`})
   }
 }
 
@@ -370,16 +366,17 @@ async function paymentReceipt(orderNumber, channel) {
       body: userReceiptReq
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
+
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -399,16 +396,16 @@ async function energyBalance() {
       }
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -434,16 +431,17 @@ async function loadToken(userToken) {
       body: userTokenReq
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
+
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -2691,7 +2689,7 @@ for(var k in plugins){if(plugins.hasOwnProperty(k)){core_controller.plugins.regi
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/trans_history.vue?vue&type=template&id=37680e49
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/trans_history.vue?vue&type=template&id=baf40b2e
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -2728,7 +2726,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/trans_history.vue?vue&type=template&id=37680e49
+// CONCATENATED MODULE: ./pages/trans_history.vue?vue&type=template&id=baf40b2e
 
 // EXTERNAL MODULE: ./components/CustomSelect.vue + 4 modules
 var CustomSelect = __webpack_require__(58);
@@ -2844,9 +2842,10 @@ var Chart_default = /*#__PURE__*/__webpack_require__.n(Chart);
       }
 
       // Log the extracted data and colors
-      console.log('Transaction Dates:', transactionDates);
-      console.log('Amounts:', amounts);
-      console.log('Bar Colors:', barColors);
+      //console.log('Transaction Dates:', transactionDates);
+      //console.log('Amounts:', amounts);
+      //console.log('Bar Colors:', barColors);
+
       transactionDates.push("");
       amounts.push("");
       const xValues = transactionDates;
@@ -2895,8 +2894,8 @@ var Chart_default = /*#__PURE__*/__webpack_require__.n(Chart);
       this.transactionList = await Object(mods["f" /* getPaymentHistory */])();
       // let pr = await paymentReceipt("20240422113154472007399276", "UT000007")
       // let pr = await paymentReceipt("20240411202745039007724322", "UT000007")
-      // console.log('reeeeeeceipt ', pr);
-      console.log(this.transactionList);
+      // //console.log('reeeeeeceipt ', pr);
+      //console.log(this.transactionList);
       if (this.transactionList.message == 'Token expired!') {
         localStorage.clear();
         this.$router.push('./');
@@ -2924,10 +2923,11 @@ var Chart_default = /*#__PURE__*/__webpack_require__.n(Chart);
       var instances = M.Datepicker.init(elems, {
         format: 'yyyy-mm-dd' // Set the format option to 'yyyy-mm-dd'
       });
-      console.log('loading.................................');
+      //console.log('loading.................................');
     });
     M.AutoInit();
-    console.log('calling paymentHistory');
+
+    //console.log('calling paymentHistory');
     this.paymentHistory();
   },
   created() {}

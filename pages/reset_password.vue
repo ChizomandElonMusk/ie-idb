@@ -121,7 +121,7 @@ export default {
       //     this.hidePreLoader = true
       //   } else {
       //     let credentials = await loginUser(this.username, this.password)
-      //     console.log(credentials.u.roles[0]);
+      //     //console.log(credentials.u.roles[0]);
       //     if (credentials == undefined) {
       //       M.toast({html: '<b class="red-text">Check Username or Password!</b>'})
       //       this.hidePreLoader = true
@@ -146,7 +146,7 @@ export default {
 
       // this.convertEmail(this.username, this.password)
 
-      // console.log(`username -> ${this.username}     password -> ${this.password}`)
+      // //console.log(`username -> ${this.username}     password -> ${this.password}`)
       // this is the main condition to allow the use login
       // if (this.username === '' || this.password === '') {
       //   M.toast({html: '<b class="red-text">Username or Password is empty!</b>'})
@@ -173,7 +173,7 @@ export default {
         this.tariff = user_info.tariff
         let user_online_status = await getOnlineStatus()
         this.online_status = user_online_status.message.toLowerCase()
-        console.log('here is the ut ', this.account_name);
+        //console.log('here is the ut ', this.account_name);
       }
     },
 
@@ -192,12 +192,12 @@ export default {
     }, 60000);
     // this.testAPI()
     // let v = this.$store.state.token
-    // console.log(v)
+    // //console.log(v)
 
     // this.$store.commit('setToken', '294039480398029842i42ik3lnsdkhgosih')
 
     // let vv = this.$store.getters.myGetter;
-    // console.log(vv)
+    // //console.log(vv)
 
 
   }

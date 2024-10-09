@@ -37,13 +37,13 @@ async function loginUser(username, password) {
     const response = await rawResponse.json();
     // return response
 
-    console.log(response);
+    //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     return response;
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -67,19 +67,17 @@ async function getUserInfo() {
       body: passwords
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     return response;
   } catch (error) {
-    console.log(error);
-    M.toast({
-      html: `<b class="red-text">${error}</b>`
-    });
+    //console.log(error)
+    // M.toast({html: `<b class="red-text">${error}</b>`})
   }
 }
 async function searchPaymentHistory(account_number, start_date, end_date) {
@@ -100,16 +98,16 @@ async function searchPaymentHistory(account_number, start_date, end_date) {
       body: passwords
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -133,16 +131,16 @@ async function getPaymentHistory() {
       body: passwords
     });
     const response = await rawResponse.json();
-    // console.log(response)
+    // //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -164,16 +162,16 @@ async function registerIntent(meterNumber) {
       body: user_meter_number
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -197,16 +195,16 @@ async function confirmOtp(otp) {
       body: userOtp
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -230,16 +228,16 @@ async function changePassword(newPassword, confirmPassword) {
       body: userPasswords
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -261,16 +259,16 @@ async function passwordResetIntent(username) {
       body: usernameReq
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -294,16 +292,16 @@ async function confirmPasswordResetToken(otp) {
       body: userOtp
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -328,19 +326,17 @@ async function getOnlineStatus() {
       // body: userMeterNumber,
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
-    M.toast({
-      html: `<b class="red-text">${error}</b>`
-    });
+    //console.log(error)
+    // M.toast({html: `<b class="red-text">${error}</b>`})
   }
 }
 
@@ -363,16 +359,17 @@ async function paymentReceipt(orderNumber, channel) {
       body: userReceiptReq
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
+
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -392,16 +389,16 @@ async function energyBalance() {
       }
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -427,16 +424,17 @@ async function loadToken(userToken) {
       body: userTokenReq
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
+
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -496,7 +494,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(4).default
 module.exports.__inject__ = function (context) {
-  add("5d4a4a66", content, true, context)
+  add("4d63f3bf", content, true, context)
 };
 
 /***/ }),
@@ -534,9 +532,9 @@ module.exports = "data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1cz
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_vue_vue_type_style_index_0_id_27d34706_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(55);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_vue_vue_type_style_index_0_id_27d34706_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_vue_vue_type_style_index_0_id_27d34706_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_vue_vue_type_style_index_0_id_27d34706_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_vue_vue_type_style_index_0_id_27d34706_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_vue_vue_type_style_index_0_id_87ae4efa_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(55);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_vue_vue_type_style_index_0_id_87ae4efa_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_vue_vue_type_style_index_0_id_87ae4efa_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_vue_vue_type_style_index_0_id_87ae4efa_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_vue_vue_type_style_index_0_id_87ae4efa_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -548,7 +546,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(3);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".loading[data-v-27d34706]{overflow:hidden;position:relative}.loading[data-v-27d34706]:before{animation:glassReflection-27d34706 2s linear infinite;background:linear-gradient(90deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.3),hsla(0,0%,100%,0));content:\"\";height:100%;left:-100%;position:absolute;top:0;transform:skewX(-25deg);width:50%}@keyframes glassReflection-27d34706{0%{left:-100%}to{left:200%}}.flexcontainerinfo[data-v-27d34706]{position:relative;z-index:1}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, ".loading[data-v-87ae4efa]{overflow:hidden;position:relative}.loading[data-v-87ae4efa]:before{animation:glassReflection-87ae4efa 2s linear infinite;background:linear-gradient(90deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.3),hsla(0,0%,100%,0));content:\"\";height:100%;left:-100%;position:absolute;top:0;transform:skewX(-25deg);width:50%}@keyframes glassReflection-87ae4efa{0%{left:-100%}to{left:200%}}.flexcontainerinfo[data-v-87ae4efa]{position:relative;z-index:1}", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {};
 module.exports = ___CSS_LOADER_EXPORT___;
@@ -563,7 +561,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/dashboard.vue?vue&type=template&id=27d34706&scoped=true
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/dashboard.vue?vue&type=template&id=87ae4efa&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -572,7 +570,7 @@ var render = function render() {
     staticStyle: {
       "padding-top": "0px"
     }
-  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\" data-v-27d34706>", "</div>", [_vm._ssrNode("<div class=\"flexitem-username\" data-v-27d34706><b style=\"font-size: 20px; color: #757575;\" data-v-27d34706>" + _vm._ssrEscape("\n          " + _vm._s(_vm.greeting) + "\n        ") + "</b> <br data-v-27d34706></div> "), _vm._ssrNode("<div class=\"flexitem-notification\" data-v-27d34706>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\" data-v-87ae4efa>", "</div>", [_vm._ssrNode("<div class=\"flexitem-username\" data-v-87ae4efa><b style=\"font-size: 20px; color: #757575;\" data-v-87ae4efa>" + _vm._ssrEscape("\n          " + _vm._s(_vm.greeting) + "\n        ") + "</b> <br data-v-87ae4efa></div> "), _vm._ssrNode("<div class=\"flexitem-notification\" data-v-87ae4efa>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/settings"
     }
@@ -586,23 +584,23 @@ var render = function render() {
       "src": __webpack_require__(45),
       "alt": ""
     }
-  })])], 1)], 2), _vm._ssrNode(" <div class=\"row\" data-v-27d34706><b" + _vm._ssrClass("grey-text darken-4", {
+  })])], 1)], 2), _vm._ssrNode(" <div class=\"row\" data-v-87ae4efa><b" + _vm._ssrClass("grey-text darken-4", {
     'hide': _vm.hideAccountName
-  }) + " data-v-27d34706>" + _vm._ssrEscape("\n        " + _vm._s(_vm.account_name) + "\n      ") + "</b> <b" + _vm._ssrClass("wave-dots", {
+  }) + " data-v-87ae4efa>" + _vm._ssrEscape("\n        " + _vm._s(_vm.account_name) + "\n      ") + "</b> <b" + _vm._ssrClass("wave-dots", {
     'hide': _vm.hideWaveDot
-  }) + " data-v-27d34706><span data-v-27d34706>.</span><span data-v-27d34706>.</span><span data-v-27d34706>.</span><span data-v-27d34706>.</span></b> <br data-v-27d34706> <div" + _vm._ssrClass("card-panel red loading", {
+  }) + " data-v-87ae4efa><span data-v-87ae4efa>.</span><span data-v-87ae4efa>.</span><span data-v-87ae4efa>.</span><span data-v-87ae4efa>.</span></b> <br data-v-87ae4efa> <div" + _vm._ssrClass("card-panel red loading", {
     'hide': _vm.hideLazyLoad
-  }) + " style=\"border-radius: 10px;\" data-v-27d34706><div class=\"flexcontainerinfo\" data-v-27d34706><div class=\"white-text flex-icon-day\" data-v-27d34706></div> <div class=\"flex-time\" data-v-27d34706><span class=\"red-text\" style=\"font-size: 12px;\" data-v-27d34706></span> <br data-v-27d34706> <span class=\"red-text\" style=\"font-weight: 600; font-size: 10px;\" data-v-27d34706></span> <br data-v-27d34706> <span class=\"red-text\" style=\"font-weight: 300; font-size: 12px;\" data-v-27d34706></span> <br data-v-27d34706> <span class=\"red-text\" style=\"font-weight: 600; font-size: 10px;\" data-v-27d34706></span><br data-v-27d34706> <span class=\"red-text\" style=\"font-weight: 300; font-size: 12px;\" data-v-27d34706></span></div> <div class=\"flex-temperature\" data-v-27d34706></div></div> <div class=\"flexcontainerinfo\" style=\"margin-top: 5px;\" data-v-27d34706><div class=\"white-text flex-meter-number\" data-v-27d34706></div></div></div> <div" + _vm._ssrClass("card-panel red", {
+  }) + " style=\"border-radius: 10px;\" data-v-87ae4efa><div class=\"flexcontainerinfo\" data-v-87ae4efa><div class=\"white-text flex-icon-day\" data-v-87ae4efa></div> <div class=\"flex-time\" data-v-87ae4efa><span class=\"red-text\" style=\"font-size: 12px;\" data-v-87ae4efa></span> <br data-v-87ae4efa> <span class=\"red-text\" style=\"font-weight: 600; font-size: 10px;\" data-v-87ae4efa></span> <br data-v-87ae4efa> <span class=\"red-text\" style=\"font-weight: 300; font-size: 12px;\" data-v-87ae4efa></span> <br data-v-87ae4efa> <span class=\"red-text\" style=\"font-weight: 600; font-size: 10px;\" data-v-87ae4efa></span><br data-v-87ae4efa> <span class=\"red-text\" style=\"font-weight: 300; font-size: 12px;\" data-v-87ae4efa></span></div> <div class=\"flex-temperature\" data-v-87ae4efa></div></div> <div class=\"flexcontainerinfo\" style=\"margin-top: 5px;\" data-v-87ae4efa><div class=\"white-text flex-meter-number\" data-v-87ae4efa></div></div></div> <div" + _vm._ssrClass("card-panel red", {
     'hide': _vm.hideCardData
-  }) + " style=\"border-radius: 10px;\" data-v-27d34706><div class=\"flexcontainerinfo\" data-v-27d34706><div" + _vm._ssrClass("white-text flex-icon-day", {
+  }) + " style=\"border-radius: 10px;\" data-v-87ae4efa><div class=\"flexcontainerinfo\" data-v-87ae4efa><div" + _vm._ssrClass("white-text flex-icon-day", {
     'hide': _vm.defaultData
-  }) + " data-v-27d34706>" + (_vm.online_status == 'online' ? "<img" + _vm._ssrAttr("src", __webpack_require__(59)) + " alt class=\"responsive-img\" style=\"max-width: 50px;\" data-v-27d34706>" : "<!---->") + " " + (_vm.online_status == 'offline' ? "<img" + _vm._ssrAttr("src", __webpack_require__(60)) + " alt class=\"responsive-img\" style=\"max-width: 50px;\" data-v-27d34706>" : "<!---->") + "</div> <div" + _vm._ssrClass("flex-time", {
+  }) + " data-v-87ae4efa>" + (_vm.online_status == 'online' ? "<img" + _vm._ssrAttr("src", __webpack_require__(59)) + " alt class=\"responsive-img\" style=\"max-width: 50px;\" data-v-87ae4efa>" : "<!---->") + " " + (_vm.online_status == 'offline' ? "<img" + _vm._ssrAttr("src", __webpack_require__(60)) + " alt class=\"responsive-img\" style=\"max-width: 50px;\" data-v-87ae4efa>" : "<!---->") + "</div> <div" + _vm._ssrClass("flex-time", {
     'hide': _vm.defaultData
-  }) + " data-v-27d34706><span class=\"white-text\" style=\"font-size: 12px;\" data-v-27d34706>" + _vm._ssrEscape("\n              " + _vm._s(_vm.dashboard_date) + "\n            ") + "</span> <br data-v-27d34706> <span class=\"white-text\" style=\"font-weight: 600; font-size: 10px;\" data-v-27d34706>\n              Account number:\n            </span> <br data-v-27d34706> <span class=\"white-text\" style=\"font-weight: 300; font-size: 12px;\" data-v-27d34706>" + _vm._ssrEscape("\n              " + _vm._s(_vm.account_number) + "\n            ") + "</span> <br data-v-27d34706> <span class=\"white-text\" style=\"font-weight: 600; font-size: 10px;\" data-v-27d34706>\n              Meter number:\n            </span><br data-v-27d34706> <span class=\"white-text\" style=\"font-weight: 300; font-size: 12px;\" data-v-27d34706>" + _vm._ssrEscape("\n              " + _vm._s(_vm.meter_number) + "\n            ") + "</span></div> <div" + _vm._ssrClass("flex-temperature", {
+  }) + " data-v-87ae4efa><span class=\"white-text\" style=\"font-size: 12px;\" data-v-87ae4efa>" + _vm._ssrEscape("\n              " + _vm._s(_vm.dashboard_date) + "\n            ") + "</span> <br data-v-87ae4efa> <span class=\"white-text\" style=\"font-weight: 600; font-size: 10px;\" data-v-87ae4efa>\n              Account number:\n            </span> <br data-v-87ae4efa> <span class=\"white-text\" style=\"font-weight: 300; font-size: 12px;\" data-v-87ae4efa>" + _vm._ssrEscape("\n              " + _vm._s(_vm.account_number) + "\n            ") + "</span> <br data-v-87ae4efa> <span class=\"white-text\" style=\"font-weight: 600; font-size: 10px;\" data-v-87ae4efa>\n              Meter number:\n            </span><br data-v-87ae4efa> <span class=\"white-text\" style=\"font-weight: 300; font-size: 12px;\" data-v-87ae4efa>" + _vm._ssrEscape("\n              " + _vm._s(_vm.meter_number) + "\n            ") + "</span></div> <div" + _vm._ssrClass("flex-temperature", {
     'hide': _vm.defaultData
-  }) + " data-v-27d34706><b style=\"background-color: yellow; padding: 5px; border-radius: 7px; font-size: 10px;\" data-v-27d34706>" + _vm._ssrEscape("Band - " + _vm._s(_vm.tariff)) + "</b> <br data-v-27d34706></div> <div" + _vm._ssrClass("flex-time center", {
+  }) + " data-v-87ae4efa><b style=\"background-color: yellow; padding: 5px; border-radius: 7px; font-size: 10px;\" data-v-87ae4efa>" + _vm._ssrEscape("Band - " + _vm._s(_vm.tariff)) + "</b> <br data-v-87ae4efa></div> <div" + _vm._ssrClass("flex-time center", {
     'hide': _vm.energyBalance
-  }) + " data-v-27d34706><p class=\"white-text\" style=\"font-size: 22px;\" data-v-27d34706>" + _vm._ssrEscape("\n              " + _vm._s(_vm.energy_balance_data) + "\n            ") + "</p> <img" + _vm._ssrAttr("src", __webpack_require__(61)) + " alt class=\"responsive-img\" style=\"max-width: 30px;\" data-v-27d34706></div></div> <div class=\"flexcontainerinfo\" style=\"margin-top: 5px;\" data-v-27d34706><div class=\"white-text flex-meter-number\" data-v-27d34706></div></div></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-27d34706>", "</div>", [_vm._ssrNode("<div class=\"flexcontainerbtn\" data-v-27d34706>", "</div>", [_vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-27d34706><div class=\"white-text center boarder-top\" data-v-27d34706><img" + _vm._ssrAttr("src", __webpack_require__(46)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-27d34706> <p class=\"button-text white-text\" data-v-27d34706>\n              Energy Balance\n            </p></div></div> <div style=\"width: 10px;\" data-v-27d34706></div> "), _vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-27d34706>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-27d34706>", "</div>", [_c('nuxt-link', {
+  }) + " data-v-87ae4efa><p class=\"white-text\" style=\"font-size: 22px;\" data-v-87ae4efa>" + _vm._ssrEscape("\n              " + _vm._s(_vm.energy_balance_data) + "\n            ") + "</p> <img" + _vm._ssrAttr("src", __webpack_require__(61)) + " alt class=\"responsive-img\" style=\"max-width: 30px;\" data-v-87ae4efa></div></div> <div class=\"flexcontainerinfo\" style=\"margin-top: 5px;\" data-v-87ae4efa><div class=\"white-text flex-meter-number\" data-v-87ae4efa></div></div></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-87ae4efa>", "</div>", [_vm._ssrNode("<div class=\"flexcontainerbtn\" data-v-87ae4efa>", "</div>", [_vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-87ae4efa><div class=\"white-text center boarder-top\" data-v-87ae4efa><img" + _vm._ssrAttr("src", __webpack_require__(46)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-87ae4efa> <p class=\"button-text white-text\" data-v-87ae4efa>\n              Energy Balance\n            </p></div></div> <div style=\"width: 10px;\" data-v-87ae4efa></div> "), _vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-87ae4efa>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-87ae4efa>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "./trans_history"
     }
@@ -618,7 +616,7 @@ var render = function render() {
     }
   }), _vm._v(" "), _c('p', {
     staticClass: "button-text white-text"
-  }, [_vm._v("\n                Transaction History\n              ")])])], 1)])], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-27d34706>", "</div>", [_vm._ssrNode("<div class=\"flexcontainerbtn\" data-v-27d34706>", "</div>", [_vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-27d34706><a href=\"https://www.ie-payments.com/pay-bill\" target=\"_blank\" data-v-27d34706><div class=\"white-text center boarder-top\" data-v-27d34706><img" + _vm._ssrAttr("src", __webpack_require__(48)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-27d34706> <p class=\"button-text white-text\" data-v-27d34706>\n                Purchase Electricity\n              </p></div></a></div> <div style=\"width: 10px;\" data-v-27d34706></div> "), _vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-27d34706>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-27d34706>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("\n                Transaction History\n              ")])])], 1)])], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-87ae4efa>", "</div>", [_vm._ssrNode("<div class=\"flexcontainerbtn\" data-v-87ae4efa>", "</div>", [_vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-87ae4efa><a href=\"https://www.ie-payments.com/pay-bill\" target=\"_blank\" data-v-87ae4efa><div class=\"white-text center boarder-top\" data-v-87ae4efa><img" + _vm._ssrAttr("src", __webpack_require__(48)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-87ae4efa> <p class=\"button-text white-text\" data-v-87ae4efa>\n                Purchase Electricity\n              </p></div></a></div> <div style=\"width: 10px;\" data-v-87ae4efa></div> "), _vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-87ae4efa>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-87ae4efa>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "./remote"
     }
@@ -634,11 +632,11 @@ var render = function render() {
     }
   }), _vm._v(" "), _c('p', {
     staticClass: "button-text white-text"
-  }, [_vm._v("\n                Remote Loading\n              ")])])], 1)])], 2)]), _vm._ssrNode(" <div class=\"row\" data-v-27d34706><div class=\"card-panel red\" style=\"border-radius: 10px;\" data-v-27d34706><div class=\"center\" data-v-27d34706><a href=\"https://www.ikejaelectric.com/contact/\" target=\"_blank\" data-v-27d34706><img" + _vm._ssrAttr("src", __webpack_require__(62)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-27d34706> <br data-v-27d34706></a> <b class=\"white-text\" style=\"font-size: 10px; font-weight: 700;\" data-v-27d34706>\n            Customer Care\n          </b></div></div></div>")], 2);
+  }, [_vm._v("\n                Remote Loading\n              ")])])], 1)])], 2)]), _vm._ssrNode(" <div class=\"row\" data-v-87ae4efa><div class=\"card-panel red\" style=\"border-radius: 10px;\" data-v-87ae4efa><div class=\"center\" data-v-87ae4efa><a href=\"https://www.ikejaelectric.com/contact/\" target=\"_blank\" data-v-87ae4efa><img" + _vm._ssrAttr("src", __webpack_require__(62)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-87ae4efa> <br data-v-87ae4efa></a> <b class=\"white-text\" style=\"font-size: 10px; font-weight: 700;\" data-v-87ae4efa>\n            Customer Care\n          </b></div></div></div>")], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/dashboard.vue?vue&type=template&id=27d34706&scoped=true
+// CONCATENATED MODULE: ./pages/dashboard.vue?vue&type=template&id=87ae4efa&scoped=true
 
 // EXTERNAL MODULE: ./js_modules/mods.js
 var mods = __webpack_require__(38);
@@ -671,15 +669,12 @@ var mods = __webpack_require__(38);
     };
   },
   methods: {
-    logOut() {
-      if (false) {}
-    },
     async showEnergyUsage() {
       this.energy_balance_data = 'Please wait...';
       this.defaultData = true;
       this.energyBalance = false;
       let ebdata = await Object(mods["d" /* energyBalance */])();
-      console.log(ebdata);
+      ////console.log(ebdata);
       if (ebdata.data == undefined || ebdata.data == null) {
         this.energy_balance_data = 'Network error. Try again later';
       } else {
@@ -719,21 +714,20 @@ var mods = __webpack_require__(38);
         let user_online_status = await Object(mods["e" /* getOnlineStatus */])();
         if (user_online_status.message == 'Error encountered while processing request!') {
           this.online_status = 'offline';
-          console.log('no timeer online was called');
+          ////console.log('no timeer online was called');
         } else {
           this.online_status = user_online_status.message.toLowerCase();
         }
         this.hideLazyLoad = true;
         this.hideCardData = false;
-        // console.log('this is for online status ', this.user_online_status);
-        // console.log('here is the ut ', this.account_name);
+        // ////console.log('this is for online status ', this.user_online_status);
+        // ////console.log('here is the ut ', this.account_name);
       }
     },
     async getOnlineStatusRoutineCall() {
       let user_online_status = await Object(mods["e" /* getOnlineStatus */])();
-      if (user_online_status.message == 'Error encountered while processing request!') {
+      if (user_online_status.message == 'Error encountered while processing request!' || user_online_status.message == 'Token expired!') {
         this.online_status = 'offline';
-        console.log('>> with timeer online was called');
       } else {
         this.online_status = user_online_status.message.toLowerCase();
       }
@@ -768,7 +762,7 @@ var mods = __webpack_require__(38);
     }
   },
   mounted() {
-    console.log('calling getUserDetails');
+    ////console.log('calling getUserDetails');
     this.getUserDetails();
     this.greetUser();
     const currentDate = new Date();
@@ -805,7 +799,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "27d34706",
+  "87ae4efa",
   "32d73e0a"
   
 )

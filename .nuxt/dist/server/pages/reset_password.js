@@ -37,13 +37,13 @@ async function loginUser(username, password) {
     const response = await rawResponse.json();
     // return response
 
-    console.log(response);
+    //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     return response;
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -67,19 +67,17 @@ async function getUserInfo() {
       body: passwords
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     return response;
   } catch (error) {
-    console.log(error);
-    M.toast({
-      html: `<b class="red-text">${error}</b>`
-    });
+    //console.log(error)
+    // M.toast({html: `<b class="red-text">${error}</b>`})
   }
 }
 async function searchPaymentHistory(account_number, start_date, end_date) {
@@ -100,16 +98,16 @@ async function searchPaymentHistory(account_number, start_date, end_date) {
       body: passwords
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -133,16 +131,16 @@ async function getPaymentHistory() {
       body: passwords
     });
     const response = await rawResponse.json();
-    // console.log(response)
+    // //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -164,16 +162,16 @@ async function registerIntent(meterNumber) {
       body: user_meter_number
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -197,16 +195,16 @@ async function confirmOtp(otp) {
       body: userOtp
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -230,16 +228,16 @@ async function changePassword(newPassword, confirmPassword) {
       body: userPasswords
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -261,16 +259,16 @@ async function passwordResetIntent(username) {
       body: usernameReq
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -294,16 +292,16 @@ async function confirmPasswordResetToken(otp) {
       body: userOtp
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -328,19 +326,17 @@ async function getOnlineStatus() {
       // body: userMeterNumber,
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
-    M.toast({
-      html: `<b class="red-text">${error}</b>`
-    });
+    //console.log(error)
+    // M.toast({html: `<b class="red-text">${error}</b>`})
   }
 }
 
@@ -363,16 +359,17 @@ async function paymentReceipt(orderNumber, channel) {
       body: userReceiptReq
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
+
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -392,16 +389,16 @@ async function energyBalance() {
       }
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -427,16 +424,17 @@ async function loadToken(userToken) {
       body: userTokenReq
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
+
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -519,7 +517,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/reset_password.vue?vue&type=template&id=290ed69e
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/reset_password.vue?vue&type=template&id=80aa1ade
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -546,7 +544,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/reset_password.vue?vue&type=template&id=290ed69e
+// CONCATENATED MODULE: ./pages/reset_password.vue?vue&type=template&id=80aa1ade
 
 // EXTERNAL MODULE: ./assets/images/angled_background.jpg
 var angled_background = __webpack_require__(39);
@@ -633,7 +631,7 @@ var mods = __webpack_require__(38);
       //     this.hidePreLoader = true
       //   } else {
       //     let credentials = await loginUser(this.username, this.password)
-      //     console.log(credentials.u.roles[0]);
+      //     //console.log(credentials.u.roles[0]);
       //     if (credentials == undefined) {
       //       M.toast({html: '<b class="red-text">Check Username or Password!</b>'})
       //       this.hidePreLoader = true
@@ -653,7 +651,7 @@ var mods = __webpack_require__(38);
 
       // this.convertEmail(this.username, this.password)
 
-      // console.log(`username -> ${this.username}     password -> ${this.password}`)
+      // //console.log(`username -> ${this.username}     password -> ${this.password}`)
       // this is the main condition to allow the use login
       // if (this.username === '' || this.password === '') {
       //   M.toast({html: '<b class="red-text">Username or Password is empty!</b>'})
@@ -676,7 +674,7 @@ var mods = __webpack_require__(38);
         this.tariff = user_info.tariff;
         let user_online_status = await getOnlineStatus();
         this.online_status = user_online_status.message.toLowerCase();
-        console.log('here is the ut ', this.account_name);
+        //console.log('here is the ut ', this.account_name);
       }
     }
   },
@@ -689,12 +687,12 @@ var mods = __webpack_require__(38);
     }, 60000);
     // this.testAPI()
     // let v = this.$store.state.token
-    // console.log(v)
+    // //console.log(v)
 
     // this.$store.commit('setToken', '294039480398029842i42ik3lnsdkhgosih')
 
     // let vv = this.$store.getters.myGetter;
-    // console.log(vv)
+    // //console.log(vv)
   }
 });
 // CONCATENATED MODULE: ./pages/reset_password.vue?vue&type=script&lang=js

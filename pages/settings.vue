@@ -245,7 +245,7 @@ export default {
             this.defaultData = true
             this.energyBalance = false
             let ebdata = await energyBalance()
-            console.log(ebdata);
+            //console.log(ebdata);
             if (ebdata.data == undefined || ebdata.data == null) {
                 this.energy_balance_data = 'Network error. Try again later'
             } else {
@@ -285,14 +285,14 @@ export default {
                 this.tariff = user_info.tariff
                 let user_online_status = await getOnlineStatus()
                 this.online_status = user_online_status.message.toLowerCase()
-                console.log('here is the ut ', this.account_name);
+                //console.log('here is the ut ', this.account_name);
             }
         },
 
         async getOnlineStatusRoutineCall() {
             let user_online_status = await getOnlineStatus()
             this.online_status = user_online_status.message.toLowerCase()
-            // console.log('light api was called');
+            // //console.log('light api was called');
 
         },
 
@@ -329,7 +329,7 @@ export default {
     },
 
     mounted() {
-        console.log('calling getUserDetails');
+        //console.log('calling getUserDetails');
         this.getUserDetails()
         this.greetUser()
         const currentDate = new Date();

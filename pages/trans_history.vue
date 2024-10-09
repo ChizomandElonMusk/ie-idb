@@ -258,9 +258,9 @@ export default {
       }
 
       // Log the extracted data and colors
-      console.log('Transaction Dates:', transactionDates);
-      console.log('Amounts:', amounts);
-      console.log('Bar Colors:', barColors);
+      //console.log('Transaction Dates:', transactionDates);
+      //console.log('Amounts:', amounts);
+      //console.log('Bar Colors:', barColors);
 
 
       transactionDates.push("")
@@ -318,8 +318,8 @@ export default {
       this.transactionList = await getPaymentHistory()
       // let pr = await paymentReceipt("20240422113154472007399276", "UT000007")
       // let pr = await paymentReceipt("20240411202745039007724322", "UT000007")
-      // console.log('reeeeeeceipt ', pr);
-      console.log(this.transactionList);
+      // //console.log('reeeeeeceipt ', pr);
+      //console.log(this.transactionList);
       if (this.transactionList.message == 'Token expired!') {
         localStorage.clear()
         this.$router.push('./')
@@ -351,12 +351,12 @@ export default {
       var instances = M.Datepicker.init(elems, {
         format: 'yyyy-mm-dd' // Set the format option to 'yyyy-mm-dd'
       });
-      console.log('loading.................................');
+      //console.log('loading.................................');
     });
     M.AutoInit();
 
 
-    console.log('calling paymentHistory');
+    //console.log('calling paymentHistory');
     this.paymentHistory()
   },
 

@@ -37,13 +37,13 @@ async function loginUser(username, password) {
     const response = await rawResponse.json();
     // return response
 
-    console.log(response);
+    //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     return response;
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -67,19 +67,17 @@ async function getUserInfo() {
       body: passwords
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     return response;
   } catch (error) {
-    console.log(error);
-    M.toast({
-      html: `<b class="red-text">${error}</b>`
-    });
+    //console.log(error)
+    // M.toast({html: `<b class="red-text">${error}</b>`})
   }
 }
 async function searchPaymentHistory(account_number, start_date, end_date) {
@@ -100,16 +98,16 @@ async function searchPaymentHistory(account_number, start_date, end_date) {
       body: passwords
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -133,16 +131,16 @@ async function getPaymentHistory() {
       body: passwords
     });
     const response = await rawResponse.json();
-    // console.log(response)
+    // //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -164,16 +162,16 @@ async function registerIntent(meterNumber) {
       body: user_meter_number
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -197,16 +195,16 @@ async function confirmOtp(otp) {
       body: userOtp
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -230,16 +228,16 @@ async function changePassword(newPassword, confirmPassword) {
       body: userPasswords
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -261,16 +259,16 @@ async function passwordResetIntent(username) {
       body: usernameReq
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -294,16 +292,16 @@ async function confirmPasswordResetToken(otp) {
       body: userOtp
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -328,19 +326,17 @@ async function getOnlineStatus() {
       // body: userMeterNumber,
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
-    M.toast({
-      html: `<b class="red-text">${error}</b>`
-    });
+    //console.log(error)
+    // M.toast({html: `<b class="red-text">${error}</b>`})
   }
 }
 
@@ -363,16 +359,17 @@ async function paymentReceipt(orderNumber, channel) {
       body: userReceiptReq
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
+
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -392,16 +389,16 @@ async function energyBalance() {
       }
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -427,16 +424,17 @@ async function loadToken(userToken) {
       body: userTokenReq
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
+
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -483,7 +481,7 @@ module.exports = __webpack_require__.p + "img/logout_white.c2bc90c.svg";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/settings.vue?vue&type=template&id=12819368&scoped=true
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/settings.vue?vue&type=template&id=38d0e968&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -492,7 +490,7 @@ var render = function render() {
     staticStyle: {
       "padding-top": "0px"
     }
-  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\" data-v-12819368>", "</div>", [_vm._ssrNode("<div class=\"flexitem-username\" data-v-12819368><b style=\"font-size: 20px; color: #757575;\" data-v-12819368>\n                Settings\n            </b> <br data-v-12819368></div> "), _vm._ssrNode("<div class=\"flexitem-notification\" data-v-12819368>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\" data-v-38d0e968>", "</div>", [_vm._ssrNode("<div class=\"flexitem-username\" data-v-38d0e968><b style=\"font-size: 20px; color: #757575;\" data-v-38d0e968>\n                Settings\n            </b> <br data-v-38d0e968></div> "), _vm._ssrNode("<div class=\"flexitem-notification\" data-v-38d0e968>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "./dashboard"
     }
@@ -506,7 +504,7 @@ var render = function render() {
       "src": __webpack_require__(41),
       "alt": ""
     }
-  })])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-12819368>", "</div>", [_vm._ssrNode("<div class=\"flexcontainerbtn\" data-v-12819368>", "</div>", [_vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-12819368>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-12819368>", "</div>", [_c('nuxt-link', {
+  })])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-38d0e968>", "</div>", [_vm._ssrNode("<div class=\"flexcontainerbtn\" data-v-38d0e968>", "</div>", [_vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-38d0e968>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-38d0e968>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "./reset_password"
     }
@@ -522,7 +520,7 @@ var render = function render() {
     }
   }), _vm._v(" "), _c('p', {
     staticClass: "button-text white-text"
-  }, [_vm._v("\n                        Reset Password\n                    ")])])], 1)]), _vm._ssrNode(" <div style=\"width: 10px;\" data-v-12819368></div> "), _vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-12819368>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-12819368>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("\n                        Reset Password\n                    ")])])], 1)]), _vm._ssrNode(" <div style=\"width: 10px;\" data-v-38d0e968></div> "), _vm._ssrNode("<div class=\"card-panel orange flex-buttons\" style=\"border-radius: 10px;\" data-v-38d0e968>", "</div>", [_vm._ssrNode("<div class=\"white-text center boarder-top\" data-v-38d0e968>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "./about"
     }
@@ -538,11 +536,11 @@ var render = function render() {
     }
   }), _vm._v(" "), _c('p', {
     staticClass: "button-text white-text"
-  }, [_vm._v("\n                            About\n                        ")])])], 1)])], 2)]), _vm._ssrNode(" <div class=\"row\" data-v-12819368><div class=\"flexcontainerbtn\" data-v-12819368><div class=\"card-panel red flex-buttons\" style=\"border-radius: 10px;\" data-v-12819368><div class=\"white-text center boarder-top\" data-v-12819368><div to=\"./trans_history\" data-v-12819368><img" + _vm._ssrAttr("src", __webpack_require__(70)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-12819368> <p class=\"button-text white-text\" data-v-12819368>\n                            Logout\n                        </p></div></div></div></div></div>")], 2);
+  }, [_vm._v("\n                            About\n                        ")])])], 1)])], 2)]), _vm._ssrNode(" <div class=\"row\" data-v-38d0e968><div class=\"flexcontainerbtn\" data-v-38d0e968><div class=\"card-panel red flex-buttons\" style=\"border-radius: 10px;\" data-v-38d0e968><div class=\"white-text center boarder-top\" data-v-38d0e968><div to=\"./trans_history\" data-v-38d0e968><img" + _vm._ssrAttr("src", __webpack_require__(70)) + " alt class=\"responsive-img\" style=\"max-width: 50px; filter: hue-rotate(180deg);\" data-v-38d0e968> <p class=\"button-text white-text\" data-v-38d0e968>\n                            Logout\n                        </p></div></div></div></div></div>")], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/settings.vue?vue&type=template&id=12819368&scoped=true
+// CONCATENATED MODULE: ./pages/settings.vue?vue&type=template&id=38d0e968&scoped=true
 
 // EXTERNAL MODULE: ./js_modules/mods.js
 var mods = __webpack_require__(38);
@@ -579,7 +577,7 @@ var mods = __webpack_require__(38);
       this.defaultData = true;
       this.energyBalance = false;
       let ebdata = await Object(mods["d" /* energyBalance */])();
-      console.log(ebdata);
+      //console.log(ebdata);
       if (ebdata.data == undefined || ebdata.data == null) {
         this.energy_balance_data = 'Network error. Try again later';
       } else {
@@ -613,13 +611,13 @@ var mods = __webpack_require__(38);
         this.tariff = user_info.tariff;
         let user_online_status = await Object(mods["e" /* getOnlineStatus */])();
         this.online_status = user_online_status.message.toLowerCase();
-        console.log('here is the ut ', this.account_name);
+        //console.log('here is the ut ', this.account_name);
       }
     },
     async getOnlineStatusRoutineCall() {
       let user_online_status = await Object(mods["e" /* getOnlineStatus */])();
       this.online_status = user_online_status.message.toLowerCase();
-      // console.log('light api was called');
+      // //console.log('light api was called');
     },
     greetUser() {
       // Get the current time
@@ -651,7 +649,7 @@ var mods = __webpack_require__(38);
     }
   },
   mounted() {
-    console.log('calling getUserDetails');
+    //console.log('calling getUserDetails');
     this.getUserDetails();
     this.greetUser();
     const currentDate = new Date();
@@ -686,7 +684,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "12819368",
+  "38d0e968",
   "6aa2018c"
   
 )

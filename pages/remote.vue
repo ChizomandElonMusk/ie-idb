@@ -110,7 +110,7 @@ export default {
 
   methods: {
     // handlePaste(key) {
-    //   console.log('Paste was handled');
+    //   //console.log('Paste was handled');
 
     //   let pasted_token = key.trim();
 
@@ -123,10 +123,10 @@ export default {
 
     //   if (this.isValidMeterNumber(pasted_token)) {
     //     this.value = pasted_token;
-    //     console.log('Valid token pasted:', pasted_token);
+    //     //console.log('Valid token pasted:', pasted_token);
     //     this.showToast('Token code successfully pasted', 'green');
     //   } else {
-    //     console.log('Invalid token pasted:', pasted_token);
+    //     //console.log('Invalid token pasted:', pasted_token);
     //     this.showToast('Please check token and try again', 'red');
     //   }
     // },
@@ -154,7 +154,7 @@ export default {
 
 
     handlePaste(key) {
-      console.log('paste was clicked');
+      //console.log('paste was clicked');
 
       let pasted_token = key
       pasted_token = pasted_token.trim()
@@ -167,11 +167,11 @@ export default {
 
         if (isNumber == true) {
           this.value = pasted_token
-          console.log('key pressed: ', key);
+          //console.log('key pressed: ', key);
           M.toast({ html: '<b class="yellow-text">Token code successfully pasted</b>' })
         } else {
-          console.log('key pressed: ', key);
-          console.log('this is not a valid meter number');
+          //console.log('key pressed: ', key);
+          //console.log('this is not a valid meter number');
           M.toast({ html: '<b class="red-text">Please check token and try again</b>' })
         }
 

@@ -37,13 +37,13 @@ async function loginUser(username, password) {
     const response = await rawResponse.json();
     // return response
 
-    console.log(response);
+    //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     return response;
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -67,19 +67,17 @@ async function getUserInfo() {
       body: passwords
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     return response;
   } catch (error) {
-    console.log(error);
-    M.toast({
-      html: `<b class="red-text">${error}</b>`
-    });
+    //console.log(error)
+    // M.toast({html: `<b class="red-text">${error}</b>`})
   }
 }
 async function searchPaymentHistory(account_number, start_date, end_date) {
@@ -100,16 +98,16 @@ async function searchPaymentHistory(account_number, start_date, end_date) {
       body: passwords
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -133,16 +131,16 @@ async function getPaymentHistory() {
       body: passwords
     });
     const response = await rawResponse.json();
-    // console.log(response)
+    // //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -164,16 +162,16 @@ async function registerIntent(meterNumber) {
       body: user_meter_number
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -197,16 +195,16 @@ async function confirmOtp(otp) {
       body: userOtp
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -230,16 +228,16 @@ async function changePassword(newPassword, confirmPassword) {
       body: userPasswords
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -261,16 +259,16 @@ async function passwordResetIntent(username) {
       body: usernameReq
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -294,16 +292,16 @@ async function confirmPasswordResetToken(otp) {
       body: userOtp
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -328,19 +326,17 @@ async function getOnlineStatus() {
       // body: userMeterNumber,
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
-    M.toast({
-      html: `<b class="red-text">${error}</b>`
-    });
+    //console.log(error)
+    // M.toast({html: `<b class="red-text">${error}</b>`})
   }
 }
 
@@ -363,16 +359,17 @@ async function paymentReceipt(orderNumber, channel) {
       body: userReceiptReq
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
+
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -392,16 +389,16 @@ async function energyBalance() {
       }
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -427,16 +424,17 @@ async function loadToken(userToken) {
       body: userTokenReq
     });
     const response = await rawResponse.json();
-    console.log(response);
+    //console.log(response)
+
     return response;
 
-    // console.log(response)
+    // //console.log(response)
 
-    // console.log(response.passwords)
-    // console.log(response)
+    // //console.log(response.passwords)
+    // //console.log(response)
     // return response
   } catch (error) {
-    console.log(error);
+    //console.log(error)
     M.toast({
       html: `<b class="red-text">${error}</b>`
     });
@@ -633,7 +631,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/remote.vue?vue&type=template&id=53efe9fc&scoped=true
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/remote.vue?vue&type=template&id=2f01ac62&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -642,7 +640,7 @@ var render = function render() {
     staticStyle: {
       "padding-top": "0px"
     }
-  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\" data-v-53efe9fc>", "</div>", [_vm._ssrNode("<div class=\"flexitem-username\" data-v-53efe9fc><b style=\"font-size: 20px; color: #757575;\" data-v-53efe9fc>\n        Remote token\n      </b> <br data-v-53efe9fc></div> "), _vm._ssrNode("<div class=\"flexitem-notification\" data-v-53efe9fc>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"flexcontainer\" style=\"margin-top: 10px;\" data-v-2f01ac62>", "</div>", [_vm._ssrNode("<div class=\"flexitem-username\" data-v-2f01ac62><b style=\"font-size: 20px; color: #757575;\" data-v-2f01ac62>\n        Remote token\n      </b> <br data-v-2f01ac62></div> "), _vm._ssrNode("<div class=\"flexitem-notification\" data-v-2f01ac62>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "./dashboard"
     }
@@ -656,11 +654,11 @@ var render = function render() {
       "src": __webpack_require__(41),
       "alt": ""
     }
-  })])], 1)], 2), _vm._ssrNode(" <div class=\"row\" style=\"margin-top: 20px;\" data-v-53efe9fc><b class=\"grey-text darken-4\" data-v-53efe9fc>\n      Meter number: \n      <b" + _vm._ssrClass(null, {
+  })])], 1)], 2), _vm._ssrNode(" <div class=\"row\" style=\"margin-top: 20px;\" data-v-2f01ac62><b class=\"grey-text darken-4\" data-v-2f01ac62>\n      Meter number: \n      <b" + _vm._ssrClass(null, {
     'hide': _vm.hideMeterNumber
-  }) + " data-v-53efe9fc>" + _vm._ssrEscape("\n        " + _vm._s(_vm.meter_number) + "\n      ") + "</b> <b" + _vm._ssrClass("wave-dots", {
+  }) + " data-v-2f01ac62>" + _vm._ssrEscape("\n        " + _vm._s(_vm.meter_number) + "\n      ") + "</b> <b" + _vm._ssrClass("wave-dots", {
     'hide': _vm.hideWaveDot
-  }) + " data-v-53efe9fc><span data-v-53efe9fc>.</span><span data-v-53efe9fc>.</span><span data-v-53efe9fc>.</span><span data-v-53efe9fc>.</span></b></b> <div class=\"card-panel red\" style=\"border-radius: 10px;\" data-v-53efe9fc><input type=\"text\" name=\"token\" maxlength=\"20\" autocomplete=\"off\" placeholder=\"Enter token\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.value) + " class=\"white-text center\" style=\"border-bottom: 0; font-size: 20px;\" data-v-53efe9fc></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-53efe9fc>", "</div>", [_c('Keyboard', {
+  }) + " data-v-2f01ac62><span data-v-2f01ac62>.</span><span data-v-2f01ac62>.</span><span data-v-2f01ac62>.</span><span data-v-2f01ac62>.</span></b></b> <div class=\"card-panel red\" style=\"border-radius: 10px;\" data-v-2f01ac62><input type=\"text\" name=\"token\" maxlength=\"20\" autocomplete=\"off\" placeholder=\"Enter token\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.value) + " class=\"white-text center\" style=\"border-bottom: 0; font-size: 20px;\" data-v-2f01ac62></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-2f01ac62>", "</div>", [_c('Keyboard', {
     attrs: {
       "selfValue": _vm.value
     },
@@ -670,11 +668,11 @@ var render = function render() {
       },
       "paste": _vm.handlePaste
     }
-  })], 1), _vm._ssrNode(" <div class=\"row\" style=\"margin-top: 20px;\" data-v-53efe9fc><button class=\"btn btn-large col s12 orange black-text\" style=\"border-radius: 10px; font-weight: 400;\" data-v-53efe9fc><b data-v-53efe9fc>Load token</b></button></div> <br data-v-53efe9fc>")], 2);
+  })], 1), _vm._ssrNode(" <div class=\"row\" style=\"margin-top: 20px;\" data-v-2f01ac62><button class=\"btn btn-large col s12 orange black-text\" style=\"border-radius: 10px; font-weight: 400;\" data-v-2f01ac62><b data-v-2f01ac62>Load token</b></button></div> <br data-v-2f01ac62>")], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/remote.vue?vue&type=template&id=53efe9fc&scoped=true
+// CONCATENATED MODULE: ./pages/remote.vue?vue&type=template&id=2f01ac62&scoped=true
 
 // EXTERNAL MODULE: ./components/Keyboard.vue + 4 modules
 var Keyboard = __webpack_require__(54);
@@ -701,7 +699,7 @@ var mods = __webpack_require__(38);
   },
   methods: {
     // handlePaste(key) {
-    //   console.log('Paste was handled');
+    //   //console.log('Paste was handled');
 
     //   let pasted_token = key.trim();
 
@@ -714,10 +712,10 @@ var mods = __webpack_require__(38);
 
     //   if (this.isValidMeterNumber(pasted_token)) {
     //     this.value = pasted_token;
-    //     console.log('Valid token pasted:', pasted_token);
+    //     //console.log('Valid token pasted:', pasted_token);
     //     this.showToast('Token code successfully pasted', 'green');
     //   } else {
-    //     console.log('Invalid token pasted:', pasted_token);
+    //     //console.log('Invalid token pasted:', pasted_token);
     //     this.showToast('Please check token and try again', 'red');
     //   }
     // },
@@ -744,7 +742,8 @@ var mods = __webpack_require__(38);
     // },
 
     handlePaste(key) {
-      console.log('paste was clicked');
+      //console.log('paste was clicked');
+
       let pasted_token = key;
       pasted_token = pasted_token.trim();
       if (pasted_token == '') {} else {
@@ -752,13 +751,13 @@ var mods = __webpack_require__(38);
         var isNumber = this.isNumeric(pasted_token);
         if (isNumber == true) {
           this.value = pasted_token;
-          console.log('key pressed: ', key);
+          //console.log('key pressed: ', key);
           M.toast({
             html: '<b class="yellow-text">Token code successfully pasted</b>'
           });
         } else {
-          console.log('key pressed: ', key);
-          console.log('this is not a valid meter number');
+          //console.log('key pressed: ', key);
+          //console.log('this is not a valid meter number');
           M.toast({
             html: '<b class="red-text">Please check token and try again</b>'
           });
@@ -830,7 +829,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "53efe9fc",
+  "2f01ac62",
   "e5135722"
   
 )

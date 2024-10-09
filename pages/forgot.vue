@@ -88,7 +88,7 @@
                     this.hidePreLoader = true
                 } else {
                     localStorage.setItem('jdotwdott', token.jws)
-                    console.log('jws: ', token.jws);
+                    //console.log('jws: ', token.jws);
                     this.$router.push('./confirm_otp_reset_password')
                     this.hidePreLoader = true
                 }

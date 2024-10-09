@@ -21,13 +21,13 @@ export async function loginUser(username, password) {
         const response = await rawResponse.json()
         // return response
 
-        console.log(response)
+        //console.log(response)
 
-        // console.log(response.passwords)
-        // console.log(response)
+        // //console.log(response.passwords)
+        // //console.log(response)
         return response
     } catch (error) {
-        console.log(error)
+        //console.log(error)
         M.toast({html: `<b class="red-text">${error}</b>`})
     }
 }
@@ -54,17 +54,17 @@ export async function getUserInfo() {
         })
 
         const response = await rawResponse.json()
-        console.log(response)
+        //console.log(response)
         return response
 
-        // console.log(response)
+        // //console.log(response)
 
-        // console.log(response.passwords)
-        // console.log(response)
+        // //console.log(response.passwords)
+        // //console.log(response)
         return response
     } catch (error) {
-        console.log(error)
-        M.toast({html: `<b class="red-text">${error}</b>`})
+        //console.log(error)
+        // M.toast({html: `<b class="red-text">${error}</b>`})
     }
 }
 
@@ -89,16 +89,16 @@ export async function searchPaymentHistory(account_number, start_date, end_date)
         })
 
         const response = await rawResponse.json()
-        console.log(response)
+        //console.log(response)
         return response
 
-        // console.log(response)
+        // //console.log(response)
 
-        // console.log(response.passwords)
-        // console.log(response)
+        // //console.log(response.passwords)
+        // //console.log(response)
         // return response
     } catch (error) {
-        console.log(error)
+        //console.log(error)
         M.toast({html: `<b class="red-text">${error}</b>`})
     }
 }
@@ -124,16 +124,16 @@ export async function getPaymentHistory() {
         })
 
         const response = await rawResponse.json()
-        // console.log(response)
+        // //console.log(response)
         return response
 
-        // console.log(response)
+        // //console.log(response)
 
-        // console.log(response.passwords)
-        // console.log(response)
+        // //console.log(response.passwords)
+        // //console.log(response)
         // return response
     } catch (error) {
-        console.log(error)
+        //console.log(error)
         M.toast({html: `<b class="red-text">${error}</b>`})
     }
 }
@@ -158,16 +158,16 @@ export async function registerIntent(meterNumber) {
         })
 
         const response = await rawResponse.json()
-        console.log(response)
+        //console.log(response)
         return response
 
-        // console.log(response)
+        // //console.log(response)
 
-        // console.log(response.passwords)
-        // console.log(response)
+        // //console.log(response.passwords)
+        // //console.log(response)
         // return response
     } catch (error) {
-        console.log(error)
+        //console.log(error)
         M.toast({html: `<b class="red-text">${error}</b>`})
     }
 }
@@ -194,16 +194,16 @@ export async function confirmOtp(otp) {
         })
 
         const response = await rawResponse.json()
-        console.log(response)
+        //console.log(response)
         return response
 
-        // console.log(response)
+        // //console.log(response)
 
-        // console.log(response.passwords)
-        // console.log(response)
+        // //console.log(response.passwords)
+        // //console.log(response)
         // return response
     } catch (error) {
-        console.log(error)
+        //console.log(error)
         M.toast({html: `<b class="red-text">${error}</b>`})
     }
 }
@@ -230,16 +230,16 @@ export async function changePassword(newPassword, confirmPassword) {
         })
 
         const response = await rawResponse.json()
-        console.log(response)
+        //console.log(response)
         return response
 
-        // console.log(response)
+        // //console.log(response)
 
-        // console.log(response.passwords)
-        // console.log(response)
+        // //console.log(response.passwords)
+        // //console.log(response)
         // return response
     } catch (error) {
-        console.log(error)
+        //console.log(error)
         M.toast({html: `<b class="red-text">${error}</b>`})
     }
 }
@@ -263,16 +263,16 @@ export async function passwordResetIntent(username) {
         })
 
         const response = await rawResponse.json()
-        console.log(response)
+        //console.log(response)
         return response
 
-        // console.log(response)
+        // //console.log(response)
 
-        // console.log(response.passwords)
-        // console.log(response)
+        // //console.log(response.passwords)
+        // //console.log(response)
         // return response
     } catch (error) {
-        console.log(error)
+        //console.log(error)
         M.toast({html: `<b class="red-text">${error}</b>`})
     }
 }
@@ -298,16 +298,16 @@ export async function confirmPasswordResetToken(otp) {
         })
 
         const response = await rawResponse.json()
-        console.log(response)
+        //console.log(response)
         return response
 
-        // console.log(response)
+        // //console.log(response)
 
-        // console.log(response.passwords)
-        // console.log(response)
+        // //console.log(response.passwords)
+        // //console.log(response)
         // return response
     } catch (error) {
-        console.log(error)
+        //console.log(error)
         M.toast({html: `<b class="red-text">${error}</b>`})
     }
 }
@@ -334,17 +334,17 @@ export async function getOnlineStatus() {
         })
 
         const response = await rawResponse.json()
-        console.log(response)
+        //console.log(response)
         return response
 
-        // console.log(response)
+        // //console.log(response)
 
-        // console.log(response.passwords)
-        // console.log(response)
+        // //console.log(response.passwords)
+        // //console.log(response)
         // return response
     } catch (error) {
-        console.log(error)
-        M.toast({html: `<b class="red-text">${error}</b>`})
+        //console.log(error)
+        // M.toast({html: `<b class="red-text">${error}</b>`})
     }
 }
 
@@ -370,17 +370,17 @@ export async function paymentReceipt(orderNumber, channel) {
         })
 
         const response = await rawResponse.json()
-        console.log(response)
+        //console.log(response)
         
         return response
 
-        // console.log(response)
+        // //console.log(response)
 
-        // console.log(response.passwords)
-        // console.log(response)
+        // //console.log(response.passwords)
+        // //console.log(response)
         // return response
     } catch (error) {
-        console.log(error)
+        //console.log(error)
         M.toast({html: `<b class="red-text">${error}</b>`})
     }
 }
@@ -402,16 +402,16 @@ export async function energyBalance() {
         })
 
         const response = await rawResponse.json()
-        console.log(response)
+        //console.log(response)
         return response
 
-        // console.log(response)
+        // //console.log(response)
 
-        // console.log(response.passwords)
-        // console.log(response)
+        // //console.log(response.passwords)
+        // //console.log(response)
         // return response
     } catch (error) {
-        console.log(error)
+        //console.log(error)
         M.toast({html: `<b class="red-text">${error}</b>`})
     }
 }
@@ -440,17 +440,17 @@ export async function loadToken(userToken) {
         })
 
         const response = await rawResponse.json()
-        console.log(response)
+        //console.log(response)
         
         return response
 
-        // console.log(response)
+        // //console.log(response)
 
-        // console.log(response.passwords)
-        // console.log(response)
+        // //console.log(response.passwords)
+        // //console.log(response)
         // return response
     } catch (error) {
-        console.log(error)
+        //console.log(error)
         M.toast({html: `<b class="red-text">${error}</b>`})
     }
 }

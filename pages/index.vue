@@ -121,7 +121,7 @@ export default {
       //     this.startHeartBeat = false
       //   } else {
       //     let credentials = await loginUser(this.username2, this.password2)
-      //     console.log(credentials);
+      //     //console.log(credentials);
       //     if (credentials == undefined || credentials.message == 'Error encountered while processing request!') {
       //       M.toast({ html: '<b class="red-text">Check Username or Password!</b>' })
       //       // this.hidePreLoader = true
@@ -152,7 +152,7 @@ export default {
         this.startHeartBeat = false
       } else {
         let credentials = await loginUser(this.username, this.password)
-        console.log(credentials);
+        //console.log(credentials);
         if (credentials == undefined || credentials.message == 'Error encountered while processing request!') {
           M.toast({ html: '<b class="red-text">Check Username or Password!</b>' })
           // this.hidePreLoader = true
@@ -180,7 +180,7 @@ export default {
 
       // this.convertEmail(this.username, this.password)
 
-      // console.log(`username -> ${this.username}     password -> ${this.password}`)
+      // //console.log(`username -> ${this.username}     password -> ${this.password}`)
       // this is the main condition to allow the use login
       // if (this.username === '' || this.password === '') {
       //   M.toast({html: '<b class="red-text">Username or Password is empty!</b>'})
@@ -211,18 +211,18 @@ export default {
     //       })
     //     });
 
-    //     console.log('content is being converted to json')
+    //     //console.log('content is being converted to json')
     //     const content = await rawResponse.json();
 
-    //     console.log(content)
+    //     //console.log(content)
 
 
     //     let responseCode = content.code
     //     let message = content.message
 
-    //     console.log('if statement is being ran to check response')
-    //     console.log('response code ', responseCode)
-    //     console.log('response token ', content.token)
+    //     //console.log('if statement is being ran to check response')
+    //     //console.log('response code ', responseCode)
+    //     //console.log('response token ', content.token)
     //     if(responseCode == "09" || responseCode == null || responseCode == undefined) {
 
     //       M.toast({html: `<b class="red-text">${message}</b>`})
@@ -244,8 +244,8 @@ export default {
     //     }
 
     //   } catch (error) {
-    //     console.log(`Your error says -> ${error}`)
-    //     console.log(error)
+    //     //console.log(`Your error says -> ${error}`)
+    //     //console.log(error)
     //     M.toast({html: `<b class="red-text">${error}</b>`})
     //     this.hidePreLoader = true
     //   }
@@ -263,9 +263,9 @@ export default {
       let encrytedUsername = username
       let encrytedPassword = this.encryptWithAes256(pWord, encrptionKey)
 
-      // console.log(`username -> ${encrytedUsername}   password -> ${encrytedPassword}`)
+      // //console.log(`username -> ${encrytedUsername}   password -> ${encrytedPassword}`)
 
-      console.log('trying api now........')
+      //console.log('trying api now........')
 
       try {
 
@@ -283,16 +283,16 @@ export default {
           })
         });
 
-        console.log('content is being converted to json')
+        //console.log('content is being converted to json')
         const content = await rawResponse.json();
 
-        console.log(content)
+        //console.log(content)
 
 
         let responseCode = content.code
         let message = content.message
 
-        console.log('if statement is being ran to check response')
+        //console.log('if statement is being ran to check response')
         if (responseCode == "09" || responseCode == null || responseCode == undefined) {
 
           M.toast({ html: `<b class="red-text">${message}</b>` })
@@ -319,7 +319,7 @@ export default {
 
 
       } catch (error) {
-        console.log(`Your error says -> ${error}`)
+        //console.log(`Your error says -> ${error}`)
         M.toast({ html: `<b class="red-text">${error}</b>` })
         this.hidePreLoader = true
       }
@@ -340,7 +340,7 @@ export default {
         salt,
         { keySize: 256 / 32, iterations: 1000, hasher: CryptoJS.algo.SHA512 }     // Apply SHA512
       );
-      // console.log("derived key:\n" + key);
+      // //console.log("derived key:\n" + key);
 
       // Generate random 16 bytes init vector (iv)
       var iv = CryptoJS.lib.WordArray.random(128 / 8);
@@ -351,7 +351,7 @@ export default {
       // Concatenate
       var encryptedData = salt.clone().concat(iv).concat(cipherText.ciphertext);  // Concatenate on binary level
       var encryptedDataB64 = encryptedData.toString(CryptoJS.enc.Base64);         // Base64 encode the result
-      // console.log("aes encrypted text:\n", encryptedDataB64.replace(/(.{56})/g,'$1\n')); 
+      // //console.log("aes encrypted text:\n", encryptedDataB64.replace(/(.{56})/g,'$1\n')); 
       return encryptedDataB64.replace(/(.{56})/g, '$1\n');
     },
 
@@ -360,12 +360,12 @@ export default {
   created() {
     // this.testAPI()
     // let v = this.$store.state.token
-    // console.log(v)
+    // //console.log(v)
 
     // this.$store.commit('setToken', '294039480398029842i42ik3lnsdkhgosih')
 
     // let vv = this.$store.getters.myGetter;
-    // console.log(vv)
+    // //console.log(vv)
 
 
   }
