@@ -292,6 +292,7 @@
 
 <script>
 import { getUserInfo, getOnlineStatus, energyBalance } from '~/js_modules/mods'
+
 export default {
   layout: 'admin_main',
 
@@ -324,7 +325,6 @@ export default {
   },
 
   methods: {
-
     async showEnergyUsage() {
       this.energy_balance_data = 'Please wait...'
       this.defaultData = true
