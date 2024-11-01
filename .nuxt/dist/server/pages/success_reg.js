@@ -169,7 +169,7 @@ async function registerIntent(meterNumber) {
       body: user_meter_number
     });
     const response = await rawResponse.json();
-    //console.log(response)
+    // console.log(response)
     return response;
 
     // //console.log(response)

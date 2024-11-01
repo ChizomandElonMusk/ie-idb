@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/success_password_change", {data:[{}],fetch:{},mutations:void 0});

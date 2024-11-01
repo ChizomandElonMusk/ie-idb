@@ -169,7 +169,7 @@ async function registerIntent(meterNumber) {
       body: user_meter_number
     });
     const response = await rawResponse.json();
-    //console.log(response)
+    // console.log(response)
     return response;
 
     // //console.log(response)
@@ -519,26 +519,26 @@ var component = Object(componentNormalizer["a" /* default */])(
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/signup.vue?vue&type=template&id=388f2fd4
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/signup.vue?vue&type=template&id=5fb64ab2
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c('div', [_vm._ssrNode("<div class=\"row full-width\">", "</div>", [_vm._ssrNode("<div class=\"col s12 m6\" style=\"margin-top: 60px\">", "</div>", [_c('Logo'), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"container\">", "</div>", [_vm._ssrNode("<div class=\"row\">", "</div>", [_vm._ssrNode("<div class=\"col s12\"></div> "), _vm._ssrNode("<div class=\"col s12\">", "</div>", [_vm._ssrNode("<div class=\"white darken-4\">", "</div>", [_vm._ssrNode("<div class=\"card-content\">", "</div>", [_vm._ssrNode("<h6 class=\"center black-text\" style=\"font-weight:500;\">\n                          Hi, Welcome\n                      </h6> <p class=\"center\" style=\"font-weight:500;\">\n                          Please enter your meter number\n                      </p> <div" + _vm._ssrClass("row", {
+  return _c('div', [_vm._ssrNode("<div class=\"row full-width\">", "</div>", [_vm._ssrNode("<div class=\"col s12 m6\" style=\"margin-top: 60px\">", "</div>", [_c('Logo'), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"container\">", "</div>", [_vm._ssrNode("<div class=\"row\">", "</div>", [_vm._ssrNode("<div class=\"col s12\"></div> "), _vm._ssrNode("<div class=\"col s12\">", "</div>", [_vm._ssrNode("<div class=\"white darken-4\">", "</div>", [_vm._ssrNode("<div class=\"card-content\">", "</div>", [_vm._ssrNode("<h6 class=\"center black-text\" style=\"font-weight:500;\">\n                                    Hi, Welcome\n                                </h6> <p class=\"center\" style=\"font-weight:500;\">\n                                    Please enter your meter number\n                                </p> <div" + _vm._ssrClass("row", {
     'hide': _vm.hidePreLoader
-  }) + "><div class=\"col s12 center\"><img" + _vm._ssrAttr("src", __webpack_require__(37)) + " class=\"responsive-img heartbeat\" style=\"max-width: 60px;\"></div></div> "), _vm._ssrNode("<form>", "</form>", [_vm._ssrNode("<div class=\"row\"><div class=\"input-field col s12\"><input type=\"text\" placeholder=\"Meter number\" id=\"meter_number\"" + _vm._ssrAttr("value", _vm.meter_number) + " class=\"black-text\"> <label for=\"meter_number\">Meter number</label></div></div> <div class=\"row\"><div class=\"input-field col s12 center\"><button class=\"red btn btn-large col s12\" style=\"border-radius: 10px 10px 10px 10px;\">\n                                      Send\n                                  </button></div></div> "), _vm._ssrNode("<div class=\"row\">", "</div>", [_vm._ssrNode("<div class=\"input-field col s12 center\">", "</div>", [_vm._ssrNode("\n                                  I already have an account\n                                  "), _c('nuxt-link', {
+  }) + "><div class=\"col s12 center\"><img" + _vm._ssrAttr("src", __webpack_require__(37)) + " class=\"responsive-img heartbeat\" style=\"max-width: 60px;\"></div></div> "), _vm._ssrNode("<form>", "</form>", [_vm._ssrNode("<div class=\"row\"><div class=\"input-field col s12\"><input type=\"text\" placeholder=\"Meter number\" id=\"meter_number\"" + _vm._ssrAttr("value", _vm.meter_number) + " class=\"black-text\"> <label for=\"meter_number\">Meter number</label></div> <div class=\"input-field col s12 center\"><b class=\"red-text\" style=\"font-weight:500;\">" + _vm._ssrEscape("\n                                                " + _vm._s(_vm.errorMessage) + "\n                                            ") + "</b></div></div> <div class=\"row\"><div class=\"input-field col s12 center\"><button class=\"red btn btn-large col s12\" style=\"border-radius: 10px 10px 10px 10px;\">\n                                                Send\n                                            </button></div></div> "), _vm._ssrNode("<div class=\"row\">", "</div>", [_vm._ssrNode("<div class=\"input-field col s12 center\">", "</div>", [_vm._ssrNode("\n                                            I already have an account\n                                            "), _c('nuxt-link', {
     staticStyle: {
       "width": "300px"
     },
     attrs: {
       "to": "./"
     }
-  }, [_vm._v("\n                                      Login\n                                  ")])], 2)])], 2)], 2)])])], 2)])], 2), _vm._ssrNode(" <div class=\"col s12 m6 full-width hide-on-small-and-down\"" + _vm._ssrStyle(null, {
+  }, [_vm._v("\n                                                Login\n                                            ")])], 2)])], 2)], 2)])])], 2)])], 2), _vm._ssrNode(" <div class=\"col s12 m6 full-width hide-on-small-and-down\"" + _vm._ssrStyle(null, {
     backgroundImage: `url(${_vm.backgroundUrl})`
   }, null) + "></div>")], 2)]);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/signup.vue?vue&type=template&id=388f2fd4
+// CONCATENATED MODULE: ./pages/signup.vue?vue&type=template&id=5fb64ab2
 
 // EXTERNAL MODULE: ./assets/images/angled_background.jpg
 var angled_background = __webpack_require__(39);
@@ -555,6 +555,7 @@ var mods = __webpack_require__(38);
     return {
       meter_number: '',
       hidePreLoader: true,
+      errorMessage: '',
       backgroundUrl: angled_background_default.a
     };
   },
@@ -563,6 +564,7 @@ var mods = __webpack_require__(38);
       M.toast({
         html: '<b class="yellow-text">Please wait...</b>'
       });
+      this.errorMessage = '';
       this.meter_number = this.meter_number.trim();
       if (this.meter_number == '') {
         M.toast({
@@ -570,12 +572,13 @@ var mods = __webpack_require__(38);
         });
       } else {
         let token = await Object(mods["l" /* registerIntent */])(this.meter_number);
-        if (token == undefined) {
+        if (token.code == '02') {
           M.toast({
-            html: '<b class="red-text">Network error!</b>'
+            html: `<b class="red-text">${token.message}</b>`
           });
           this.hidePreLoader = true;
-        } else {
+          this.errorMessage = token.message;
+        } else if (token.jws !== '') {
           localStorage.setItem('jdotwdott', token.jws);
           //console.log('jws: ', token.jws);
           this.$router.push('./confirm_otp');
