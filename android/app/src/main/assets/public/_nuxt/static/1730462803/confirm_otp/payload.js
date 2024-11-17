@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/confirm_otp", {data:[{}],fetch:{},mutations:void 0});

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">IE IDB</string>
+    <string name="title_activity_main">IE IDB</string>
+    <string name="package_name">com.ikejaelectric.idb.app</string>
+    <string name="custom_url_scheme">com.ikejaelectric.idb.app</string>
+</resources>

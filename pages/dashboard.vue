@@ -218,7 +218,7 @@
 
         <div class="card-panel orange flex-buttons" style="border-radius: 10px;">
 
-          <a href="https://www.ie-payments.com/pay-bill" target="_blank">
+          <a href="https://vend.mojec.com" target="_blank">
             <div class="white-text center boarder-top">
               <img src="~assets/images/purchase.svg" class="responsive-img"
                 style="max-width: 50px; filter: hue-rotate(180deg);" alt="">

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/success_reg", {data:[{}],fetch:{},mutations:void 0});

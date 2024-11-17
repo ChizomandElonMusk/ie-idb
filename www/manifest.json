@@ -1,0 +1,17 @@
+{
+    "name": "IE IDB",
+    "short_name": "IE IDB",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "assets/icon/icon-only.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }

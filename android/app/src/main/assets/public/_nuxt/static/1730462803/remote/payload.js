@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/remote", {data:[{}],fetch:{},mutations:void 0});
