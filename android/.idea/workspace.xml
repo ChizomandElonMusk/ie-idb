@@ -10,19 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf49f840-b9e9-4199-9ac2-b987549a4048" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.nuxt/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../.nuxt/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.nuxt/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/../.nuxt/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.nuxt/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../.nuxt/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.nuxt/components/nuxt-build-indicator.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.nuxt/components/nuxt-error.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../.nuxt/components/nuxt-error.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.nuxt/components/nuxt-link.client.js" beforeDir="false" afterPath="$PROJECT_DIR$/../.nuxt/components/nuxt-link.client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.nuxt/loading.html" beforeDir="false" afterPath="$PROJECT_DIR$/../.nuxt/loading.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.nuxt/mixins/fetch.client.js" beforeDir="false" afterPath="$PROJECT_DIR$/../.nuxt/mixins/fetch.client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.nuxt/mixins/fetch.server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../.nuxt/mixins/fetch.server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.nuxt/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../.nuxt/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.nuxt/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../.nuxt/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.nuxt/views/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/../.nuxt/views/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.nuxt/routes.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.nuxt/routes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/assets/public/200.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/public/200.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/assets/public/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/public/about/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/assets/public/confirm_otp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/public/confirm_otp/index.html" afterDir="false" />
@@ -45,40 +34,40 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/assets/public/trans_history/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/public/trans_history/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/assets/public/user-info/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/public/user-info/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dist/200.html" beforeDir="false" afterPath="$PROJECT_DIR$/../dist/200.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/about/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/about/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/confirm_otp/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/confirm_otp/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/confirm_otp_reset_password/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/confirm_otp_reset_password/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/dashboard/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/dashboard/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/energy_usage/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/energy_usage/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/forgot/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/login/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/manifest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/remote/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/remote/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/reset_password/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/reset_password/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/reset_password2/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/reset_password2/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/sent/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/settings/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/settings/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/signup/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/success_forgotten_password_reset/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/success_forgotten_password_reset/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/success_password_change/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/success_password_change/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/success_reg/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/success_reg/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/test/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/trans_history/payload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/trans_history/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1731519253/user-info/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/about/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/about/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/confirm_otp/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/confirm_otp/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/confirm_otp_reset_password/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/confirm_otp_reset_password/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/dashboard/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/dashboard/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/energy_usage/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/energy_usage/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/forgot/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/login/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/manifest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/remote/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/remote/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/reset_password/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/reset_password/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/reset_password2/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/reset_password2/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/sent/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/settings/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/settings/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/signup/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/success_forgotten_password_reset/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/success_forgotten_password_reset/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/success_password_change/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/success_password_change/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/success_reg/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/success_reg/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/test/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/trans_history/payload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/trans_history/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/_nuxt/static/1732122878/user-info/payload.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../dist/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../dist/about/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dist/confirm_otp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../dist/confirm_otp/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dist/confirm_otp_reset_password/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../dist/confirm_otp_reset_password/index.html" afterDir="false" />

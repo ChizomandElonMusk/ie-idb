@@ -96,6 +96,8 @@ export default {
                 M.toast({ html: '<b class="yellow-text">Please enter a valid meter number</b>' })
             } else {
                 let token = await registerIntent(this.meter_number)
+                console.log('this is the meter number: ', this.meter_number);
+                console.log('this is the response from registerIntent: ', token);
                 if (token.code == '02') {
                     M.toast({ html: `<b class="red-text">${token.message}</b>` })
                     this.hidePreLoader = true
