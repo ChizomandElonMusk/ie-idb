@@ -19,7 +19,7 @@
 
             <div class="flexitem-notification" @click="logOut()">
                 <nuxt-link to="./dashboard">
-                    <img src="~assets/images/home.svg"  class="responsive-img"
+                    <img src="~assets/images/home.svg" class="responsive-img"
                         style="max-width: 30px; filter: hue-rotate(180deg);" alt="">
                 </nuxt-link>
             </div>
@@ -107,7 +107,7 @@
 
         <!-- start of buttons -->
 
-        <div class="row">
+        <div class="row" :class="{ 'hide': hideSettingsView }">
 
             <div class="flexcontainerbtn">
 
@@ -116,10 +116,10 @@
                     <div class="white-text center boarder-top" v-on:click="showEnergyUsage">
                         <nuxt-link to="./reset_password">
                             <img src="~assets/images/reset_password.svg" class="responsive-img"
-                            style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
-                        <p class="button-text white-text">
-                            Reset Password
-                        </p>
+                                style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
+                            <p class="button-text white-text">
+                                Reset Password
+                            </p>
                         </nuxt-link>
                     </div>
 
@@ -147,7 +147,78 @@
         </div>
 
 
-        <div class="row">
+        <div class="row" :class="{ 'hide': hideSettingsView }">
+
+            <div class="flexcontainerbtn">
+
+                <div class="card-panel orange flex-buttons" style="border-radius: 10px;">
+
+                    <div class="white-text center boarder-top" @click="deleteAccount()">
+                        <div to="./trans_history">
+                            <img src="~assets/images/delete.svg" class="responsive-img"
+                                style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
+                            <p class="button-text white-text">
+                                Delete Account
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="row" :class="{ 'hide': hideDeleteDialog }">
+
+            <div class="flexcontainerbtn">
+
+                <div class="card-panel white flex-buttons" style="border-radius: 10px;">
+                    <div class="black-text center boarder-top">
+                        <div>
+                            <b>Delete Your Account?</b>
+                            <p class="button-text black-text left-align ">
+                                Are you sure you want to delete your account? This action is permanent and cannot be
+                                undone. Here’s what will happen:
+                                <br>
+                                <br>
+
+                                All your data (e.g., profile information, preferences) will be permanently deleted.
+
+                                <br>
+                                You will lose access to all services and features associated with your account.
+
+                                <br>
+
+                                You will no longer be able to recover your account or its data.
+                            </p>
+                        </div>
+
+                        <div class="row" style="padding: 10px;">
+                            <div class="col s6">
+                                <button class="btn btn-large red" @click="yesDeleteAccount()">
+                                    Delete
+                                </button>
+                            </div>
+                            <div class="col s6">
+                                <button class="btn btn-large white red-text" @click="cancelDelete()">
+                                    Cancel
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="row" :class="{ 'hide': hideSettingsView }">
 
             <div class="flexcontainerbtn">
 
@@ -205,12 +276,14 @@
 
 
 <script>
-import { getUserInfo, getOnlineStatus, energyBalance } from '~/js_modules/mods'
+import { getUserInfo, getOnlineStatus, energyBalance, deleteAccount } from '~/js_modules/mods'
 export default {
     layout: 'admin_main',
 
     data() {
         return {
+            hideSettingsView: false,
+            hideDeleteDialog: true,
             account_name: '',
             account_number: '',
             meter_number: '',
@@ -233,6 +306,35 @@ export default {
     },
 
     methods: {
+
+        deleteAccount() {
+            this.hideDeleteDialog = false
+            this.hideSettingsView = true
+        },
+
+        cancelDelete() {
+            this.hideDeleteDialog = true
+            this.hideSettingsView = false
+        },
+
+        async yesDeleteAccount() {
+            // call api
+            // log user out
+
+            try {
+                let deleteResponse = await deleteAccount()
+                console.log(deleteResponse);
+                console.log(deleteResponse);
+                console.log(deleteResponse);
+
+                if (deleteResponse.message == 'Success!') {
+                    this.logOut()
+                }
+            } catch (error) {
+
+            }
+        },
+
         logOut() {
             if (process.client) {
                 localStorage.clear()
@@ -241,16 +343,20 @@ export default {
         },
 
         async showEnergyUsage() {
-            this.energy_balance_data = 'Please wait...'
-            this.defaultData = true
-            this.energyBalance = false
-            let ebdata = await energyBalance()
-            //console.log(ebdata);
-            if (ebdata.data == undefined || ebdata.data == null) {
-                this.energy_balance_data = 'Network error. Try again later'
-            } else {
-                this.energy_balance_data = ebdata.data
-                this.energy_balance_data = ' Balance: ' + this.energy_balance_data + ' KWH'
+            try {
+                this.energy_balance_data = 'Please wait...'
+                this.defaultData = true
+                this.energyBalance = false
+                let ebdata = await energyBalance()
+                //console.log(ebdata);
+                if (ebdata.data == undefined || ebdata.data == null) {
+                    this.energy_balance_data = 'Network error. Try again later'
+                } else {
+                    this.energy_balance_data = ebdata.data
+                    this.energy_balance_data = ' Balance: ' + this.energy_balance_data + ' KWH'
+                }
+            } catch (error) {
+
             }
 
         },

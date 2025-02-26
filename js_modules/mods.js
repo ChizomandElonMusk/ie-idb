@@ -456,6 +456,36 @@ export async function loadToken(userToken) {
 }
 
 
+
+export async function deleteAccount() {
+    let token = localStorage.getItem('jdotwdott')
+
+    try {
+        const rawResponse = await fetch('https://api.ikejaelectric.com/idbwebapi/ie/v1/unsubscribe', {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer 8bcdcbd0-6e0c-3fb4-87af-602e87b5654f',
+                'Content-Type': 'application/json',
+                'token': token
+
+            },
+            // body: userMeterNumber,
+        })
+
+        const response = await rawResponse.json()
+        console.log(response)
+        console.log(response)
+        console.log(response)
+        console.log(response)
+        console.log(response)
+        return response
+    } catch (error) {
+        //console.log(error)
+        // M.toast({html: `<b class="red-text">${error}</b>`})
+    }
+}
+
+
 export function logOut() {
     if(process.client) {
       localStorage.clear()
