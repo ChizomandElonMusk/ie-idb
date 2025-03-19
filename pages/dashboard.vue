@@ -218,7 +218,7 @@
 
         <div class="card-panel orange flex-buttons" style="border-radius: 10px;">
 
-          <a href="https://vend.mojec.com" target="_blank">
+          <a href="https://vend.mojec.com/#/rmdetails" target="_blank">
             <div class="white-text center boarder-top">
               <img src="~assets/images/purchase.svg" class="responsive-img"
                 style="max-width: 50px; filter: hue-rotate(180deg);" alt="">
@@ -372,7 +372,8 @@ export default {
         }
         this.account_number = user_info.accountNumber
         this.meter_number = user_info.meterNumber
-        this.tariff = user_info.feederBand
+        // this.tariff = user_info.feederBand 
+        this.tariff = 'A'
         let user_online_status = await getOnlineStatus()
         if (user_online_status.message == 'Error encountered while processing request!') {
           this.online_status = 'offline'
