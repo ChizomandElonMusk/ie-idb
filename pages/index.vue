@@ -59,6 +59,15 @@
               </div>
             </div>
 
+            <div class="row">
+              <div class="input-field col s12 center red-text">
+                Make Payment on IDB
+                <a href="https://vend.mojec.com/#/rmdetails" target="_blank">
+                  Click here
+                </a>
+              </div>
+            </div>
+
           </form>
         </div>
       </div>
